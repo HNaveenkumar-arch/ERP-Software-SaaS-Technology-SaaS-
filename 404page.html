@@ -1,0 +1,881 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Page Not Found</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        :root {
+            --primary: #1d4ed8;
+            --primary-light: #eff6ff;
+            --text-main: #0f172a;
+            --text-muted: #64748b;
+            --bg-body: #f8fafc;
+            --white: #ffffff;
+            --border: #e2e8f0;
+            --red: #ef4444;
+            --green: #10b981;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-body);
+            color: var(--text-main);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow-x: hidden;
+            padding: 40px 5%;
+        }
+
+        .error-container {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            max-width: 1300px;
+            width: 100%;
+            gap: 60px;
+        }
+
+        /* ============================
+           LEFT SIDE (Content)
+        ============================ */
+        .error-left {
+            flex: 1;
+            max-width: 600px;
+            width: 100%;
+        }
+
+        .telemetry-badge {
+            display: inline-flex;
+            align-items: center;
+            flex-wrap: wrap;
+            background: var(--white);
+            border: 1px solid var(--border);
+            border-radius: 50px;
+            padding: 6px 16px;
+            font-size: 11px;
+            font-weight: 700;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.02);
+        }
+
+        .telemetry-badge .dot {
+            width: 6px;
+            height: 6px;
+            background: var(--primary);
+            border-radius: 50%;
+            margin-right: 8px;
+        }
+
+        .telemetry-badge .text-blue {
+            color: var(--primary);
+            letter-spacing: 0.5px;
+        }
+
+        .telemetry-badge .divider {
+            margin: 0 10px;
+            color: var(--border);
+        }
+
+        .telemetry-badge .text-gray {
+            color: var(--text-muted);
+            font-weight: 500;
+        }
+
+        .error-code-wrapper {
+            position: relative;
+            display: inline-block;
+            margin-bottom: 20px;
+            cursor: pointer;
+        }
+
+        .error-code {
+            font-size: 160px;
+            font-weight: 800;
+            color: var(--text-main);
+            line-height: 1;
+            letter-spacing: -5px;
+            transition: transform 0.3s;
+        }
+
+        .error-code-wrapper:hover .error-code {
+            transform: scale(1.05);
+        }
+
+        .error-code span {
+            color: var(--primary);
+        }
+
+        .http-badge {
+            position: absolute;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #dbeafe;
+            color: var(--primary);
+            font-size: 11px;
+            font-weight: 700;
+            padding: 4px 10px;
+            border-radius: 4px;
+            letter-spacing: 0.5px;
+        }
+
+        .error-title {
+            font-size: 40px;
+            font-weight: 800;
+            margin-bottom: 15px;
+            letter-spacing: -1px;
+        }
+
+        .error-desc {
+            font-size: 16px;
+            color: var(--text-muted);
+            line-height: 1.6;
+            margin-bottom: 40px;
+        }
+
+        .btn-group {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 50px;
+            flex-wrap: wrap;
+            visibility: visible;
+            /* Fallback for missing animation */
+            opacity: 1;
+        }
+
+        .btn-primary,
+        .btn-secondary {
+            padding: 14px 28px;
+            border-radius: 8px;
+            font-size: 15px;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            transition: all 0.3s;
+        }
+
+        .btn-primary {
+            background: var(--primary);
+            color: var(--white);
+            border: 1px solid var(--primary);
+            box-shadow: 0 4px 12px rgba(29, 78, 216, 0.2);
+        }
+
+        .btn-primary:hover {
+            background: #1e3a8a;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(29, 78, 216, 0.4);
+        }
+
+        .btn-secondary {
+            background: var(--white);
+            color: var(--text-main);
+            border: 1px solid var(--border);
+        }
+
+        .btn-secondary:hover {
+            background: var(--bg-body);
+            border-color: #cbd5e1;
+            transform: translateY(-3px);
+        }
+
+        .search-container {
+            background: var(--white);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 25px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.02);
+            width: 100%;
+        }
+
+        .search-input-wrapper {
+            position: relative;
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .search-input-wrapper i {
+            position: absolute;
+            left: 15px;
+            color: var(--text-muted);
+        }
+
+        .search-input-wrapper input {
+            width: 100%;
+            background: var(--primary-light);
+            border: 1px solid #dbeafe;
+            border-radius: 8px;
+            padding: 12px 15px 12px 40px;
+            font-size: 14px;
+            outline: none;
+            color: var(--text-main);
+            transition: border 0.3s;
+        }
+
+        .search-input-wrapper input:focus {
+            border-color: #93c5fd;
+        }
+
+        .shortcut-key {
+            position: absolute;
+            right: 15px;
+            background: var(--white);
+            border: 1px solid var(--border);
+            border-radius: 4px;
+            padding: 2px 6px;
+            font-size: 10px;
+            color: var(--text-muted);
+            font-weight: 600;
+        }
+
+        .quick-links {
+            font-size: 12px;
+            color: var(--text-muted);
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            align-items: center;
+        }
+
+        .quick-links a {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+
+        .quick-links a:hover {
+            color: #1e3a8a;
+            text-decoration: underline;
+        }
+
+        .quick-links span {
+            color: #cbd5e1;
+        }
+
+        /* ============================
+           RIGHT SIDE (Cards & Charts)
+        ============================ */
+        .error-right {
+            flex: 1;
+            max-width: 550px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .telemetry-card {
+            background: var(--white);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 25px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+            transition: transform 0.3s, box-shadow 0.3s;
+            width: 100%;
+            overflow: hidden;
+            box-sizing: border-box;
+        }
+
+        .telemetry-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.06);
+        }
+
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 25px;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .header-left {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .icon-box {
+            width: 36px;
+            height: 36px;
+            background: var(--primary-light);
+            color: var(--primary);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            transition: transform 0.3s;
+            flex-shrink: 0;
+        }
+
+        .telemetry-card:hover .icon-box {
+            transform: rotate(360deg);
+        }
+
+        .route-title {
+            font-size: 14px;
+            font-weight: 700;
+            margin-bottom: 3px;
+            word-break: break-word;
+        }
+
+        .route-hash {
+            font-size: 12px;
+            color: var(--text-muted);
+        }
+
+        .status-badge {
+            background: #fee2e2;
+            color: var(--red);
+            border: 1px solid #fecaca;
+            padding: 4px 10px;
+            border-radius: 50px;
+            font-size: 11px;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            white-space: nowrap;
+        }
+
+        .status-badge .dot {
+            width: 6px;
+            height: 6px;
+            background: var(--red);
+            border-radius: 50%;
+        }
+
+        .chart-header {
+            display: flex;
+            justify-content: space-between;
+            font-size: 11px;
+            font-weight: 700;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            margin-bottom: 10px;
+            flex-wrap: wrap;
+        }
+
+        .chart-box {
+            background: var(--bg-body);
+            border-radius: 12px;
+            padding: 20px;
+            position: relative;
+            margin-bottom: 25px;
+            width: 100%;
+        }
+
+        .reroute-text {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 11px;
+            font-weight: 700;
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .svg-chart {
+            width: 100%;
+            height: auto;
+            display: block;
+            margin-top: 10px;
+            overflow: visible;
+        }
+
+        .chart-line {
+            fill: none;
+            stroke: var(--primary);
+            stroke-width: 2.5;
+            stroke-dasharray: 6 6;
+            animation: dashMove 20s linear infinite;
+        }
+
+        @keyframes dashMove {
+            to {
+                stroke-dashoffset: -200;
+            }
+        }
+
+        .chart-node {
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .chart-node:hover {
+            r: 7;
+            filter: drop-shadow(0 0 8px rgba(37, 99, 235, 0.6));
+        }
+
+        .chart-node.red {
+            fill: var(--red);
+        }
+
+        .chart-node.green {
+            fill: var(--green);
+        }
+
+        .chart-node.blue {
+            fill: var(--primary);
+        }
+
+        .chart-labels {
+            display: flex;
+            justify-content: space-between;
+            font-size: 10px;
+            color: var(--text-muted);
+            margin-top: 5px;
+            flex-wrap: wrap;
+        }
+
+        .chart-labels span:nth-child(2) {
+            color: var(--red);
+        }
+
+        .chart-labels span:nth-child(3) {
+            color: var(--green);
+        }
+
+        .health-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+        }
+
+        .health-item {
+            background: var(--white);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 12px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: all 0.3s;
+        }
+
+        .health-item:hover {
+            border-color: var(--primary);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
+        }
+
+        .health-name {
+            font-size: 12px;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .health-name i {
+            color: var(--green);
+        }
+
+        .health-name i.fa-link-slash {
+            color: var(--red);
+        }
+
+        .health-status {
+            font-size: 10px;
+            font-weight: 700;
+            padding: 3px 8px;
+            border-radius: 4px;
+        }
+
+        .status-active {
+            background: #d1fae5;
+            color: #059669;
+        }
+
+        .status-error {
+            background: #fee2e2;
+            color: #dc2626;
+        }
+
+        .recovery-card {
+            background: var(--white);
+            border-radius: 12px;
+            padding: 20px 25px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+            border-left: 5px solid var(--primary);
+            transition: transform 0.3s;
+            width: 100%;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .recovery-card:hover {
+            transform: translateX(5px);
+        }
+
+        .rec-left {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .rec-icon {
+            width: 40px;
+            height: 40px;
+            background: var(--primary-light);
+            color: var(--primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.3s;
+            flex-shrink: 0;
+        }
+
+        .recovery-card:hover .rec-icon {
+            transform: rotate(-180deg);
+        }
+
+        .rec-title {
+            font-size: 13px;
+            font-weight: 700;
+            margin-bottom: 2px;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .rec-title .dot {
+            width: 6px;
+            height: 6px;
+            background: var(--primary);
+            border-radius: 50%;
+        }
+
+        .rec-desc {
+            font-size: 11px;
+            color: var(--text-muted);
+        }
+
+        .btn-logs {
+            background: var(--primary-light);
+            color: var(--primary);
+            border: none;
+            padding: 8px 16px;
+            border-radius: 6px;
+            font-size: 12px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s;
+            white-space: nowrap;
+        }
+
+        .btn-logs:hover {
+            background: var(--primary);
+            color: var(--white);
+        }
+
+        /* ============================
+           MOBILE RESPONSIVE
+        ============================ */
+        @media (max-width: 1024px) {
+            .error-container {
+                flex-direction: column;
+                align-items: center;
+                gap: 40px;
+            }
+
+            .error-left,
+            .error-right {
+                max-width: 100%;
+            }
+
+            .error-code {
+                font-size: 140px;
+            }
+
+            .error-title {
+                font-size: 36px;
+            }
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 30px 20px;
+            }
+
+            .error-code {
+                font-size: 100px;
+            }
+
+            .http-badge {
+                font-size: 9px;
+                top: 10px;
+            }
+
+            .error-title {
+                font-size: 30px;
+            }
+
+            /* Buttons Fix for Mobile */
+            .btn-group {
+                flex-direction: column;
+                width: 100%;
+            }
+
+            .btn-primary,
+            .btn-secondary {
+                width: 100%;
+                justify-content: center;
+            }
+
+            .telemetry-card {
+                padding: 20px;
+            }
+
+            .chart-box {
+                padding: 15px 10px;
+            }
+
+            .chart-labels {
+                font-size: 9px;
+                flex-direction: column;
+                gap: 2px;
+            }
+
+            .health-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .recovery-card {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 15px;
+            }
+
+            .btn-logs {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="error-container">
+        <!-- LEFT SIDE CONTENT -->
+        <div class="error-left">
+            <div class="telemetry-badge">
+                <span class="dot"></span>
+                <span class="text-blue">ERROR 404 &bull; SYSTEM TELEMETRY WARNING</span>
+                <span class="divider">|</span>
+                <span class="text-gray">Cluster Failover</span>
+            </div>
+
+            <!-- Confetti trigger wrapper -->
+            <div class="error-code-wrapper" id="confetti-trigger">
+                <div class="http-badge">HTTP_NOT_FOUND</div>
+                <h1 class="error-code">4<span>0</span>4</h1>
+            </div>
+
+            <h2 class="error-title">Oops! Page Not Found</h2>
+            <p class="error-desc">The page you're looking for may have been moved, deleted, or is temporarily
+                unavailable across our cloud clusters. Our autonomous route reconciliation has logged this telemetry
+                event.</p>
+
+            <!-- Buttons Grid (மாற்றப்பட்ட பகுதி) -->
+            <div class="btn-group">
+                <a href="#" onclick="history.back(); return false;" class="btn-secondary"><i class="fa-solid fa-arrow-left"></i> Go Back</a>
+                <a href="index.html" class="btn-primary"><i class="fa-solid fa-house"></i> Back to Home</a>
+            </div>
+
+            <div class="search-container">
+                <div class="search-input-wrapper">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" placeholder="Search documentation, modules, or URLs...">
+                    <span class="shortcut-key">⌘ K</span>
+                </div>
+                <div class="quick-links">
+                    Looking for:
+                    <a href="#">Live Status <i class="fa-solid fa-arrow-trend-up"></i></a> <span>&bull;</span>
+                    <a href="#">ERP Modules</a> <span>&bull;</span>
+                    <a href="#">API Documentation</a> <span>&bull;</span>
+                    <a href="#">Help Desk</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- RIGHT SIDE CARDS -->
+        <div class="error-right">
+
+            <div class="telemetry-card">
+                <div class="card-header">
+                    <div class="header-left">
+                        <div class="icon-box"><i class="fa-solid fa-code-branch"></i></div>
+                        <div>
+                            <div class="route-title">Node Route /telemetry/v4-cluster</div>
+                            <div class="route-hash">Target Hash: #0x8F94...42B</div>
+                        </div>
+                    </div>
+                    <div class="status-badge">
+                        <span class="dot"></span> 404 Disconnected
+                    </div>
+                </div>
+
+                <div class="chart-header">
+                    <span>Routing Signal</span>
+                    <span>LATENCY: 1.4ms</span>
+                </div>
+
+                <div class="chart-box">
+                    <div class="chart-node-label"
+                        style="font-size: 11px; font-weight: 700; color: var(--text-main); margin-bottom: 10px;">
+                        <span style="color:var(--primary); font-size:14px; margin-right:5px;">&bull;</span> Client
+                        Ingress
+                    </div>
+                    <div class="reroute-text"><i class="fa-solid fa-rotate"></i> REROUTING</div>
+
+                    <!-- SVG Chart -->
+                    <svg class="svg-chart" viewBox="0 0 400 80" preserveAspectRatio="xMidYMid meet">
+                        <polyline class="chart-line" points="20,40 80,40 130,40 180,30 230,60 280,40 330,40 380,40" />
+                        <circle class="chart-node blue" cx="20" cy="40" r="4.5" />
+                        <circle class="chart-node blue" cx="80" cy="40" r="4.5" />
+                        <circle class="chart-node blue" cx="130" cy="40" r="4.5" />
+                        <circle class="chart-node blue" cx="180" cy="30" r="4.5" />
+                        <circle class="chart-node red" cx="230" cy="60" r="4.5" />
+                        <circle class="chart-node blue" cx="280" cy="40" r="4.5" />
+                        <circle class="chart-node blue" cx="330" cy="40" r="4.5" />
+                        <circle class="chart-node green" cx="380" cy="40" r="6" />
+                    </svg>
+
+                    <div class="chart-labels">
+                        <span>Edge Gateway</span>
+                        <span>404 Drop Point</span>
+                        <span>Failover Safe</span>
+                    </div>
+                </div>
+
+                <div class="chart-header" style="margin-top: 20px;">
+                    <span>BUSINESS INFRASTRUCTURE HEALTH</span>
+                </div>
+
+                <div class="health-grid">
+                    <div class="health-item">
+                        <div class="health-name"><i class="fa-solid fa-building-columns"></i> Finance</div>
+                        <div class="health-status status-active">Active</div>
+                    </div>
+                    <div class="health-item">
+                        <div class="health-name"><i class="fa-solid fa-users"></i> HR & Payroll</div>
+                        <div class="health-status status-active">Active</div>
+                    </div>
+                    <div class="health-item">
+                        <div class="health-name"><i class="fa-solid fa-boxes-stacked"></i> Inventory</div>
+                        <div class="health-status status-active">Active</div>
+                    </div>
+                    <div class="health-item">
+                        <div class="health-name"><i class="fa-solid fa-link-slash"></i> Requested URL</div>
+                        <div class="health-status status-error">Unresolved</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="recovery-card">
+                <div class="rec-left">
+                    <div class="rec-icon"><i class="fa-solid fa-rotate"></i></div>
+                    <div>
+                        <div class="rec-title">Auto-Recovery Active <span class="dot"></span></div>
+                        <div class="rec-desc">Redirecting traffic safely to primary dashboard</div>
+                    </div>
+                </div>
+                <button class="btn-logs">View Logs <i class="fa-solid fa-file-lines"
+                        style="margin-left: 5px;"></i></button>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- GSAP & Canvas Confetti -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+
+            // GSAP Entry Animation
+            // fromTo பயன்படுத்தியுள்ளதால் எந்த கோடும் மறையாமல் உறுதியாக வேலை செய்யும்
+            const tl = gsap.timeline({ defaults: { ease: "power3.out" } });
+
+            tl.fromTo(".telemetry-badge", { opacity: 0, y: -20 }, { opacity: 1, y: 0, duration: 0.6 })
+                .fromTo(".error-code-wrapper", { opacity: 0, scale: 0.5 }, { opacity: 1, scale: 1, duration: 0.8, ease: "back.out(1.5)" }, "-=0.3")
+                .fromTo(".error-title", { opacity: 0, x: -30 }, { opacity: 1, x: 0, duration: 0.6 }, "-=0.4")
+                .fromTo(".error-desc", { opacity: 0, x: -30 }, { opacity: 1, x: 0, duration: 0.6 }, "-=0.4")
+                .fromTo(".btn-group a", { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.5, stagger: 0.1 }, "-=0.2")
+                .fromTo(".search-container", { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.6 }, "-=0.3")
+                .fromTo(".telemetry-card", { opacity: 0, x: 50 }, { opacity: 1, x: 0, duration: 0.8 }, "-=1.2")
+                .fromTo(".chart-box", { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.6 }, "-=0.8")
+                .fromTo(".health-item", { opacity: 0, scale: 0.9 }, { opacity: 1, scale: 1, duration: 0.4, stagger: 0.1 }, "-=0.6")
+                .fromTo(".recovery-card", { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.6, ease: "back.out(1.2)" }, "-=0.4");
+
+            gsap.fromTo(".chart-node",
+                { opacity: 0, scale: 0 },
+                { opacity: 1, scale: 1, transformOrigin: "center", duration: 0.5, stagger: 0.05, delay: 0.8, ease: "back.out(2)" }
+            );
+
+            // Party Popper (Confetti) Effect
+            function fireConfetti() {
+                var duration = 2 * 1000;
+                var animationEnd = Date.now() + duration;
+                var defaults = { startVelocity: 30, spread: 360, ticks: 60, zIndex: 9999 };
+
+                function randomInRange(min, max) { return Math.random() * (max - min) + min; }
+
+                var interval = setInterval(function () {
+                    var timeLeft = animationEnd - Date.now();
+                    if (timeLeft <= 0) { return clearInterval(interval); }
+                    var particleCount = 50 * (timeLeft / duration);
+                    confetti(Object.assign({}, defaults, {
+                        particleCount,
+                        origin: { x: randomInRange(0.1, 0.3), y: Math.random() - 0.2 },
+                        colors: ['#1d4ed8', '#10b981', '#ef4444', '#ffffff']
+                    }));
+                    confetti(Object.assign({}, defaults, {
+                        particleCount,
+                        origin: { x: randomInRange(0.7, 0.9), y: Math.random() - 0.2 },
+                        colors: ['#1d4ed8', '#10b981', '#ef4444', '#ffffff']
+                    }));
+                }, 250);
+            }
+
+            // Trigger Confetti on Load and on Click
+            setTimeout(fireConfetti, 500);
+            document.getElementById('confetti-trigger').addEventListener('click', fireConfetti);
+        });
+    </script>
+</body>
+
+</html>
