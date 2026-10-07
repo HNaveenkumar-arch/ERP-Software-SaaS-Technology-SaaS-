@@ -5,12 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SaaS / ERP Software Navigation - Dark Mode</title>
-    <!-- AOS Animation CSS -->
+
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <!-- FontAwesome for Icons -->
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="resource.css">
     <link rel="stylesheet" href="common.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 
 <body>
@@ -42,15 +44,15 @@
             </div>
 
             <ul class="nav-links" id="nav-links">
-                <li data-aos="fade-down" data-aos-delay="100"><a href="index.html" class="active">Home</a></li>
+                <li data-aos="fade-down" data-aos-delay="100"><a href="index.html">Home</a></li>
                 <li data-aos="fade-down" data-aos-delay="200"><a href="platform.html">Platform</a></li>
                 <li data-aos="fade-down" data-aos-delay="300"><a href="Solutions.html">Solutions</a></li>
-                <li data-aos="fade-down" data-aos-delay="400"><a href="index.html">Industries</a></li>
+                <li data-aos="fade-down" data-aos-delay="400"><a href="industries.html">Industries</a></li>
                 <li data-aos="fade-down" data-aos-delay="500"><a href="pricing.html">Pricing</a></li>
-                <li data-aos="fade-down" data-aos-delay="600"><a href="resources.html">Resources</a></li>
+                <li data-aos="fade-down" data-aos-delay="600"><a href="resources.html" class="active">Resources</a></li>
                 <li data-aos="fade-down" data-aos-delay="700"><a href="contact.html">Contact</a></li>
 
-                <!-- Mobile Actions (Visible only in mobile) -->
+
                 <li class="mobile-actions">
                     <a href="login.html" class="login-btn">Login</a>
                     <a href="getstart.html" class="get-started-btn">Get Started</a>
@@ -64,21 +66,620 @@
         </nav>
     </header>
 
-    <section style="height: 150vh; padding: 150px 5%; background: #0f172a; color: white;">
-        <h1 data-aos="fade-up">Welcome to the Future of ERP Software</h1>
-        <p data-aos="fade-up" data-aos-delay="200" style="margin-top: 15px; color: #94a3b8;">Scroll down to see the
-            navbar shrink effect.</p>
+
+
+
+    <section class="research-section">
+        <div class="res-container">
+
+
+            <div class="res-header res-anim">
+                <div class="res-badge">ERP KNOWLEDGE & ARCHITECTURE HUB</div>
+                <h2>Resources & Insights</h2>
+                <h3 class="res-subtitle text-blue">Everything you need to get more from your ERP platform.</h3>
+                <p>In-depth technical guides, modular ERP tutorials, industry whitepapers, enterprise case studies,
+                    benchmarks, and executive advisory to accelerate continuous operational transformation.</p>
+                <div class="res-btns">
+                    <a href="404page.html" class="res-btn-primary"><i class="fa-regular fa-compass"></i> Explore
+                        Resources</a>
+                    <a href="404page.html" class="res-btn-secondary"><i class="fa-regular fa-calendar-check"></i> Book a
+                        Technical Demo</a>
+                </div>
+                <div class="res-features">
+                    <span><i class="fa-solid fa-certificate text-blue"></i> 120+ Technical Guides</span>
+                    <span><i class="fa-solid fa-shield-halved text-green"></i> Verified SOC2 Best Practices</span>
+                    <span><i class="fa-solid fa-chart-simple text-purple"></i> Quarterly Research Reports</span>
+                </div>
+            </div>
+
+
+            <div class="res-search-wrapper res-anim">
+                <div class="search-bar-layout">
+
+                    <div class="search-input-box">
+                        <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                        <input type="text" id="researchSearch"
+                            placeholder="Search guides, articles, whitepapers, reports, tutorials...">
+                        <button id="searchBtn" class="search-btn"><i class="fa-solid fa-arrow-right"></i></button>
+                    </div>
+
+                    <div class="search-filters">
+                        <button class="filter-btn active">All Resources</button>
+                        <button class="filter-btn">ERP Guides</button>
+                        <button class="filter-btn">Industry Insights</button>
+                        <button class="filter-btn">Whitepapers</button>
+                        <button class="filter-btn">Case Studies</button>
+                        <button class="filter-btn">Tutorials</button>
+                    </div>
+                </div>
+
+                <p id="searchError" class="search-error-msg"><i class="fa-solid fa-circle-exclamation"></i> Please enter
+                    a search term!</p>
+            </div>
+
+
+            <div class="res-dashboard res-anim">
+
+                <div class="dash-browser-header">
+                    <div class="browser-dots"><span></span><span></span><span></span></div>
+                    <div class="browser-url">aura-erp://telemetry.console.network/architecture/live-view</div>
+                    <div class="browser-status"><span class="dot-green"></span> Cluster Healthy: 99.99%</div>
+                </div>
+
+
+                <div class="dash-body">
+
+                    <div class="dash-sidebar">
+                        <div class="sidebar-title">ARCHITECTURE VIEWS</div>
+                        <button class="dash-tab active" data-tab="1"><i class="fa-solid fa-building-columns"></i>
+                            General Ledger Fabric</button>
+                        <button class="dash-tab" data-tab="2"><i class="fa-solid fa-box-open"></i> Inventory &
+                            Warehousing</button>
+                        <button class="dash-tab" data-tab="3"><i class="fa-solid fa-circle-nodes"></i> Cross-Entity CRM
+                            Flow</button>
+                        <button class="dash-tab" data-tab="4"><i class="fa-solid fa-shield-halved"></i> RBAC & Audit
+                            Logs</button>
+
+
+                        <div class="sync-rate-box">
+                            <h4>Automated Sync Rate</h4>
+                            <p>99.84% zero-touch ledger posting</p>
+                            <div class="progress-bar">
+                                <div class="progress-fill"></div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="dash-main">
+
+                        <div class="dash-metrics">
+                            <div class="dash-m-card">
+                                <h5>Active Subs. Ledger <i class="fa-solid fa-building text-blue"></i></h5>
+                                <h3><span class="dash-counter" id="count-1" data-val="32" data-decimal="0">0</span>
+                                    Entities</h3>
+                                <p class="text-green"><i class="fa-solid fa-arrow-trend-up"></i> Real-time consolidated
+                                </p>
+                            </div>
+                            <div class="dash-m-card">
+                                <h5>Event Stream Throughput <i class="fa-solid fa-bolt text-purple"></i></h5>
+                                <h3><span class="dash-counter" id="count-2" data-val="148200" data-decimal="0">0</span>
+                                    msg/s</h3>
+                                <p class="text-blue"><i class="fa-solid fa-clock"></i> Sub-12ms latency</p>
+                            </div>
+                            <div class="dash-m-card">
+                                <h5>Reconciliation Cycle <i class="fa-solid fa-hourglass-half text-green"></i></h5>
+                                <h3><span class="dash-counter" id="count-3" data-val="0.4" data-decimal="1">0</span>
+                                    Days</h3>
+                                <p class="text-green"><i class="fa-solid fa-arrow-down"></i> Reduced from 12 days</p>
+                            </div>
+                        </div>
+
+
+                        <div class="dash-chart-box">
+                            <div class="chart-header">
+                                <div>
+                                    <h4 id="chart-title">Unified Telemetry & Journal Posting Velocity</h4>
+                                    <p>Hourly automated journal generation across SAP, Salesforce & AuraERP core</p>
+                                </div>
+                                <span class="live-badge">Live Telemetry</span>
+                            </div>
+                            <div class="chart-canvas-wrapper">
+                                <canvas id="researchChart"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+
+
+    <section class="knowledge-domain-section">
+        <div class="kd-container">
+
+
+            <div class="kd-header-layout kd-anim">
+                <div class="kd-header-left">
+                    <div class="kd-badge">STRUCTURED LEARNING PATHS</div>
+                    <h2>Browse by Knowledge Domain</h2>
+                </div>
+                <div class="kd-header-right">
+                    <p>Modular operational frameworks designed for CIOs, technical leads, and finance transformation
+                        officers.</p>
+                </div>
+            </div>
+
+
+            <div class="kd-grid">
+
+
+                <div class="kd-card kd-flip-card">
+                    <div class="kd-icon bg-blue-light text-blue"><i class="fa-solid fa-book-open"></i></div>
+                    <h3>ERP Guides</h3>
+                    <p>Step-by-step blueprints for multi-entity architecture, cloud database migration, and autonomous
+                        workflow design.</p>
+                    <div class="kd-footer border-blue">
+                        <span class="kd-count">34 Manuals & Frameworks</span>
+                        <a href="404page.html" class="kd-link text-blue">Explore Guides <i
+                                class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="kd-card kd-flip-card">
+                    <div class="kd-icon bg-purple-light text-purple"><i class="fa-solid fa-arrow-trend-up"></i></div>
+                    <h3>Industry Insights</h3>
+                    <p>Sector-specific research covering discrete manufacturing, pharmaceutical supply chains, logistics
+                        telemetry, and retail omnichannel.</p>
+                    <div class="kd-footer border-purple">
+                        <span class="kd-count">28 Industry Papers</span>
+                        <a href="404page.html" class="kd-link text-purple">Explore Insights <i
+                                class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="kd-card kd-flip-card">
+                    <div class="kd-icon bg-green-light text-green"><i class="fa-regular fa-circle-play"></i></div>
+                    <h3>Product Tutorials</h3>
+                    <p>Developer & analyst masterclasses on real-time general ledger reconciliation, warehouse batch
+                        tracking, and webhook APIs.</p>
+                    <div class="kd-footer border-green">
+                        <span class="kd-count">42 Video Walkthroughs</span>
+                        <a href="404page.html" class="kd-link text-green">Watch Tutorials <i
+                                class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+
+                <div class="kd-card kd-flip-card">
+                    <div class="kd-icon bg-yellow-light text-yellow"><i class="fa-regular fa-file-lines"></i></div>
+                    <h3>Whitepapers & Reports</h3>
+                    <p>Deep-dive benchmarks, compliance roadmaps (SOC 2, ISO 27001, HIPAA, IFRS 16), and Total Cost of
+                        Ownership (TCO) calculators.</p>
+                    <div class="kd-footer border-yellow">
+                        <span class="kd-count">19 Benchmarking PDFs</span>
+                        <a href="404page.html" class="kd-link text-yellow">Download Reports <i
+                                class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="kd-card kd-flip-card">
+                    <div class="kd-icon bg-pink-light text-pink"><i class="fa-regular fa-building"></i></div>
+                    <h3>Case Studies</h3>
+                    <p>Verified operational retrospectives from international mid-market to Global 2000 enterprises
+                        modernizing legacy SAP/Oracle workloads.</p>
+                    <div class="kd-footer border-pink">
+                        <span class="kd-count">16 Customer Stories</span>
+                        <a href="404page.html" class="kd-link text-pink">Read Case Studies <i
+                                class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="kd-card kd-flip-card">
+                    <div class="kd-icon bg-cyan-light text-cyan"><i class="fa-solid fa-newspaper"></i></div>
+                    <h3>Blog & Articles</h3>
+                    <p>Weekly perspectives on autonomous finance, machine-learning assisted invoice matching, and
+                        enterprise software engineering.</p>
+                    <div class="kd-footer border-cyan">
+                        <span class="kd-count">85+ Technical Posts</span>
+                        <a href="404page.html" class="kd-link text-cyan">Read Articles <i
+                                class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <section class="guide-section">
+        <div class="guide-container">
+            <div class="guide-layout">
+
+
+                <div class="guide-content">
+                    <div class="guide-badge gd-anim"><i class="fa-solid fa-book-open-reader"></i> FEATURED COMPREHENSIVE
+                        GUIDE • 48 PAGES PDF</div>
+                    <h2 class="gd-anim">The Complete Guide to Modern ERP Software</h2>
+                    <p class="gd-desc gd-anim">Discover how next-generation cloud ERP centralizes global entity books,
+                        automates multi-tiered procurement approvals, and provides granular operational telematics for
+                        executive teams.</p>
+
+                    <ul class="guide-checklist gd-anim">
+                        <li><i class="fa-regular fa-circle-check text-blue"></i> Single-ledger data fabric architecture
+                            vs fragmented legacy departmental silos</li>
+                        <li><i class="fa-regular fa-circle-check text-blue"></i> Automating up to 70% of routine journal
+                            entries and purchase order matchings</li>
+                        <li><i class="fa-regular fa-circle-check text-blue"></i> Comprehensive SOC 2 Type II, ISO 27001,
+                            and regional data sovereignty blueprints</li>
+                    </ul>
+
+                    <div class="guide-btns gd-anim">
+                        <a href="404page.html" class="btn-primary-blue"><i class="fa-solid fa-download"></i> Download
+                            Free Guide (PDF)</a>
+                        <a href="404page.html" class="btn-text-dark">Preview Table of Contents <i
+                                class="fa-regular fa-eye"></i></a>
+                    </div>
+                </div>
+
+
+                <div class="guide-graphic gd-anim">
+                    <div class="graphic-bg">
+
+                        <div class="floating-playbook-card">
+                            <div class="playbook-edition"><i class="fa-regular fa-star"></i> 2026 Edition</div>
+                            <div class="pb-header">
+                                <div class="pb-icon">A</div>
+                                <span>AURAERP PLAYBOOK</span>
+                            </div>
+                            <h3>Modern Cloud ERP Playbook</h3>
+                            <p>Architectural paradigms for autonomous global operations.</p>
+
+                            <div class="pb-metric-box">
+                                <div class="pb-metric-head">
+                                    <span>BENCHMARK</span>
+                                    <span>RESULT</span>
+                                </div>
+                                <div class="pb-metric-value">+48% <small>Closing Velocity</small></div>
+                                <div class="pb-progress-bar">
+                                    <div class="pb-progress-fill"></div>
+                                </div>
+                            </div>
+
+                            <div class="pb-footer">
+                                <span>Author: ERP Research Lab</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+    <section class="publications-section">
+        <div class="pub-container">
+
+
+            <div class="pub-header-layout pub-anim">
+                <div class="pub-header-left">
+                    <div class="pub-badge">FIELD INSIGHTS</div>
+                    <h2>Latest Publications & Articles</h2>
+                </div>
+                <div class="pub-header-right">
+                    <div class="pub-toggle-bg">
+                        <button class="pub-toggle-btn active" id="btn-recent">Most Recent</button>
+                        <button class="pub-toggle-btn" id="btn-popular">Popular</button>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="pub-grid active-grid" id="grid-recent">
+
+                <div class="pub-card pub-flip-card">
+                    <div class="pc-top">
+                        <span class="pc-tag bg-blue-light text-blue">STRATEGY</span>
+                        <span class="pc-time">8 min read</span>
+                    </div>
+                    <div class="pc-mid">
+                        <div class="pc-icon text-blue"><i class="fa-solid fa-arrow-right-arrow-left"></i></div>
+                        <span class="pc-guide">Guide #402</span>
+                    </div>
+                    <div class="pc-body">
+                        <div class="pc-meta">Oct 24, 2026 • Executive Briefing</div>
+                        <h3>How to Choose the Right ERP Software for Your Business</h3>
+                        <p>Navigating vendor lock-in, multi-branch scaling dynamics, license structures, and 5-year
+                            total cost of ownership (TCO) evaluations.</p>
+                    </div>
+                    <div class="pc-footer">
+                        <div class="pc-author"><span class="author-av bg-blue-light text-blue">MV</span> Marcus Vance,
+                            VP Architect</div>
+                        <a href="404page.html" class="pc-link text-blue">Read <i
+                                class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+
+                <div class="pub-card pub-flip-card">
+                    <div class="pc-top">
+                        <span class="pc-tag bg-purple-light text-purple">ARCHITECTURE</span>
+                        <span class="pc-time">11 min read</span>
+                    </div>
+                    <div class="pc-mid">
+                        <div class="pc-icon text-purple"><i class="fa-solid fa-server"></i></div>
+                        <span class="pc-guide">Deep Dive #189</span>
+                    </div>
+                    <div class="pc-body">
+                        <div class="pc-meta">Oct 18, 2026 • System Architecture</div>
+                        <h3>Cloud ERP vs Traditional On-Premise ERP</h3>
+                        <p>A granular technical breakdown comparing real-time event streaming versus overnight batch ETL
+                            synchronization paradigms.</p>
+                    </div>
+                    <div class="pc-footer">
+                        <div class="pc-author"><span class="author-av bg-purple-light text-purple">ER</span> Elena
+                            Rostova, Principal Eng</div>
+                        <a href="404page.html" class="pc-link text-purple">Read <i
+                                class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+
+                <div class="pub-card pub-flip-card">
+                    <div class="pc-top">
+                        <span class="pc-tag bg-green-light text-green">AUTOMATION</span>
+                        <span class="pc-time">6 min read</span>
+                    </div>
+                    <div class="pc-mid">
+                        <div class="pc-icon text-green"><i class="fa-solid fa-robot"></i></div>
+                        <span class="pc-guide">Workflow #82</span>
+                    </div>
+                    <div class="pc-body">
+                        <div class="pc-meta">Oct 12, 2026 • Operational Efficiency</div>
+                        <h3>5 Ways ERP Automation Improves Business Operations</h3>
+                        <p>Eliminating manual PO approval roadblocks, three-way OCR invoice verification, and
+                            asynchronous payroll reconciliations.</p>
+                    </div>
+                    <div class="pc-footer">
+                        <div class="pc-author"><span class="author-av bg-green-dark text-white">DS</span> David Song,
+                            Head of Ops</div>
+                        <a href="404page.html" class="pc-link text-green">Read <i
+                                class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+
+                <div class="pub-card pub-flip-card">
+                    <div class="pc-top">
+                        <span class="pc-tag bg-yellow-light text-yellow">IMPLEMENTATION</span>
+                        <span class="pc-time">14 min read</span>
+                    </div>
+                    <div class="pc-mid">
+                        <div class="pc-icon text-yellow"><i class="fa-solid fa-rocket"></i></div>
+                        <span class="pc-guide">Roadmap #301</span>
+                    </div>
+                    <div class="pc-body">
+                        <div class="pc-meta">Oct 05, 2026 • Implementation Playbook</div>
+                        <h3>ERP Implementation: A Step-by-Step Enterprise Guide</h3>
+                        <p>From historical ledger cleansing and sandbox migration to organizational change management:
+                            the battle-tested 90-day blueprint.</p>
+                    </div>
+                    <div class="pc-footer">
+                        <div class="pc-author"><span class="author-av bg-yellow-dark text-white">AL</span> Amara Lin,
+                            Solutions Director</div>
+                        <a href="404page.html" class="pc-link text-yellow">Read <i
+                                class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+
+                <div class="pub-card pub-flip-card">
+                    <div class="pc-top">
+                        <span class="pc-tag bg-purple-light text-purple">ANALYTICS</span>
+                        <span class="pc-time">7 min read</span>
+                    </div>
+                    <div class="pc-mid">
+                        <div class="pc-icon text-purple"><i class="fa-solid fa-chart-simple"></i></div>
+                        <span class="pc-guide">Analytics #94</span>
+                    </div>
+                    <div class="pc-body">
+                        <div class="pc-meta">Sep 28, 2026 • Business Intelligence</div>
+                        <h3>How Real-Time Analytics Improve Business Decisions</h3>
+                        <p>Unifying operational supply chain telemetry and financial forecasting into a responsive
+                            single pane of glass.</p>
+                    </div>
+                    <div class="pc-footer">
+                        <div class="pc-author"><span class="author-av bg-purple-dark text-white">TC</span> Tom Chen,
+                            Chief Data Officer</div>
+                        <a href="404page.html" class="pc-link text-purple">Read <i
+                                class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+
+                <div class="pub-card pub-flip-card">
+                    <div class="pc-top">
+                        <span class="pc-tag bg-blue-light text-blue">SCALABILITY</span>
+                        <span class="pc-time">9 min read</span>
+                    </div>
+                    <div class="pc-mid">
+                        <div class="pc-icon text-blue"><i class="fa-solid fa-server"></i></div>
+                        <span class="pc-guide">Infra #512</span>
+                    </div>
+                    <div class="pc-body">
+                        <div class="pc-meta">Sep 20, 2026 • Global Infrastructure</div>
+                        <h3>Building a Scalable Digital Business Architecture</h3>
+                        <p>Designing event-driven ERP micro-integrations that allow hyper-growth organizations to handle
+                            10x order spikes effortlessly.</p>
+                    </div>
+                    <div class="pc-footer">
+                        <div class="pc-author"><span class="author-av bg-blue-dark text-white">JW</span> Julian Weber,
+                            Enterprise Fellow</div>
+                        <a href="404page.html" class="pc-link text-blue">Read <i
+                                class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="pub-grid hidden-grid" id="grid-popular">
+
+                <div class="pub-card pub-flip-card">
+                    <div class="pc-top">
+                        <span class="pc-tag bg-green-light text-green">FINANCE</span>
+                        <span class="pc-time">15 min read</span>
+                    </div>
+                    <div class="pc-mid">
+                        <div class="pc-icon text-green"><i class="fa-solid fa-money-bill-trend-up"></i></div>
+                        <span class="pc-guide">Ledger #101</span>
+                    </div>
+                    <div class="pc-body">
+                        <div class="pc-meta">All Time Most Read • Accounting</div>
+                        <h3>The Ultimate Guide to Multi-Entity Ledger Consolidation</h3>
+                        <p>Learn how Fortune 500 CFOs automate month-end closures and eliminate cross-border tax
+                            discrepancies in real-time.</p>
+                    </div>
+                    <div class="pc-footer">
+                        <div class="pc-author"><span class="author-av bg-green-dark text-white">MV</span> Marcus Vance,
+                            VP Architect</div>
+                        <a href="404page.html" class="pc-link text-green">Read <i
+                                class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="pub-card pub-flip-card">
+                    <div class="pc-top">
+                        <span class="pc-tag bg-blue-light text-blue">AI TRENDS</span>
+                        <span class="pc-time">12 min read</span>
+                    </div>
+                    <div class="pc-mid">
+                        <div class="pc-icon text-blue"><i class="fa-solid fa-microchip"></i></div>
+                        <span class="pc-guide">Report #202</span>
+                    </div>
+                    <div class="pc-body">
+                        <div class="pc-meta">Trending Now • AI Integration</div>
+                        <h3>Machine Learning in Modern ERP Modules</h3>
+                        <p>How predictive algorithms are reshaping inventory management and automated invoice matching
+                            frameworks.</p>
+                    </div>
+                    <div class="pc-footer">
+                        <div class="pc-author"><span class="author-av bg-blue-dark text-white">ER</span> Elena Rostova,
+                            Principal Eng</div>
+                        <a href="404page.html" class="pc-link text-blue">Read <i
+                                class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="pub-card pub-flip-card">
+                    <div class="pc-top">
+                        <span class="pc-tag bg-purple-light text-purple">SECURITY</span>
+                        <span class="pc-time">10 min read</span>
+                    </div>
+                    <div class="pc-mid">
+                        <div class="pc-icon text-purple"><i class="fa-solid fa-shield-halved"></i></div>
+                        <span class="pc-guide">Protocol #05</span>
+                    </div>
+                    <div class="pc-body">
+                        <div class="pc-meta">Essential Read • Cybersecurity</div>
+                        <h3>Zero-Trust Frameworks for Cloud ERPs</h3>
+                        <p>Securing sensitive enterprise data with biometric RBAC, immutable audit trails, and VPC
+                            isolation.</p>
+                    </div>
+                    <div class="pc-footer">
+                        <div class="pc-author"><span class="author-av bg-purple-dark text-white">TC</span> Tom Chen,
+                            Chief Data Officer</div>
+                        <a href="404page.html" class="pc-link text-purple">Read <i
+                                class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+
+
+    <section class="newsletter-section">
+        <div class="news-container">
+            <div class="news-box section-flip-anim">
+                <div class="news-badge"><i class="fa-regular fa-envelope"></i> BI-WEEKLY ARCHITECTURE DISPATCH</div>
+                <h2>Get ERP Insights Delivered to Your Inbox</h2>
+                <p>Join 28,000+ CIOs, CFOs, and operations leaders. Receive practical ERP architecture frameworks,
+                    product changelogs, and industry benchmarks directly to your email.</p>
+
+                <form id="newsletterForm" class="news-form">
+                    <div class="input-group">
+                        <i class="fa-solid fa-at"></i>
+                        <input type="text" id="newsEmail" placeholder="Enter your work email address">
+                        <button type="button" id="newsSubscribeBtn">Subscribe Now</button>
+                    </div>
+                    <div id="newsError" class="news-error"><i class="fa-solid fa-circle-exclamation"></i> Please enter a
+                        valid email address!</div>
+                </form>
+
+                <div class="news-disclaimer">
+                    <i class="fa-solid fa-shield-check text-green"></i> Zero spam. No third-party data sharing.
+                    Unsubscribe anytime.
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <section class="cta-section">
+        <div class="cta-container">
+            <div class="cta-blue-box section-flip-anim">
+
+                <div class="decor-circle c-1"></div>
+                <div class="decor-circle c-2"></div>
+                <div class="decor-circle c-3"></div>
+
+                <div class="cta-content">
+                    <div class="cta-item-anim">
+                        <div class="cta-badge-blue">MODERN OPERATIONS PLATFORM</div>
+                    </div>
+                    <h2 class="cta-item-anim">Ready to Transform Your Business Operations?</h2>
+                    <p class="cta-item-anim">Bring your teams, multi-entity finances, supply chain telematics, and
+                        automated approvals together with one unified ERP cloud platform.</p>
+
+                    <div class="cta-buttons cta-item-anim">
+                        <a href="404page.html" class="btn-solid">Get Started Free <i
+                                class="fa-solid fa-arrow-right"></i></a>
+                        <a href="404page.html" class="btn-outline"><i class="fa-solid fa-user-tie"></i> Book an
+                            Architecture Demo</a>
+                    </div>
+
+                    <div class="cta-features cta-item-anim">
+                        <span><i class="fa-solid fa-check"></i> 14-day risk-free sandbox</span>
+                        <span><i class="fa-solid fa-check"></i> Dedicated solutions architect</span>
+                        <span><i class="fa-solid fa-check"></i> Zero legacy hardware footprint</span>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
 
     <footer id="footer" class="footer">
         <div class="footer-container">
-            <!-- Column 1: Brand & Social -->
+
             <div class="footer-brand" data-aos="fade-up" data-aos-duration="1000">
                 <div class="logo">
                     <a href="index.html"><img src="./asset/logo_bule.webp" alt="logo"></a>
                 </div>
-                <!-- ஸ்கிரீன்ஷாட்டில் உள்ள அதே வாசகம் -->
+
                 <p class="footer-desc">
                     One connected platform for your entire business. Streamline workflows, boost productivity, and make
                     data-driven decisions.
@@ -91,7 +692,7 @@
                 </div>
             </div>
 
-            <!-- Column 2: Platform Links (ஸ்கிரீன்ஷாட்டில் உள்ள 5 மெனுக்கள்) -->
+
             <div class="footer-links" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
                 <h3>PLATFORM</h3>
                 <ul>
@@ -103,7 +704,7 @@
                 </ul>
             </div>
 
-            <!-- Column 3: Company Links (நேவ்பாரில் உள்ள முதல் 5 மெனுக்கள்) -->
+
             <div class="footer-links" data-aos="fade-up" data-aos-delay="400" data-aos-duration="1000">
                 <h3>COMPANY</h3>
                 <ul>
@@ -115,7 +716,7 @@
                 </ul>
             </div>
 
-            <!-- Column 4: Resources Links (நேவ்பார் மீதி 2 + ஸ்கிரீன்ஷாட் 3) -->
+
             <div class="footer-links" data-aos="fade-up" data-aos-delay="600" data-aos-duration="1000">
                 <h3>RESOURCES</h3>
                 <ul>
@@ -128,7 +729,7 @@
             </div>
         </div>
 
-        <!-- Footer Bottom: Copyright & Legal -->
+
         <div class="footer-bottom-container">
             <div class="footer-bottom">
                 <p>&copy; 2026 STACKLY. All rights reserved.</p>
@@ -144,9 +745,356 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 
-    <!-- AOS Animation JS -->
+
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="script.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+
+
+            setTimeout(() => {
+
+                gsap.registerPlugin(ScrollTrigger);
+
+
+
+
+                gsap.utils.toArray('.res-anim').forEach((element, i) => {
+                    gsap.fromTo(element,
+                        { opacity: 0, y: 30 },
+                        {
+                            opacity: 1, y: 0, duration: 0.8, ease: "power2.out", delay: i * 0.1,
+                            scrollTrigger: { trigger: ".research-section", start: "top 85%", toggleActions: "play none none none" }
+                        }
+                    );
+                });
+
+
+
+
+                const searchInput = document.getElementById("researchSearch");
+                const searchBtn = document.getElementById("searchBtn");
+                const errorMsg = document.getElementById("searchError");
+
+                searchBtn.addEventListener("click", () => {
+                    if (searchInput.value.trim() === "") {
+
+                        errorMsg.style.display = "block";
+                    } else {
+
+                        errorMsg.style.display = "none";
+                        window.location.href = "404page.html";
+                    }
+                });
+
+
+
+
+
+                const tabData = {
+                    1: {
+                        title: "Unified Telemetry & Journal Posting Velocity",
+                        metrics: [32, 148200, 0.4],
+                        chart: [10, 20, 15, 30, 25, 45, 60]
+                    },
+                    2: {
+                        title: "Global Inventory Restock Cycle",
+                        metrics: [18, 92000, 1.2],
+                        chart: [30, 25, 40, 35, 50, 45, 65]
+                    },
+                    3: {
+                        title: "Omnichannel Lead Conversion Flow",
+                        metrics: [55, 64000, 2.5],
+                        chart: [15, 35, 20, 45, 30, 55, 75]
+                    },
+                    4: {
+                        title: "RBAC Access Violation Logs",
+                        metrics: [120, 1500, 0.1],
+                        chart: [5, 10, 8, 15, 12, 20, 5]
+                    }
+                };
+
+
+                let researchChart;
+                const ctx = document.getElementById('researchChart');
+
+                if (ctx && typeof Chart !== 'undefined') {
+
+                    let gradient = ctx.getContext('2d').createLinearGradient(0, 0, 0, 200);
+                    gradient.addColorStop(0, 'rgba(37, 99, 235, 0.2)');
+                    gradient.addColorStop(1, 'rgba(37, 99, 235, 0)');
+
+                    researchChart = new Chart(ctx, {
+                        type: 'line',
+                        data: {
+                            labels: ['00:00', '04:00', '08:00', '12:00', '16:00', '20:00', 'Current'],
+                            datasets: [{
+                                label: 'Velocity',
+                                data: tabData[1].chart,
+                                borderColor: '#2563eb',
+                                backgroundColor: gradient,
+                                borderWidth: 2,
+                                fill: true,
+                                tension: 0.4,
+                                pointBackgroundColor: '#ffffff',
+                                pointBorderColor: '#2563eb',
+                                pointBorderWidth: 2,
+                                pointRadius: 4
+                            }]
+                        },
+                        options: {
+                            responsive: true,
+                            maintainAspectRatio: false,
+                            plugins: { legend: { display: false } },
+                            scales: {
+                                x: { display: false },
+                                y: { display: false, min: 0 }
+                            },
+                            animation: { duration: 1500, easing: 'easeOutQuart' }
+                        }
+                    });
+                }
+
+
+                function animateCounters(dataArray) {
+                    for (let i = 1; i <= 3; i++) {
+                        let el = document.getElementById(`count-${i}`);
+                        let targetVal = dataArray[i - 1];
+                        let decimals = parseInt(el.getAttribute('data-decimal')) || 0;
+                        let obj = { val: 0 };
+
+                        gsap.to(obj, {
+                            val: targetVal,
+                            duration: 2,
+                            ease: "power3.out",
+                            onUpdate: function () {
+
+                                el.innerText = decimals > 0
+                                    ? obj.val.toFixed(decimals)
+                                    : Math.floor(obj.val).toLocaleString('en-US');
+                            }
+                        });
+                    }
+                }
+
+
+                animateCounters(tabData[1].metrics);
+
+
+                const tabs = document.querySelectorAll('.dash-tab');
+                const chartTitle = document.getElementById('chart-title');
+
+                tabs.forEach(tab => {
+                    tab.addEventListener('click', function () {
+
+                        tabs.forEach(t => t.classList.remove('active'));
+
+                        this.classList.add('active');
+
+
+                        let tabId = this.getAttribute('data-tab');
+                        let newData = tabData[tabId];
+
+
+                        chartTitle.innerText = newData.title;
+
+
+                        animateCounters(newData.metrics);
+
+
+                        if (researchChart) {
+                            researchChart.data.datasets[0].data = newData.chart;
+                            researchChart.update();
+                        }
+                    });
+                });
+
+            }, 2200);
+
+        });
+
+
+        document.addEventListener("DOMContentLoaded", () => {
+
+
+            setTimeout(() => {
+
+                gsap.registerPlugin(ScrollTrigger);
+
+
+
+
+
+                gsap.fromTo(".kd-anim",
+                    { opacity: 0, y: 30 },
+                    {
+                        opacity: 1, y: 0, duration: 0.8, ease: "power2.out",
+                        scrollTrigger: { trigger: ".knowledge-domain-section", start: "top 85%", toggleActions: "play none none none" }
+                    }
+                );
+
+
+                gsap.utils.toArray(".kd-flip-card").forEach((card) => {
+                    gsap.fromTo(card,
+                        { opacity: 0, rotationX: 90, transformPerspective: 1200 },
+                        {
+                            opacity: 1, rotationX: 0, duration: 1, ease: "back.out(1.2)",
+                            scrollTrigger: {
+                                trigger: card,
+                                start: "top 85%",
+                                toggleActions: "play none none none"
+                            }
+                        }
+                    );
+                });
+
+
+
+
+
+                gsap.fromTo(".gd-anim",
+                    { opacity: 0, y: 30 },
+                    {
+                        opacity: 1, y: 0, duration: 0.8, stagger: 0.15, ease: "power2.out",
+                        scrollTrigger: {
+                            trigger: ".guide-section",
+                            start: "top 75%",
+                            toggleActions: "play none none none"
+                        }
+                    }
+                );
+
+
+                gsap.fromTo(".guide-graphic",
+                    { opacity: 0, scale: 0.9 },
+                    {
+                        opacity: 1, scale: 1, duration: 1, ease: "power3.out",
+                        scrollTrigger: {
+                            trigger: ".guide-section",
+                            start: "top 75%",
+                            toggleActions: "play none none none"
+                        }
+                    }
+                );
+
+            }, 2200);
+
+        });
+
+        document.addEventListener("DOMContentLoaded", () => {
+
+
+            setTimeout(() => {
+
+                gsap.registerPlugin(ScrollTrigger);
+
+
+
+
+                const btnRecent = document.getElementById("btn-recent");
+                const btnPopular = document.getElementById("btn-popular");
+                const gridRecent = document.getElementById("grid-recent");
+                const gridPopular = document.getElementById("grid-popular");
+
+                function switchGrid(showGrid, hideGrid, activeBtn, inactiveBtn) {
+
+                    activeBtn.classList.add("active");
+                    inactiveBtn.classList.remove("active");
+
+
+                    gsap.to(hideGrid, {
+                        opacity: 0, duration: 0.3, onComplete: () => {
+                            hideGrid.style.display = "none";
+                            hideGrid.classList.remove("active-grid");
+
+
+                            showGrid.style.display = "grid";
+                            showGrid.classList.add("active-grid");
+                            gsap.fromTo(showGrid, { opacity: 0 }, { opacity: 1, duration: 0.3 });
+
+
+                            gsap.fromTo(showGrid.querySelectorAll(".pub-flip-card"),
+                                { opacity: 0, rotationY: -90, transformPerspective: 1200 },
+                                { opacity: 1, rotationY: 0, duration: 0.8, stagger: 0.1, ease: "back.out(1.2)" }
+                            );
+                        }
+                    });
+                }
+
+                btnRecent.addEventListener("click", () => switchGrid(gridRecent, gridPopular, btnRecent, btnPopular));
+                btnPopular.addEventListener("click", () => switchGrid(gridPopular, gridRecent, btnPopular, btnRecent));
+
+
+
+
+
+
+                gsap.fromTo(".pub-anim",
+                    { opacity: 0, y: 30 },
+                    {
+                        opacity: 1, y: 0, duration: 0.8, ease: "power2.out",
+                        scrollTrigger: { trigger: ".publications-section", start: "top 85%", toggleActions: "play none none none" }
+                    }
+                );
+
+
+                gsap.utils.toArray("#grid-recent .pub-flip-card").forEach((card) => {
+                    gsap.fromTo(card,
+                        { opacity: 0, rotationY: -90, transformPerspective: 1200 },
+                        {
+                            opacity: 1, rotationY: 0, duration: 1.2, ease: "back.out(1.2)",
+                            scrollTrigger: { trigger: card, start: "top 85%", toggleActions: "play none none none" }
+                        }
+                    );
+                });
+
+
+                gsap.utils.toArray(".section-flip-anim").forEach((box) => {
+                    gsap.fromTo(box,
+                        { opacity: 0, rotationX: 45, transformPerspective: 1500, y: 50 },
+                        {
+                            opacity: 1, rotationX: 0, y: 0, duration: 1.2, ease: "power3.out",
+                            scrollTrigger: { trigger: box, start: "top 80%", toggleActions: "play none none none" }
+                        }
+                    );
+                });
+
+
+                gsap.fromTo(".cta-item-anim",
+                    { opacity: 0, y: 25 },
+                    {
+                        opacity: 1, y: 0, duration: 0.6, stagger: 0.15, ease: "power2.out",
+                        scrollTrigger: { trigger: ".cta-section", start: "top 75%", toggleActions: "play none none none" }
+                    }
+                );
+
+
+
+
+                const emailInput = document.getElementById('newsEmail');
+                const subscribeBtn = document.getElementById('newsSubscribeBtn');
+                const newsError = document.getElementById('newsError');
+
+                subscribeBtn.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const emailVal = emailInput.value.trim();
+
+
+                    if (emailVal === '' || !emailVal.includes('@')) {
+                        newsError.style.display = 'block';
+                    } else {
+                        newsError.style.display = 'none';
+
+                        window.location.href = '404page.html';
+                    }
+                });
+
+            }, 2200);
+
+        });
+
+    </script>
 </body>
 
 </html>

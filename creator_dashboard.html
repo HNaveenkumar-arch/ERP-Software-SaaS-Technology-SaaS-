@@ -1,0 +1,794 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creator Dashboard | Stackly</title>
+
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="creator_dashboard.css">
+
+
+    <script>
+        if (!sessionStorage.getItem('userEmail')) {
+            alert("Unauthorized Access! Please Login.");
+            window.location.replace("login.html");
+        }
+    </script>
+</head>
+
+<body>
+
+    <div class="sidebar-overlay" id="sidebarOverlay" onclick="toggleSidebar()"></div>
+
+
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <a href="index.html" class="logo">
+                <img src="./asset/logo_bule.webp" alt="logo"> </a>
+            <span class="role-badge creator-badge">CREATOR</span>
+        </div>
+
+        <div class="sidebar-menu">
+            <a class="nav-item active" onclick="switchTab('tab-workspace', this, 'Creator Workspace')"><i
+                    class="fas fa-border-all"></i> Workspace</a>
+            <a class="nav-item" onclick="switchTab('tab-content', this, 'Content Hub')"><i
+                    class="fas fa-photo-video"></i> Content Hub</a>
+            <a class="nav-item" onclick="switchTab('tab-campaigns', this, 'Active Campaigns')"><i
+                    class="fas fa-bullhorn"></i> Campaigns</a>
+            <a class="nav-item" onclick="switchTab('tab-analytics', this, 'Audience Analytics')"><i
+                    class="fas fa-chart-line"></i> Analytics</a>
+            <a class="nav-item" onclick="switchTab('tab-monetization', this, 'Monetization')"><i
+                    class="fas fa-hand-holding-dollar"></i> Monetization</a>
+            <a class="nav-item" onclick="switchTab('tab-settings', this, 'Creator Settings')"><i
+                    class="fas fa-sliders-h"></i> Settings</a>
+        </div>
+
+        <div class="sidebar-profile">
+            <div class="profile-avatar"><i class="fa-solid fa-pen-nib"></i></div>
+            <div class="profile-info">
+                <h4 id="userNameDisplay">Loading...</h4>
+                <p id="userEmailDisplay">loading@email.com</p>
+            </div>
+        </div>
+    </aside>
+
+
+    <main class="main-content">
+
+        <header class="topbar">
+            <div class="topbar-left">
+                <button class="menu-toggle" onclick="toggleSidebar()"><i class="fas fa-bars"></i></button>
+                <h2 id="pageTitle">Creator Workspace</h2>
+            </div>
+            <div class="topbar-right">
+                <button onclick="window.location.href='index.html'" class="btn-header"><i class="fas fa-home"></i> <span
+                        class="hide-mobile">Home</span></button>
+                <button onclick="logout()" class="btn-header btn-logout"><i class="fas fa-power-off"></i> <span
+                        class="hide-mobile">Logout</span></button>
+            </div>
+        </header>
+
+        <div class="dashboard-body">
+
+            <div id="tab-workspace" class="content-tab active-tab">
+                <div class="grid-4 mb-30">
+                    <div class="stat-card" data-aos="fade-up">
+                        <div class="icon-box bg-purple"><i class="fas fa-eye"></i></div>
+                        <div class="stat-info">
+                            <p>Total Views</p>
+                            <h3>2.4M</h3>
+                        </div>
+                    </div>
+                    <div class="stat-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="icon-box bg-blue"><i class="fas fa-users"></i></div>
+                        <div class="stat-info">
+                            <p>Subscribers</p>
+                            <h3>850K</h3>
+                        </div>
+                    </div>
+                    <div class="stat-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="icon-box bg-green"><i class="fas fa-wallet"></i></div>
+                        <div class="stat-info">
+                            <p>This Month</p>
+                            <h3>$12.5K</h3>
+                        </div>
+                    </div>
+                    <div class="stat-card" data-aos="fade-up" data-aos-delay="300">
+                        <div class="icon-box bg-orange"><i class="fas fa-heart"></i></div>
+                        <div class="stat-info">
+                            <p>Avg Engagement</p>
+                            <h3>14.2%</h3>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid-2 mb-30">
+                    <div class="premium-card" data-aos="fade-down">
+                        <h3 class="card-title">Audience Engagement Trend</h3>
+                        <div class="chart-container"><canvas id="engagementChart"></canvas></div>
+                    </div>
+                    <div class="premium-card" data-aos="fade-up">
+                        <h3 class="card-title">Quick Actions</h3>
+                        <div class="grid-2">
+                            <button class="action-btn" onclick="window.location.href='404page.html'"><i
+                                    class="fas fa-cloud-upload-alt text-blue"></i> Upload
+                                Video</button>
+                            <button class="action-btn" onclick="window.location.href='404page.html'"><i
+                                    class="fas fa-pen-fancy text-purple"></i> Write Blog</button>
+                            <button class="action-btn" onclick="window.location.href='404page.html'"><i
+                                    class="fas fa-camera text-orange"></i> Schedule Post</button>
+                            <button class="action-btn" onclick="window.location.href='404page.html'"><i
+                                    class="fas fa-broadcast-tower text-danger"></i> Go
+                                Live</button>
+                        </div>
+                        <h3 class="card-title" style="margin-top: 20px;">System Alerts</h3>
+                        <div class="alert-box warning"><i class="fas fa-exclamation-circle"></i> "Tech Review V2" video
+                            is stuck in rendering queue.</div>
+                        <div class="alert-box success"><i class="fas fa-check-circle"></i> Sponsorship payment ($4,000)
+                            credited successfully.</div>
+                    </div>
+                </div>
+
+                <div class="grid-2 mb-30">
+                    <div class="premium-card" data-aos="fade-up">
+                        <h3 class="card-title">Recent Activity Stream</h3>
+                        <div class="timeline">
+                            <div class="time-item done">
+                                <div class="time-dot"></div>
+                                <h4>Instagram Reel Published</h4>
+                                <p>Reached 15k views in 1 hour.</p>
+                            </div>
+                            <div class="time-item done">
+                                <div class="time-dot"></div>
+                                <h4>Thumbnail Approved</h4>
+                                <p>Designer submitted final draft.</p>
+                            </div>
+                            <div class="time-item active">
+                                <div class="time-dot"></div>
+                                <h4>YouTube Video Processing</h4>
+                                <p>Checking for copyright claims...</p>
+                            </div>
+                            <div class="time-item">
+                                <div class="time-dot"></div>
+                                <h4>Podcast Audio Editing</h4>
+                                <p>Pending</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="premium-card" data-aos="fade-up">
+                        <h3 class="card-title">Upcoming Content Schedule</h3>
+                        <div class="table-responsive">
+                            <table class="data-table">
+                                <tr>
+                                    <th>Title</th>
+                                    <th>Platform</th>
+                                    <th>Date</th>
+                                    <th>Status</th>
+                                </tr>
+                                <tr>
+                                    <td>iPhone 16 Review</td>
+                                    <td>YouTube</td>
+                                    <td>Oct 10</td>
+                                    <td><span class="badge warning">Editing</span></td>
+                                </tr>
+                                <tr>
+                                    <td>My Workspace Tour</td>
+                                    <td>Instagram</td>
+                                    <td>Oct 12</td>
+                                    <td><span class="badge success">Scheduled</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Top 5 AI Tools</td>
+                                    <td>TikTok</td>
+                                    <td>Oct 15</td>
+                                    <td><span class="badge danger">Draft</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Q&A Live Stream</td>
+                                    <td>Twitch</td>
+                                    <td>Oct 18</td>
+                                    <td><span class="badge warning">Planning</span></td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="tab-content" class="content-tab">
+                <h3 class="card-title mb-20" data-aos="fade-up">Top Performing Assets</h3>
+                <div class="grid-3 mb-30">
+                    <div class="flip-card" data-aos="zoom-in">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front bg-purple-grad"><i class="fab fa-youtube"></i>
+                                <h3>Tech Review Ep.4</h3>
+                                <p>Hover for Stats</p>
+                            </div>
+                            <div class="flip-card-back">
+                                <h3>1.2M Views</h3>
+                                <p>Revenue: $3,400</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flip-card" data-aos="zoom-in" data-aos-delay="100">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front bg-pink-grad"><i class="fab fa-instagram"></i>
+                                <h3>Setup Tour Reel</h3>
+                                <p>Hover for Stats</p>
+                            </div>
+                            <div class="flip-card-back">
+                                <h3>500K Likes</h3>
+                                <p>Saves: 45,000</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flip-card" data-aos="zoom-in" data-aos-delay="200">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front bg-blue-grad"><i class="fab fa-twitter"></i>
+                                <h3>AI Thread</h3>
+                                <p>Hover for Stats</p>
+                            </div>
+                            <div class="flip-card-back">
+                                <h3>2.5M Impressions</h3>
+                                <p>Retweets: 12K</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid-2 mb-30">
+                    <div class="premium-card" data-aos="fade-down">
+                        <h3 class="card-title">Cloud Storage Usage (2TB Plan)</h3>
+                        <div class="progress-wrap">
+                            <div class="prog-title"><span>Raw Video Files (1.2TB)</span><span
+                                    class="text-danger">60%</span></div>
+                            <div class="prog-bar">
+                                <div class="prog-fill bg-danger" style="width: 60%;"></div>
+                            </div>
+                        </div>
+                        <div class="progress-wrap">
+                            <div class="prog-title"><span>Edited Exports (400GB)</span><span
+                                    class="text-blue">20%</span></div>
+                            <div class="prog-bar">
+                                <div class="prog-fill bg-blue" style="width: 20%;"></div>
+                            </div>
+                        </div>
+                        <div class="progress-wrap">
+                            <div class="prog-title"><span>Thumbnails & Assets (100GB)</span><span
+                                    class="text-success">5%</span></div>
+                            <div class="prog-bar">
+                                <div class="prog-fill bg-success" style="width: 5%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="premium-card" data-aos="fade-up">
+                        <h3 class="card-title">Recent Uploads & Drafts</h3>
+                        <ul class="list-group">
+                            <li><span><i class="fas fa-file-video text-blue"></i> VLOG_094_Final.mp4</span><span
+                                    class="badge success">Ready</span></li>
+                            <li><span><i class="fas fa-image text-purple"></i> Thumb_Option1.psd</span><span
+                                    class="badge warning">Review</span></li>
+                            <li><span><i class="fas fa-file-audio text-orange"></i> Podcast_Ep12_Raw.wav</span><span
+                                    class="badge danger">Pending</span></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="premium-card mb-30" data-aos="fade-up">
+                    <h3 class="card-title">Published Content Ledger</h3>
+                    <div class="table-responsive">
+                        <table class="data-table">
+                            <tr>
+                                <th>Content ID</th>
+                                <th>Title</th>
+                                <th>Platform</th>
+                                <th>Published Date</th>
+                                <th>Status</th>
+                            </tr>
+                            <tr>
+                                <td>#VID-001</td>
+                                <td>My Desk Setup 2026</td>
+                                <td>YouTube</td>
+                                <td>Oct 01, 2026</td>
+                                <td><span class="badge success">Live</span></td>
+                            </tr>
+                            <tr>
+                                <td>#IMG-092</td>
+                                <td>Minimalist Wallpaper Pack</td>
+                                <td>Website</td>
+                                <td>Oct 03, 2026</td>
+                                <td><span class="badge success">Live</span></td>
+                            </tr>
+                            <tr>
+                                <td>#SHR-884</td>
+                                <td>Top 5 Mac Apps</td>
+                                <td>TikTok</td>
+                                <td>Oct 05, 2026</td>
+                                <td><span class="badge success">Live</span></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <div id="tab-campaigns" class="content-tab">
+                <div class="spotlight-banner mb-30" data-aos="fade-up">
+                    <div class="sb-content">
+                        <span class="badge warning" style="margin-bottom: 10px; display: inline-block;">PRIORITY
+                            CAMPAIGN</span>
+                        <h2>Sony Alpha 7R V - Dedicated Review</h2>
+                        <p>Deliverable: 12-minute dedicated video on YouTube + 2 Instagram Reels.</p>
+                        <div class="sb-meta">
+                            <span><i class="fas fa-calendar-alt"></i> Deadline: Oct 25, 2026</span>
+                            <span><i class="fas fa-dollar-sign"></i> Budget: $15,000</span>
+                        </div>
+                    </div>
+                    <div class="sb-progress">
+                        <div class="prog-title" style="color: white;"><span>Production Progress</span><span>75%</span>
+                        </div>
+                        <div class="prog-bar" style="background: rgba(255,255,255,0.2);">
+                            <div class="prog-fill bg-success" style="width: 75%;"></div>
+                        </div>
+                        <p style="font-size: 11px; margin-top: 8px; color: rgba(255,255,255,0.8);">Next step: Final
+                            client approval on draft.</p>
+                    </div>
+                </div>
+
+                <div class="grid-4 mb-30">
+                    <div class="stat-card" data-aos="fade-up">
+                        <div class="icon-box bg-purple"><i class="fas fa-bullhorn"></i></div>
+                        <div class="stat-info">
+                            <p>Active Campaigns</p>
+                            <h3>4</h3>
+                        </div>
+                    </div>
+                    <div class="stat-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="icon-box bg-blue"><i class="fas fa-handshake"></i></div>
+                        <div class="stat-info">
+                            <p>Sponsorships Won</p>
+                            <h3>12</h3>
+                        </div>
+                    </div>
+                    <div class="stat-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="icon-box bg-green"><i class="fas fa-envelope-open-text"></i></div>
+                        <div class="stat-info">
+                            <p>Inquiries Pending</p>
+                            <h3>8</h3>
+                        </div>
+                    </div>
+                    <div class="stat-card" data-aos="fade-up" data-aos-delay="300">
+                        <div class="icon-box bg-orange"><i class="fas fa-chart-pie"></i></div>
+                        <div class="stat-info">
+                            <p>Conversion Rate</p>
+                            <h3>5.8%</h3>
+                        </div>
+                    </div>
+                </div>
+
+                <h3 class="card-title mb-20" data-aos="fade-up">Active Deals Board</h3>
+                <div class="grid-3 mb-30">
+                    <div class="campaign-card" data-aos="zoom-in">
+                        <div class="cc-head">
+                            <h4>Logitech MX Master</h4><span class="badge blue">In Progress</span>
+                        </div>
+                        <p>60-second integrated shoutout.</p>
+                        <div class="cc-foot"><span class="cc-price">$4,500</span><span class="cc-date"><i
+                                    class="fas fa-clock"></i> Oct 18</span></div>
+                    </div>
+                    <div class="campaign-card" data-aos="zoom-in" data-aos-delay="100">
+                        <div class="cc-head">
+                            <h4>NordVPN</h4><span class="badge warning">Script Review</span>
+                        </div>
+                        <p>Dedicated pre-roll integration.</p>
+                        <div class="cc-foot"><span class="cc-price">$8,000</span><span class="cc-date"><i
+                                    class="fas fa-clock"></i> Nov 02</span></div>
+                    </div>
+                    <div class="campaign-card" data-aos="zoom-in" data-aos-delay="200">
+                        <div class="cc-head">
+                            <h4>Skillshare</h4><span class="badge danger">Overdue</span>
+                        </div>
+                        <p>Custom course promo link.</p>
+                        <div class="cc-foot"><span class="cc-price">$3,000</span><span class="cc-date text-danger"><i
+                                    class="fas fa-exclamation-circle"></i> Oct 05</span></div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="tab-analytics" class="content-tab">
+                <div class="live-stats-banner mb-30" data-aos="fade-up">
+                    <div class="live-pulse"></div>
+                    <div>
+                        <h2>Live Active Viewers: <span class="counter" data-val="1485">0</span></h2>
+                        <p>Watching across all your active live streams and premiering videos right now.</p>
+                    </div>
+                </div>
+
+                <div class="grid-2 mb-30">
+                    <div class="premium-card" data-aos="fade-down">
+                        <h3 class="card-title">Audience Growth (30 Days)</h3>
+                        <div class="chart-container"><canvas id="audienceChart"></canvas></div>
+                    </div>
+                    <div class="premium-card" data-aos="fade-down">
+                        <h3 class="card-title">Audience Retention Rate</h3>
+                        <div class="chart-container"><canvas id="retentionChart"></canvas></div>
+                    </div>
+                </div>
+
+                <div class="grid-3 mb-30">
+                    <div class="premium-card" data-aos="fade-up">
+                        <h3 class="card-title">Gender & Age</h3>
+                        <div class="progress-wrap">
+                            <div class="prog-title"><span>Male (18-34)</span><span class="text-blue">65%</span></div>
+                            <div class="prog-bar">
+                                <div class="prog-fill bg-blue" style="width: 65%;"></div>
+                            </div>
+                        </div>
+                        <div class="progress-wrap">
+                            <div class="prog-title"><span>Female (18-34)</span><span class="text-pink">30%</span></div>
+                            <div class="prog-bar">
+                                <div class="prog-fill bg-pink" style="width: 30%;"></div>
+                            </div>
+                        </div>
+                        <div class="progress-wrap">
+                            <div class="prog-title"><span>Other</span><span class="text-gray">5%</span></div>
+                            <div class="prog-bar">
+                                <div class="prog-fill bg-gray" style="width: 5%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="premium-card" data-aos="fade-up" data-aos-delay="100">
+                        <h3 class="card-title">Top Geographies</h3>
+                        <ul class="list-group">
+                            <li><span>🇺🇸 United States</span><span class="badge blue">45%</span></li>
+                            <li><span>🇮🇳 India</span><span class="badge blue">25%</span></li>
+                            <li><span>🇬🇧 United Kingdom</span><span class="badge blue">12%</span></li>
+                            <li><span>🇨🇦 Canada</span><span class="badge blue">8%</span></li>
+                        </ul>
+                    </div>
+                    <div class="premium-card" data-aos="fade-up" data-aos-delay="200">
+                        <h3 class="card-title">Top Search Keywords</h3>
+                        <div class="keyword-tags">
+                            <span class="tag">AI Tools 2026</span>
+                            <span class="tag">Tech Review</span>
+                            <span class="tag">Best Desk Setup</span>
+                            <span class="tag">Productivity Hacks</span>
+                            <span class="tag">Code Tutorials</span>
+                            <span class="tag">SaaS Platforms</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="tab-monetization" class="content-tab">
+                <div class="balance-card mb-30" data-aos="fade-up">
+                    <div class="bc-left">
+                        <p><i class="fas fa-shield-check"></i> Available for Withdrawal</p>
+                        <h1>$24,580.00</h1>
+                        <span>Next scheduled auto-transfer: Oct 21, 2026</span>
+                    </div>
+                    <div class="bc-right">
+                        <button class="btn-withdraw" onclick="window.location.href='404page.html'"><i
+                                class="fas fa-university"></i> Withdraw Funds</button>
+                    </div>
+                </div>
+
+                <div class="grid-2 mb-30">
+                    <div class="premium-card" data-aos="fade-down">
+                        <h3 class="card-title">Income Sources (Q3 Breakdown)</h3>
+                        <div class="progress-wrap">
+                            <div class="prog-title"><span>AdSense (YouTube/Blog)</span><span
+                                    class="text-blue">$22K</span></div>
+                            <div class="prog-bar">
+                                <div class="prog-fill bg-blue" style="width: 50%;"></div>
+                            </div>
+                        </div>
+                        <div class="progress-wrap">
+                            <div class="prog-title"><span>Brand Sponsorships</span><span class="text-purple">$15K</span>
+                            </div>
+                            <div class="prog-bar">
+                                <div class="prog-fill bg-purple" style="width: 35%;"></div>
+                            </div>
+                        </div>
+                        <div class="progress-wrap">
+                            <div class="prog-title"><span>Affiliate Marketing</span><span class="text-green">$5K</span>
+                            </div>
+                            <div class="prog-bar">
+                                <div class="prog-fill bg-green" style="width: 10%;"></div>
+                            </div>
+                        </div>
+                        <div class="progress-wrap">
+                            <div class="prog-title"><span>Merch Sales</span><span class="text-orange">$3.8K</span></div>
+                            <div class="prog-bar">
+                                <div class="prog-fill bg-orange" style="width: 5%;"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="premium-card" data-aos="fade-up">
+                        <h3 class="card-title">Upcoming Payouts Calendar</h3>
+                        <ul class="payout-list">
+                            <li>
+                                <div class="p-date bg-blue-grad"><span>OCT</span><strong>21</strong></div>
+                                <div class="p-info">
+                                    <h4>Google AdSense</h4>
+                                    <p>Wire Transfer to ending in **8921</p>
+                                </div>
+                                <div class="p-amt text-success">+$8,450</div>
+                            </li>
+                            <li>
+                                <div class="p-date bg-purple-grad"><span>OCT</span><strong>25</strong></div>
+                                <div class="p-info">
+                                    <h4>Amazon Associates</h4>
+                                    <p>Direct Deposit</p>
+                                </div>
+                                <div class="p-amt text-success">+$1,240</div>
+                            </li>
+                            <li>
+                                <div class="p-date bg-green-grad"><span>NOV</span><strong>05</strong></div>
+                                <div class="p-info">
+                                    <h4>Skillshare Sponsorship</h4>
+                                    <p>PayPal Transfer</p>
+                                </div>
+                                <div class="p-amt text-success">+$3,000</div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div id="tab-settings" class="content-tab">
+                <div class="grid-2 mb-30">
+                    <div class="premium-card" data-aos="fade-up">
+                        <h3 class="card-title">Creator Profile</h3>
+                        <div class="form-group"><label>Display Name</label><input type="text" class="form-control"
+                                value="Tech Creator Pro"></div>
+                        <div class="form-group"><label>Business Email</label><input type="email" class="form-control"
+                                value="collab@creator.com"></div>
+                        <button class="btn-header mt-10" onclick="window.location.href='404page.html'">Update
+                            Profile</button>
+                    </div>
+                    <div class="premium-card" data-aos="fade-up">
+                        <h3 class="card-title">Social Integrations</h3>
+                        <ul class="list-group">
+                            <li><span><i class="fab fa-youtube text-danger"></i> YouTube Studio API</span><span
+                                    class="badge success">Connected</span></li>
+                            <li><span><i class="fab fa-instagram" style="color:#e1306c;"></i> Instagram Graph
+                                    API</span><span class="badge success">Connected</span></li>
+                            <li><span><i class="fab fa-tiktok"></i> TikTok Creator API</span><span
+                                    class="badge warning">Re-auth Needed</span></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="grid-2 mb-30">
+                    <div class="premium-card" data-aos="fade-up">
+                        <h3 class="card-title">Notification Preferences</h3>
+                        <div class="toggle-row"><span>New Subscriber Alerts</span><label class="switch"><input
+                                    type="checkbox" checked><span class="slider"></span></label></div>
+                        <div class="toggle-row"><span>Sponsorship Inquiry Email</span><label class="switch"><input
+                                    type="checkbox" checked><span class="slider"></span></label></div>
+                        <div class="toggle-row"><span>Daily Analytics Digest</span><label class="switch"><input
+                                    type="checkbox"><span class="slider"></span></label></div>
+                    </div>
+                    <div class="premium-card" data-aos="fade-up">
+                        <h3 class="card-title">Security & Access</h3>
+                        <div class="alert-box success"><i class="fas fa-shield-check"></i> Two-Factor Auth (2FA) is
+                            ENABLED.</div>
+                        <h3 class="card-title" style="margin-top:20px; font-size:14px; border:none; padding:0;">Team
+                            Access</h3>
+                        <ul class="list-group" style="margin-top:10px;">
+                            <li><span>Editor (Alice)</span><span class="badge blue">Read/Write</span></li>
+                            <li><span>Manager (Bob)</span><span class="badge blue">Full Access</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+
+
+            let storedEmail = sessionStorage.getItem('userEmail');
+
+            if (!storedEmail) {
+                alert("Unauthorized Access! Redirecting to Login.");
+                window.location.replace("login.html");
+                return;
+            }
+
+            let extractedName = storedEmail.split('@')[0];
+            extractedName = extractedName.charAt(0).toUpperCase() + extractedName.slice(1);
+
+            const nameDisplay = document.getElementById("userNameDisplay");
+            const emailDisplay = document.getElementById("userEmailDisplay");
+            if (nameDisplay) nameDisplay.textContent = extractedName;
+            if (emailDisplay) emailDisplay.textContent = storedEmail;
+
+
+            if (typeof AOS !== 'undefined') {
+                AOS.init({
+                    duration: 800,
+                    once: true,
+                    offset: 50,
+                    easing: 'ease-out-cubic'
+                });
+            }
+
+
+            const counters = document.querySelectorAll('.counter');
+            counters.forEach(el => {
+                const targetVal = parseFloat(el.getAttribute('data-val'));
+                const duration = 2000;
+
+                setTimeout(() => {
+                    let startTime = null;
+                    function updateCounter(timestamp) {
+                        if (!startTime) startTime = timestamp;
+                        const progress = timestamp - startTime;
+                        let currentVal = Math.min((progress / duration) * targetVal, targetVal);
+
+                        el.innerText = Math.floor(currentVal).toLocaleString('en-US');
+
+                        if (progress < duration) {
+                            requestAnimationFrame(updateCounter);
+                        } else {
+                            el.innerText = targetVal.toLocaleString('en-US');
+                        }
+                    }
+                    requestAnimationFrame(updateCounter);
+                }, 500);
+            });
+
+
+            initEngagementChart();
+            initAudienceChart();
+            initRetentionChart();
+        });
+
+
+        function toggleSidebar() {
+            const sidebar = document.getElementById('sidebar');
+            const overlay = document.getElementById('sidebarOverlay');
+
+            sidebar.classList.toggle('mobile-open');
+            if (sidebar.classList.contains('mobile-open')) {
+                overlay.classList.add('show');
+                document.body.style.overflow = 'hidden';
+            } else {
+                overlay.classList.remove('show');
+                document.body.style.overflow = 'auto';
+            }
+        }
+
+
+        function switchTab(tabId, element, pageTitle) {
+            document.querySelectorAll('.content-tab').forEach(tab => tab.classList.remove('active-tab'));
+            document.querySelectorAll('.nav-item').forEach(nav => nav.classList.remove('active'));
+
+            document.getElementById(tabId).classList.add('active-tab');
+            element.classList.add('active');
+            document.getElementById('pageTitle').innerText = pageTitle;
+
+            if (typeof AOS !== 'undefined') { setTimeout(() => { AOS.refresh(); }, 100); }
+            if (window.innerWidth <= 768) { toggleSidebar(); }
+        }
+
+
+        function logout() {
+            sessionStorage.removeItem('userEmail');
+            sessionStorage.removeItem('userRole');
+            window.location.replace("login.html");
+        }
+
+
+        function initEngagementChart() {
+            const ctx = document.getElementById('engagementChart');
+            if (ctx && typeof Chart !== 'undefined') {
+                new Chart(ctx, {
+                    type: 'bar',
+                    data: {
+                        labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+                        datasets: [{
+                            label: 'Audience Engagement',
+                            data: [12, 19, 15, 25, 22, 30, 28],
+                            backgroundColor: '#8b5cf6',
+                            borderRadius: 6,
+                            barPercentage: 0.6
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        plugins: { legend: { display: false } },
+                        scales: {
+                            y: { beginAtZero: true, grid: { color: '#e2e8f0', borderDash: [5, 5] } },
+                            x: { grid: { display: false } }
+                        }
+                    }
+                });
+            }
+        }
+
+
+        function initAudienceChart() {
+            const ctx = document.getElementById('audienceChart');
+            if (ctx && typeof Chart !== 'undefined') {
+                new Chart(ctx, {
+                    type: 'line',
+                    data: {
+                        labels: ['W1', 'W2', 'W3', 'W4'],
+                        datasets: [{
+                            label: 'New Subscribers',
+                            data: [5000, 8200, 6100, 12500],
+                            borderColor: '#10b981',
+                            backgroundColor: 'rgba(16, 185, 129, 0.1)',
+                            borderWidth: 3,
+                            fill: true,
+                            tension: 0.4,
+                            pointBackgroundColor: '#047857'
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        plugins: { legend: { display: false } },
+                        scales: {
+                            y: { beginAtZero: true, grid: { color: '#e2e8f0', borderDash: [5, 5] } },
+                            x: { grid: { display: false } }
+                        }
+                    }
+                });
+            }
+        }
+
+
+        function initRetentionChart() {
+            const ctx = document.getElementById('retentionChart');
+            if (ctx && typeof Chart !== 'undefined') {
+                new Chart(ctx, {
+                    type: 'line',
+                    data: {
+                        labels: ['0:00', '2:00', '4:00', '6:00', '8:00', '10:00'],
+                        datasets: [{
+                            label: 'Viewer Retention (%)',
+                            data: [100, 85, 78, 70, 65, 58],
+                            borderColor: '#ec4899',
+                            backgroundColor: 'rgba(236, 72, 153, 0.1)',
+                            borderWidth: 3,
+                            fill: true,
+                            tension: 0.4,
+                            pointBackgroundColor: '#be185d'
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        plugins: { legend: { display: false } },
+                        scales: {
+                            y: { beginAtZero: true, max: 100, grid: { color: '#e2e8f0', borderDash: [5, 5] } },
+                            x: { grid: { display: false } }
+                        }
+                    }
+                });
+            }
+        }
+    </script>
+
+</body>
+
+</html>

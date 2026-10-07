@@ -5,12 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SaaS / ERP Software Navigation - Dark Mode</title>
-    <!-- AOS Animation CSS -->
+
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <!-- FontAwesome for Icons -->
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="industries.css">
     <link rel="stylesheet" href="common.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 
 <body>
@@ -42,15 +44,16 @@
             </div>
 
             <ul class="nav-links" id="nav-links">
-                <li data-aos="fade-down" data-aos-delay="100"><a href="index.html" class="active">Home</a></li>
+                <li data-aos="fade-down" data-aos-delay="100"><a href="index.html">Home</a></li>
                 <li data-aos="fade-down" data-aos-delay="200"><a href="platform.html">Platform</a></li>
                 <li data-aos="fade-down" data-aos-delay="300"><a href="Solutions.html">Solutions</a></li>
-                <li data-aos="fade-down" data-aos-delay="400"><a href="index.html">Industries</a></li>
+                <li data-aos="fade-down" data-aos-delay="400"><a href="industries.html" class="active">Industries</a>
+                </li>
                 <li data-aos="fade-down" data-aos-delay="500"><a href="pricing.html">Pricing</a></li>
                 <li data-aos="fade-down" data-aos-delay="600"><a href="resources.html">Resources</a></li>
                 <li data-aos="fade-down" data-aos-delay="700"><a href="contact.html">Contact</a></li>
 
-                <!-- Mobile Actions (Visible only in mobile) -->
+
                 <li class="mobile-actions">
                     <a href="login.html" class="login-btn">Login</a>
                     <a href="getstart.html" class="get-started-btn">Get Started</a>
@@ -64,21 +67,901 @@
         </nav>
     </header>
 
-    <section style="height: 150vh; padding: 150px 5%; background: #0f172a; color: white;">
-        <h1 data-aos="fade-up">Welcome to the Future of ERP Software</h1>
-        <p data-aos="fade-up" data-aos-delay="200" style="margin-top: 15px; color: #94a3b8;">Scroll down to see the
-            navbar shrink effect.</p>
+
+
+
+    <section class="ind-hero-section">
+        <div class="ind-container">
+
+
+            <div class="ind-hero-header">
+                <div class="ind-badge ind-anim">GLOBAL ENTERPRISE VERTICALS</div>
+                <h1 class="ind-anim">ERP Solutions Built for <span class="text-blue">Every Industry</span></h1>
+                <p class="ind-anim">Powerful, scalable ERP software engineered to eliminate operational friction, unify
+                    disparate data pipelines, and drive governed intelligence across specialized enterprise sectors.</p>
+                <div class="ind-hero-btns ind-anim">
+                    <a href="404page.html" class="ind-btn-primary">Explore Industries <i
+                            class="fa-solid fa-arrow-down"></i></a>
+                    <a href="404page.html" class="ind-btn-secondary"><i class="fa-regular fa-circle-play"></i> Book an
+                        Architecture
+                        Demo</a>
+                </div>
+                <div class="ind-hero-features ind-anim">
+                    <span><i class="fa-regular fa-circle-check text-green"></i> 14-Day Enterprise Onboarding</span>
+                    <span><i class="fa-regular fa-circle-check text-green"></i> Multi-Tenant SOC 2 Type II</span>
+                    <span><i class="fa-regular fa-circle-check text-green"></i> Zero Legacy Hardware Overhead</span>
+                </div>
+            </div>
+
+
+            <div class="ind-metrics-wrapper ind-anim">
+
+
+                <div class="ind-metrics-grid">
+                    <div class="i-metric">
+                        <div class="i-metric-icon bg-blue-light"><i class="fa-solid fa-certificate text-blue"></i></div>
+                        <div>
+                            <h3><span class="ind-counter" data-val="99.98" data-decimal="2">0</span>%</h3>
+                            <p>Operational Uptime</p>
+                        </div>
+                    </div>
+                    <div class="i-metric">
+                        <div class="i-metric-icon bg-purple-light"><i class="fa-solid fa-shield-halved text-purple"></i>
+                        </div>
+                        <div>
+                            <h3><span class="ind-counter" data-val="40" data-decimal="0">0</span>+</h3>
+                            <p>Global Compliances</p>
+                        </div>
+                    </div>
+                    <div class="i-metric">
+                        <div class="i-metric-icon bg-green-light"><i class="fa-solid fa-network-wired text-green"></i>
+                        </div>
+                        <div>
+                            <h3><span class="ind-counter" data-val="140" data-decimal="0">0</span>+</h3>
+                            <p>Pre-built Workflows</p>
+                        </div>
+                    </div>
+                    <div class="i-metric">
+                        <div class="i-metric-icon bg-blue-light"><i class="fa-solid fa-gauge-high text-blue"></i></div>
+                        <div>
+                            <h3>&lt;<span class="ind-counter" data-val="450" data-decimal="0">0</span>ms</h3>
+                            <p>Global Latency SLA</p>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="ind-graphic-layout">
+
+                    <div class="ig-side">
+                        <div class="ig-tag ig-tag-left"><i class="fa-solid fa-industry text-blue"></i> Industrial
+                            Manufacturing <span class="badge-green">Active</span></div>
+                        <div class="ig-tag ig-tag-left"><i class="fa-solid fa-store text-purple"></i> Omnichannel Retail
+                            <span class="badge-gray">Syncing</span>
+                        </div>
+                        <div class="ig-tag ig-tag-left"><i class="fa-solid fa-house-medical text-green"></i> Healthcare
+                            Systems <span class="badge-blue">HIPAA Lock</span></div>
+                    </div>
+
+
+                    <div class="ig-center ig-center-box">
+                        <div class="ig-core-badge">CORE SYSTEM</div>
+                        <div class="ig-core-icon"><i class="fa-solid fa-server"></i></div>
+                        <h4>Aura Data Fabric</h4>
+                        <p>Single-Ledger Transaction Processing<br>& Telemetry Engine</p>
+                        <div class="ig-status"><span class="dot-green"></span> Real-Time Ingestion: 84k TPS</div>
+                    </div>
+
+
+                    <div class="ig-side">
+                        <div class="ig-tag ig-tag-right"><i class="fa-solid fa-truck-fast text-blue"></i> Fleet & 3PL
+                            Logistics <span class="badge-gray">Telemetry</span></div>
+                        <div class="ig-tag ig-tag-right"><i class="fa-solid fa-building-columns text-purple"></i>
+                            Finance & Asset Mgmt <span class="badge-green">Consolidating</span></div>
+                        <div class="ig-tag ig-tag-right"><i class="fa-solid fa-city text-green"></i> Real Estate & EPC
+                            <span class="badge-blue">Audited</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <section class="ind-trusted-section">
+        <div class="ind-container">
+            <h5 class="trusted-title ind-anim">TRUSTED BY LEADING ENTERPRISES IN MISSION-CRITICAL ENVIRONMENTS</h5>
+            <div class="trusted-logos">
+                <a href="404page.html" class="t-logo"><span><i class="fa-solid fa-cube text-blue"></i> Acme
+                        Corp</span></a>
+                <a href="404page.html" class="t-logo"><span><i class="fa-solid fa-globe text-purple"></i> Globex
+                        Global</span></a>
+                <a href="404page.html" class="t-logo"><span><i class="fa-solid fa-sun text-green"></i> Innovate
+                        Bio</span></a>
+                <a href="404page.html" class="t-logo"><span><i class="fa-solid fa-share-nodes text-blue"></i> Vertex
+                        Logistics</span></a>
+                <a href="404page.html" class="t-logo"><span><i class="fa-solid fa-certificate text-purple"></i> Sunrise
+                        Energy</span></a>
+                <a href="404page.html" class="t-logo"><span><i class="fa-solid fa-mountain text-green"></i> Summit
+                        Financial</span></a>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <section class="ind-solutions-section">
+        <div class="ind-container">
+
+            <div class="ind-sol-header ind-anim">
+                <div class="ind-badge">VERTICAL EXCELLENCE</div>
+                <h2>Solutions for Every Industry</h2>
+                <p>Purpose-built operational suites engineered to tackle the unique regulatory, supply chain, and
+                    workflow demands of your sector.</p>
+            </div>
+
+
+            <div class="ind-sol-grid">
+
+
+                <div class="ind-sol-card top-row-card">
+                    <div class="is-card-top">
+                        <div class="is-icon bg-blue-light"><i class="fa-solid fa-industry text-blue"></i></div>
+                        <div class="is-tag bg-blue-light text-blue">Industry 4.0 Ready</div>
+                    </div>
+                    <h3>Manufacturing</h3>
+                    <p>Production schedule optimization, bill-of-materials traceability, shop-floor telemetry, and
+                        automated scrap reduction metrics.</p>
+                    <a href="404page.html" class="is-link">Explore Solution <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+
+                <div class="ind-sol-card top-row-card">
+                    <div class="is-card-top">
+                        <div class="is-icon bg-purple-light"><i class="fa-solid fa-bag-shopping text-purple"></i></div>
+                        <div class="is-tag bg-purple-light text-purple">Unified Commerce</div>
+                    </div>
+                    <h3>Retail & E-Commerce</h3>
+                    <p>Omnichannel sales, SKU lifecycle, warehouse sync, customer journey tracking, and unified order
+                        orchestration across global storefronts.</p>
+                    <a href="404page.html" class="is-link">Explore Solution <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+
+                <div class="ind-sol-card top-row-card">
+                    <div class="is-card-top">
+                        <div class="is-icon bg-green-light"><i class="fa-solid fa-briefcase-medical text-green"></i>
+                        </div>
+                        <div class="is-tag bg-green-light text-green">HIPAA & FDA</div>
+                    </div>
+                    <h3>Healthcare</h3>
+                    <p>HIPAA-compliant EHR integration, clinical staff allocation, specialized pharmacy batch inventory,
+                        and automated insurance claims.</p>
+                    <a href="404page.html" class="is-link">Explore Solution <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+
+                <div class="ind-sol-card top-row-card">
+                    <div class="is-card-top">
+                        <div class="is-icon bg-blue-light"><i class="fa-solid fa-graduation-cap text-blue"></i></div>
+                        <div class="is-tag bg-blue-light text-blue">Multi-Campus</div>
+                    </div>
+                    <h3>Education</h3>
+                    <p>Student information systems, admissions pipelines, automated tuition & fee collection, faculty
+                        workload, and accreditation audits.</p>
+                    <a href="404page.html" class="is-link">Explore Solution <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+
+
+                <div class="ind-sol-card bottom-row-card">
+                    <div class="is-card-top">
+                        <div class="is-icon bg-blue-light"><i class="fa-solid fa-building text-blue"></i></div>
+                        <div class="is-tag bg-blue-light text-blue">AIA & Lien Tracking</div>
+                    </div>
+                    <h3>Construction & Real Estate</h3>
+                    <p>Job costing, subcontractor billing, AIA compliance, capital budget tracking, project milestones,
+                        and heavy equipment telematics.</p>
+                    <a href="404page.html" class="is-link">Explore Solution <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+
+                <div class="ind-sol-card bottom-row-card">
+                    <div class="is-card-top">
+                        <div class="is-icon bg-purple-light"><i class="fa-solid fa-money-check-dollar text-purple"></i>
+                        </div>
+                        <div class="is-tag bg-purple-light text-purple">ASC 606 & IFRS</div>
+                    </div>
+                    <h3>Finance & Services</h3>
+                    <p>Multi-entity ledger consolidation, automated billable hours, revenue recognition (ASC 606),
+                        client retainer portals, and financial compliance.</p>
+                    <a href="404page.html" class="is-link">Explore Solution <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+
+                <div class="ind-sol-card bottom-row-card">
+                    <div class="is-card-top">
+                        <div class="is-icon bg-green-light"><i class="fa-solid fa-truck text-green"></i></div>
+                        <div class="is-tag bg-green-light text-green">IoT Fleet Telemetry</div>
+                    </div>
+                    <h3>Logistics & Freight</h3>
+                    <p>Fleet telemetry, dynamic route optimization, automated BOL generation, 3PL warehouse management,
+                        and continuous track & trace.</p>
+                    <a href="404page.html" class="is-link">Explore Solution <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+
+                <div class="ind-sol-card bottom-row-card">
+                    <div class="is-card-top">
+                        <div class="is-icon bg-blue-light"><i class="fa-solid fa-bed text-blue"></i></div>
+                        <div class="is-tag bg-blue-light text-blue">Multi-Property PMS</div>
+                    </div>
+                    <h3>Hospitality</h3>
+                    <p>Guest folio management, dynamic room rate engines, POS synchronization, staff shift allocation,
+                        and end-to-end banquet & event billing.</p>
+                    <a href="404page.html" class="is-link">Explore Solution <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+    <section class="impact-section">
+        <div class="container-premium">
+
+            <div class="section-header anim-header">
+                <div class="badge-premium bg-blue-light text-blue">PROVEN ENTERPRISE ROI</div>
+                <h2>Measurable Impact Across Specialized Sectors</h2>
+                <p>Real verified performance and cost-reduction metrics from enterprise rollouts worldwide.</p>
+            </div>
+
+
+            <div class="impact-grid">
+
+                <div class="imp-card imp-slide-up">
+                    <div class="imp-card-top">
+                        <div class="imp-icon bg-blue-light text-blue"><i class="fa-solid fa-robot"></i></div>
+                        <div class="imp-tag bg-blue-light text-blue">Manufacturing</div>
+                    </div>
+                    <div class="imp-value text-blue"><span class="imp-counter" data-val="34" data-prefix="-"
+                            data-suffix="%" data-decimal="0">0%</span></div>
+                    <h3>Machine Downtime</h3>
+                    <p>Automated IoT predictive maintenance across 1,200 CNC lines with real-time vibration analytics.
+                    </p>
+                    <div class="imp-footer text-green"><i class="fa-solid fa-arrow-trend-up"></i> $4.8M Saved Annually
+                    </div>
+                </div>
+
+
+                <div class="imp-card imp-slide-up">
+                    <div class="imp-card-top">
+                        <div class="imp-icon bg-purple-light text-purple"><i class="fa-solid fa-cart-shopping"></i>
+                        </div>
+                        <div class="imp-tag bg-purple-light text-purple">Retail & Commerce</div>
+                    </div>
+                    <div class="imp-value text-purple"><span class="imp-counter" data-val="48" data-prefix="+"
+                            data-suffix="%" data-decimal="0">0%</span></div>
+                    <h3>Order Velocity</h3>
+                    <p>Unified omni-channel stock reconciliation under 60 seconds with zero POS ledger drift.</p>
+                    <div class="imp-footer text-green"><i class="fa-solid fa-bolt"></i> Sub-60s Ledger Sync</div>
+                </div>
+
+
+                <div class="imp-card imp-slide-up">
+                    <div class="imp-card-top">
+                        <div class="imp-icon bg-green-light text-green"><i class="fa-solid fa-shield-halved"></i></div>
+                        <div class="imp-tag bg-green-light text-green">Healthcare</div>
+                    </div>
+                    <div class="imp-value text-green"><span class="imp-counter" data-val="99.999" data-prefix=""
+                            data-suffix="%" data-decimal="3">0%</span></div>
+                    <h3>Data Integrity</h3>
+                    <p>HIPAA/HITECH compliant real-time electronic health records audit trail and prescription
+                        verification.</p>
+                    <div class="imp-footer text-green"><i class="fa-solid fa-lock"></i> Zero Data Breaches</div>
+                </div>
+
+
+                <div class="imp-card imp-slide-up">
+                    <div class="imp-card-top">
+                        <div class="imp-icon bg-blue-light text-blue"><i class="fa-solid fa-route"></i></div>
+                        <div class="imp-tag bg-blue-light text-blue">Logistics & 3PL</div>
+                    </div>
+                    <div class="imp-value text-blue"><span class="imp-counter" data-val="22" data-prefix=""
+                            data-suffix="%" data-decimal="0">0%</span></div>
+                    <h3>Fuel & Route Savings</h3>
+                    <p>Dynamic multi-modal route dispatching and instant electronic bills of lading across 12k assets.
+                    </p>
+                    <div class="imp-footer text-green"><i class="fa-solid fa-leaf"></i> 14k Tons CO2 Abated</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <section class="evidence-section">
+        <div class="container-premium">
+
+            <div class="section-header anim-header">
+                <div class="badge-premium bg-purple-light text-purple">ENTERPRISE EVIDENCE</div>
+                <h2>Deployed in Mission-Critical Environments</h2>
+                <p>How Fortune 1000 organizations replaced fragmented legacy systems with AuraERP.</p>
+            </div>
+
+
+            <div class="evidence-grid">
+
+
+                <div class="evd-card evd-left">
+                    <div class="evd-card-header">
+                        <div class="evd-title"><i class="fa-solid fa-plane-departure text-blue"></i> AeroPrecision
+                            Dynamics</div>
+                        <div class="evd-tag bg-blue-light text-blue">AEROSPACE</div>
+                    </div>
+                    <div class="evd-content">
+                        <h4>The Challenge</h4>
+                        <p>A complex 7-tier sub-tier supplier pipeline caused 18-day average reconciliation lags and
+                            inventory blindspots.</p>
+                        <h4>AuraERP Impact</h4>
+                        <p>Deployed single-ledger Data Fabric across 4 global fabrication plants, boosting inventory
+                            turnover by 4.2x in 9 months.</p>
+                    </div>
+
+                    <div class="evd-quote-box">
+                        <p class="evd-quote">"AuraERP gave our production floors zero-latency telemetry. We eliminated
+                            our legacy ERP maintenance overhead entirely."</p>
+                        <div class="evd-author">
+                            <strong>Evelyn Vance</strong><br>VP of Global Operations
+                        </div>
+                    </div>
+                    <div class="evd-card-footer">
+                        <span class="evd-metric text-blue">4.2x Turn Rate</span>
+                        <a href="404page.html" class="evd-link">Read Story <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+
+                <div class="evd-card evd-center">
+                    <div class="evd-card-header">
+                        <div class="evd-title"><i class="fa-solid fa-store text-purple"></i> Solace Retail Group</div>
+                        <div class="evd-tag bg-purple-light text-purple">1,400+ STORES</div>
+                    </div>
+                    <div class="evd-content">
+                        <h4>The Challenge</h4>
+                        <p>Severe POS desynchronization during black Friday created 14% stock cancellation spikes and
+                            ledger variance.</p>
+                        <h4>AuraERP Impact</h4>
+                        <p>Architected live omnichannel ledger balancing 42,000 requests/sec with zero out-of-stock
+                            events over peak season.</p>
+                    </div>
+
+                    <div class="evd-quote-box">
+                        <p class="evd-quote">"The unified order orchestration handled our highest Black Friday volume in
+                            company history without a single second of downtime."</p>
+                        <div class="evd-author">
+                            <strong>Marcus Sterling</strong><br>Chief Digital Officer
+                        </div>
+                    </div>
+                    <div class="evd-card-footer">
+                        <span class="evd-metric text-purple">0 Out-of-Stock</span>
+                        <a href="404page.html" class="evd-link">Read Story <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+
+                <div class="evd-card evd-right">
+                    <div class="evd-card-header">
+                        <div class="evd-title"><i class="fa-solid fa-truck text-green"></i> TransContinental Freight
+                        </div>
+                        <div class="evd-tag bg-green-light text-green">12K VEHICLES</div>
+                    </div>
+                    <div class="evd-content">
+                        <h4>The Challenge</h4>
+                        <p>Manual dispatching and delayed bills-of-lading drove up dwell times, fuel waste, and
+                            compliance audit penalties.</p>
+                        <h4>AuraERP Impact</h4>
+                        <p>Automated IoT telemetry dispatch with dynamic multi-modal optimization, reducing annual
+                            logistics overhead by $18.4M.</p>
+                    </div>
+
+                    <div class="evd-quote-box">
+                        <p class="evd-quote">"Automated BOL generation and live route optimization lowered our fleet
+                            deadhead miles by 26% across North America."</p>
+                        <div class="evd-author">
+                            <strong>Devon Ramirez</strong><br>Chief Supply Chain Officer
+                        </div>
+                    </div>
+                    <div class="evd-card-footer">
+                        <span class="evd-metric text-green">$18.4M Saved</span>
+                        <a href="404page.html" class="evd-link">Read Story <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <section class="regulatory-section">
+        <div class="container-premium">
+
+            <div class="section-header anim-header">
+                <div class="badge-premium bg-green-light text-green">GOVERNANCE & CERTIFICATIONS</div>
+                <h2>Built-In Industry Regulatory Standards</h2>
+                <p>Pre-configured compliance workflows mapped directly to national and international governing mandates.
+                </p>
+            </div>
+
+
+            <div class="reg-grid">
+
+
+                <div class="reg-card reg-left">
+                    <div class="reg-card-top">
+                        <div class="reg-icon bg-green-light text-green"><i class="fa-solid fa-book-medical"></i></div>
+                        <h3>Healthcare & Life Sciences</h3>
+                    </div>
+                    <p class="reg-desc">Built for strict clinical security, bio-tracking, and pharmaceutical supply
+                        chain integrity.</p>
+                    <ul class="reg-list">
+                        <li><i class="fa-solid fa-circle-check text-green"></i> HIPAA / HITECH Certified</li>
+                        <li><i class="fa-solid fa-circle-check text-green"></i> FDA 21 CFR Part 11 Electronic Signatures
+                        </li>
+                        <li><i class="fa-solid fa-circle-check text-green"></i> GxP Process Validation Ready</li>
+                    </ul>
+                    <div class="reg-footer text-green">AUDITED ANNUALLY BY BSI</div>
+                </div>
+
+                <div class="reg-card reg-left">
+                    <div class="reg-card-top">
+                        <div class="reg-icon bg-purple-light text-purple"><i class="fa-solid fa-building-columns"></i>
+                        </div>
+                        <h3>Finance & FinTech</h3>
+                    </div>
+                    <p class="reg-desc">Immutable financial ledger auditability with dual-signoff authorization rules.
+                    </p>
+                    <ul class="reg-list">
+                        <li><i class="fa-solid fa-circle-check text-purple"></i> SOC 1, SOC 2 Type II, & SOC 3</li>
+                        <li><i class="fa-solid fa-circle-check text-purple"></i> Sarbanes-Oxley (SOX) Section 404</li>
+                        <li><i class="fa-solid fa-circle-check text-purple"></i> ASC 606 / IFRS 15 Revenue Governance
+                        </li>
+                        <li><i class="fa-solid fa-circle-check text-purple"></i> PCI-DSS Level 1 Encrypted Rails</li>
+                    </ul>
+                    <div class="reg-footer text-purple">BIG-4 ATTESTATION REPORTS</div>
+                </div>
+
+
+                <div class="reg-card reg-right">
+                    <div class="reg-card-top">
+                        <div class="reg-icon bg-blue-light text-blue"><i class="fa-solid fa-robot"></i></div>
+                        <h3>Defense & Precision</h3>
+                    </div>
+                    <p class="reg-desc">Rigorous aerospace tracking, lot lineage, and national defense security
+                        standards.</p>
+                    <ul class="reg-list">
+                        <li><i class="fa-solid fa-circle-check text-blue"></i> ISO 9001:2015 & AS9100 Rev D</li>
+                        <li><i class="fa-solid fa-circle-check text-blue"></i> CMMC Level 2 Assessment Ready</li>
+                        <li><i class="fa-solid fa-circle-check text-blue"></i> ITAR Enclave Deployment Architecture</li>
+                    </ul>
+                    <div class="reg-footer text-blue">FEDERAL ISOLATION AVAILABLE</div>
+                </div>
+
+                <div class="reg-card reg-right">
+                    <div class="reg-card-top">
+                        <div class="reg-icon bg-blue-light text-blue"><i class="fa-solid fa-earth-americas"></i></div>
+                        <h3>Retail & Global Trade</h3>
+                    </div>
+                    <p class="reg-desc">Cross-border taxation engines, consumer rights frameworks, and customs
+                        automation.</p>
+                    <ul class="reg-list">
+                        <li><i class="fa-solid fa-circle-check text-blue"></i> EU GDPR & California CCPA/CPRA</li>
+                        <li><i class="fa-solid fa-circle-check text-blue"></i> WCO Safe Framework Compliance</li>
+                        <li><i class="fa-solid fa-circle-check text-blue"></i> Automated VAT/GST Invoicing Rules</li>
+                    </ul>
+                    <div class="reg-footer text-blue">GLOBAL CROSS-BORDER READY</div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+    <section class="compare-section">
+        <div class="cmp-container">
+
+
+            <div class="cmp-header cmp-anim">
+                <div class="cmp-badge">ARCHITECTURAL ADVANTAGE</div>
+                <h2>Why Purpose-Built Industry ERP Beats Generic Suites</h2>
+                <p>Compare how AuraERP's industry-native telemetry replaces the bloated customization overhead of legacy
+                    horizontal suites.</p>
+            </div>
+
+
+            <div class="cmp-table-wrapper cmp-anim">
+
+
+                <div class="cmp-row cmp-thead">
+                    <div class="cmp-col font-bold">Capability & Performance Vector</div>
+                    <div class="cmp-col font-bold text-dark">Legacy Generic ERP (SAP / Oracle / NetSuite)</div>
+                    <div class="cmp-col font-bold text-blue"><i class="fa-solid fa-certificate"></i> AuraERP Industry
+                        Edition</div>
+                </div>
+
+
+                <div class="cmp-row cmp-row-anim">
+                    <div class="cmp-col font-bold text-dark">Implementation & Go-Live Timeline</div>
+                    <div class="cmp-col text-gray">18 to 36 months of heavy custom code & system integrator billables
+                    </div>
+                    <div class="cmp-col text-dark"><i class="fa-regular fa-circle-check text-green cmp-tick"></i> 14 to
+                        30 days via pre-mapped industry workflows</div>
+                </div>
+
+                <div class="cmp-row cmp-row-anim">
+                    <div class="cmp-col font-bold text-dark">Data Synchronization & Latency</div>
+                    <div class="cmp-col text-gray">Overnight batch ETL, resulting in 8-24 hour ledger and inventory
+                        blindspots</div>
+                    <div class="cmp-col text-dark"><i class="fa-regular fa-circle-check text-green cmp-tick"></i>
+                        Sub-450ms global telemetry with instant single-ledger update</div>
+                </div>
+
+                <div class="cmp-row cmp-row-anim">
+                    <div class="cmp-col font-bold text-dark">Industry Schema & Taxonomies</div>
+                    <div class="cmp-col text-gray">Generic relational tables requiring thousands of custom field patches
+                    </div>
+                    <div class="cmp-col text-dark"><i class="fa-regular fa-circle-check text-green cmp-tick"></i> Native
+                        schemas for 8 distinct verticals ready out-of-the-box</div>
+                </div>
+
+                <div class="cmp-row cmp-row-anim">
+                    <div class="cmp-col font-bold text-dark">Regulatory & Compliance Updates</div>
+                    <div class="cmp-col text-gray">Manual re-certification and risky code migrations every major release
+                    </div>
+                    <div class="cmp-col text-dark"><i class="fa-regular fa-circle-check text-green cmp-tick"></i>
+                        Continuous cloud-delivered zero-downtime compliance updates</div>
+                </div>
+
+                <div class="cmp-row cmp-row-anim">
+                    <div class="cmp-col font-bold text-dark border-none">TCO & Upgrade Friction</div>
+                    <div class="cmp-col text-gray border-none">Continuous high consultant lock-in and painful version
+                        deprecation cycles</div>
+                    <div class="cmp-col text-dark border-none"><i
+                            class="fa-regular fa-circle-check text-green cmp-tick"></i> 65% lower 3-year TCO with
+                        seamless rolling API backwards-compatibility</div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <section class="faq-section">
+        <div class="faq-container">
+
+            <div class="faq-header anim-header">
+                <div class="badge-premium bg-blue-light text-blue">EXPERTISE & ADVISORY</div>
+                <h2>Frequently Asked Questions by Industry Leaders</h2>
+                <p>Clear answers on migration paths, security isolation, customization, and enterprise deployment.</p>
+            </div>
+
+
+            <div class="faq-list">
+
+                <div class="faq-item faq-anim">
+                    <div class="faq-question">
+                        <h3>How long does an enterprise migration from SAP, Oracle, or NetSuite typically take?</h3>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            <p>While traditional generic ERP replacements demand 18 to 36 months, AuraERP delivers
+                                phased deployments in as little as 14 to 45 days. Our automated data migration pipelines
+                                extract legacy schemas, reconcile historic general ledgers, and map transactional
+                                histories directly into our unified Data Fabric without downtime.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item faq-anim">
+                    <div class="faq-question">
+                        <h3>Can we customize schemas and business logic without breaking future platform updates?</h3>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            <p>Yes. AuraERP features a metadata-driven extensible engine. Domain-specific custom fields,
+                                validation triggers, and event brokers operate in isolated user spaces. When core kernel
+                                upgrades roll out, your bespoke workflows, reports, and API integrations remain 100%
+                                intact.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item faq-anim">
+                    <div class="faq-question">
+                        <h3>How does AuraERP handle sovereign data residency and multi-region mandates?</h3>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            <p>AuraERP supports localized multi-region database sharding. You can lock patient records
+                                to EU data centers (GDPR), financial ledgers to US-East (SOX), and defense projects to
+                                isolated FedRAMP High enclaves, all while viewing aggregated telemetry via a
+                                consolidated global executive dashboard.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item faq-anim">
+                    <div class="faq-question">
+                        <h3>What deployment models are supported: Public Cloud, Private VPC, or On-Premise?</h3>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            <p>We offer multi-tenant cloud with strict logical isolation, dedicated single-tenant VPC
+                                deployments on AWS/Azure/GCP, and hybrid-edge clusters for air-gapped manufacturing
+                                facilities requiring on-premise execution with asynchronous cloud synchronization.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item faq-anim">
+                    <div class="faq-question">
+                        <h3>What enterprise SLA support and advisory services are included?</h3>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            <p>Every enterprise client receives a 99.99% uptime SLA, 15-minute response times for
+                                critical telemetry disruptions, a dedicated Technical Account Manager, and ongoing
+                                architectural reviews with our senior solutions engineers.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <section class="erp-section">
+        <div class="erp-container">
+
+            <div class="erp-header anim-header">
+                <div class="badge-premium bg-blue-light text-blue">CONNECTED ARCHITECTURE</div>
+                <h2>One Powerful ERP Platform. Every Business Need.</h2>
+                <p>A unified single-source-of-truth architecture eliminating data silos across all operational units.
+                </p>
+            </div>
+
+
+            <div class="erp-grid">
+
+                <div class="erp-card erp-top-card">
+                    <div class="ec-header">
+                        <div class="ec-icon bg-blue-light"><i class="fa-solid fa-wallet text-blue"></i></div>
+                        <div>
+                            <h3>Finance & Ledger</h3>
+                            <span class="text-green ec-sub">Real-time Reconciliation</span>
+                        </div>
+                    </div>
+                    <p>Multi-currency general ledger, automated AR/AP matching, and automated tax filings.</p>
+                    <div class="ec-footer text-dark"><span class="dot-green"></span> 99.4% Auto-Matched</div>
+                </div>
+                <div class="erp-card erp-top-card">
+                    <div class="ec-header">
+                        <div class="ec-icon bg-purple-light"><i class="fa-solid fa-users-gear text-purple"></i></div>
+                        <div>
+                            <h3>Sales & CRM</h3>
+                            <span class="text-blue ec-sub">Live Pipeline Sync</span>
+                        </div>
+                    </div>
+                    <p>Omnichannel customer tracking, AI lead scoring, dynamic CPQ quotations, and contract renewals.
+                    </p>
+                    <div class="ec-footer text-dark"><span class="dot-purple"></span> 3.2x Velocity</div>
+                </div>
+                <div class="erp-card erp-top-card">
+                    <div class="ec-header">
+                        <div class="ec-icon bg-green-light"><i class="fa-solid fa-boxes-stacked text-green"></i></div>
+                        <div>
+                            <h3>Inventory & WMS</h3>
+                            <span class="text-green ec-sub">Predictive Reorder</span>
+                        </div>
+                    </div>
+                    <p>Lot tracking, RFID verification, multi-warehouse routing, and dynamic stock forecasting.</p>
+                    <div class="ec-footer text-dark"><span class="dot-green"></span> 0 Stockouts Logged</div>
+                </div>
+                <div class="erp-card erp-top-card">
+                    <div class="ec-header">
+                        <div class="ec-icon bg-blue-light"><i class="fa-solid fa-id-badge text-blue"></i></div>
+                        <div>
+                            <h3>HR & People</h3>
+                            <span class="text-blue ec-sub">Automated Payroll</span>
+                        </div>
+                    </div>
+                    <p>Global multi-region compensation, employee lifecycle, leave accrual, and benefits administration.
+                    </p>
+                    <div class="ec-footer text-dark"><span class="dot-blue"></span> 100% Tax Compliant</div>
+                </div>
+
+
+                <div class="erp-card erp-bot-card">
+                    <div class="ec-header">
+                        <div class="ec-icon bg-purple-light"><i class="fa-solid fa-cart-flatbed text-purple"></i></div>
+                        <div>
+                            <h3>Procurement</h3>
+                            <span class="text-purple ec-sub">Vendor Matrix</span>
+                        </div>
+                    </div>
+                    <p>Automated RFP distributions, 3-way PO verification, vendor SLA grading, and spend analytics.</p>
+                    <div class="ec-footer text-dark"><span class="dot-purple"></span> 18% Spend Savings</div>
+                </div>
+                <div class="erp-card erp-bot-card">
+                    <div class="ec-header">
+                        <div class="ec-icon bg-blue-light"><i class="fa-solid fa-diagram-project text-blue"></i></div>
+                        <div>
+                            <h3>Projects</h3>
+                            <span class="text-blue ec-sub">Resource Allocation</span>
+                        </div>
+                    </div>
+                    <p>Gantt scheduling, burn rate telemetry, contractor time tracking, and deliverable sign-offs.</p>
+                    <div class="ec-footer text-dark"><span class="dot-blue"></span> Real-Time Burn Track</div>
+                </div>
+                <div class="erp-card erp-bot-card">
+                    <div class="ec-header">
+                        <div class="ec-icon bg-green-light"><i class="fa-solid fa-chart-line text-green"></i></div>
+                        <div>
+                            <h3>Analytics & AI</h3>
+                            <span class="text-green ec-sub">Predictive Engine</span>
+                        </div>
+                    </div>
+                    <p>Cross-vertical executive dashboards, automated anomaly alerts, and natural-language query engine.
+                    </p>
+                    <div class="ec-footer text-dark"><span class="dot-green"></span> LLM Data Assistant</div>
+                </div>
+                <div class="erp-card erp-bot-card">
+                    <div class="ec-header">
+                        <div class="ec-icon bg-blue-light"><i class="fa-solid fa-shield-halved text-blue"></i></div>
+                        <div>
+                            <h3>Security Core</h3>
+                            <span class="text-blue ec-sub">Zero-Trust Role RBAC</span>
+                        </div>
+                    </div>
+                    <p>Field-level encryption, immutable audit trails, biometric 2FA, and SSO / SAML integration.</p>
+                    <div class="ec-footer text-dark"><span class="dot-blue"></span> SOC2 Type II Certified</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <section class="res-section">
+        <div class="res-container">
+
+            <div class="res-header anim-header">
+                <div class="badge-premium bg-green-light text-green">GOVERNANCE & SCALE</div>
+                <h2>Engineered for Enterprise Resilience</h2>
+                <p>Built from the ground up to support high-throughput multi-entity operations with uncompromised
+                    integrity.</p>
+            </div>
+
+
+            <div class="res-grid">
+
+
+                <div class="res-card res-left">
+                    <div class="rc-icon bg-blue-light text-blue"><i class="fa-solid fa-border-all"></i></div>
+                    <h3>Centralized Operations</h3>
+                    <p>Single pane of glass unifying cross-departmental telemetry and eliminating data fragmentation
+                        across global business subsidiaries.</p>
+                    <div class="rc-btn-wrapper">
+                        <a href="404page.html" class="rc-btn">Learn More</a>
+                    </div>
+                </div>
+                <div class="res-card res-center">
+                    <div class="rc-icon bg-purple-light text-purple"><i class="fa-solid fa-bolt"></i></div>
+                    <h3>Real-Time Insights</h3>
+                    <p>Sub-second data synchronization delivering instant executive reporting, automated variance
+                        alerts, and live operational observability.</p>
+                    <div class="rc-btn-wrapper">
+                        <a href="404page.html" class="rc-btn">Learn More</a>
+                    </div>
+                </div>
+                <div class="res-card res-right">
+                    <div class="rc-icon bg-green-light text-green"><i class="fa-solid fa-robot"></i></div>
+                    <h3>Smart Automation</h3>
+                    <p>Event-driven agentic rules that eliminate 70% of repetitive operational tasks across payroll,
+                        invoicing, and logistics paperwork.</p>
+                    <div class="rc-btn-wrapper">
+                        <a href="404page.html" class="rc-btn">Learn More</a>
+                    </div>
+                </div>
+
+
+                <div class="res-card res-left">
+                    <div class="rc-icon bg-blue-light text-blue"><i class="fa-solid fa-server"></i></div>
+                    <h3>Scalable Architecture</h3>
+                    <p>Elastic cloud infrastructure handling billions of transactions across multi-region deployments
+                        with continuous active-active replication.</p>
+                    <div class="rc-btn-wrapper">
+                        <a href="404page.html" class="rc-btn">Learn More</a>
+                    </div>
+                </div>
+                <div class="res-card res-center">
+                    <div class="rc-icon bg-purple-light text-purple"><i class="fa-solid fa-shield"></i></div>
+                    <h3>Secure & Reliable</h3>
+                    <p>SOC 2 Type II, ISO 27001, and zero-trust perimeter governance safeguarding core records with
+                        military-grade encryption at rest.</p>
+                    <div class="rc-btn-wrapper">
+                        <a href="404page.html" class="rc-btn">Learn More</a>
+                    </div>
+                </div>
+                <div class="res-card res-right">
+                    <div class="rc-icon bg-green-light text-green"><i class="fa-solid fa-sliders"></i></div>
+                    <h3>Customizable Workflows</h3>
+                    <p>Extensible workflow builder with 200+ pre-built connectors and low-code orchestration tailored to
+                        specialized domain needs.</p>
+                    <div class="rc-btn-wrapper">
+                        <a href="404page.html" class="rc-btn">Learn More</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+    <section class="edu-cta-section">
+        <div class="edu-cta-container">
+
+            <div class="edu-cta-box">
+
+                <div class="edu-cta-badge cta-anim">READY TO ELEVATE LEARNING</div>
+                <h2 class="edu-cta-title cta-anim">Ready to Transform Your Educational Campus?</h2>
+                <p class="edu-cta-desc cta-anim">Empower your students, faculty, and administration with the unified
+                    EduPro learning platform. Experience complete academic excellence and streamlined campus management.
+                </p>
+
+
+                <div class="edu-cta-buttons cta-anim">
+                    <a href="404page.html" class="edu-btn-primary">Book a Campus Demo</a>
+                    <a href="404page.html" class="edu-btn-secondary">Get Started Free</a>
+                </div>
+
+
+                <div class="edu-cta-features cta-anim">
+                    <span><i class="fa-solid fa-check"></i> Seamless LMS Integration</span>
+                    <span><i class="fa-solid fa-check"></i> No setup fees required</span>
+                </div>
+            </div>
+        </div>
     </section>
 
 
     <footer id="footer" class="footer">
         <div class="footer-container">
-            <!-- Column 1: Brand & Social -->
+
             <div class="footer-brand" data-aos="fade-up" data-aos-duration="1000">
                 <div class="logo">
                     <a href="index.html"><img src="./asset/logo_bule.webp" alt="logo"></a>
                 </div>
-                <!-- ஸ்கிரீன்ஷாட்டில் உள்ள அதே வாசகம் -->
+
                 <p class="footer-desc">
                     One connected platform for your entire business. Streamline workflows, boost productivity, and make
                     data-driven decisions.
@@ -91,7 +974,7 @@
                 </div>
             </div>
 
-            <!-- Column 2: Platform Links (ஸ்கிரீன்ஷாட்டில் உள்ள 5 மெனுக்கள்) -->
+
             <div class="footer-links" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
                 <h3>PLATFORM</h3>
                 <ul>
@@ -103,7 +986,7 @@
                 </ul>
             </div>
 
-            <!-- Column 3: Company Links (நேவ்பாரில் உள்ள முதல் 5 மெனுக்கள்) -->
+
             <div class="footer-links" data-aos="fade-up" data-aos-delay="400" data-aos-duration="1000">
                 <h3>COMPANY</h3>
                 <ul>
@@ -115,7 +998,7 @@
                 </ul>
             </div>
 
-            <!-- Column 4: Resources Links (நேவ்பார் மீதி 2 + ஸ்கிரீன்ஷாட் 3) -->
+
             <div class="footer-links" data-aos="fade-up" data-aos-delay="600" data-aos-duration="1000">
                 <h3>RESOURCES</h3>
                 <ul>
@@ -128,7 +1011,7 @@
             </div>
         </div>
 
-        <!-- Footer Bottom: Copyright & Legal -->
+
         <div class="footer-bottom-container">
             <div class="footer-bottom">
                 <p>&copy; 2026 STACKLY. All rights reserved.</p>
@@ -144,9 +1027,479 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 
-    <!-- AOS Animation JS -->
+
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="script.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+
+
+            setTimeout(() => {
+
+                gsap.registerPlugin(ScrollTrigger);
+
+
+
+
+                gsap.utils.toArray('.ind-anim').forEach(element => {
+                    gsap.fromTo(element,
+                        { opacity: 0, y: 30 },
+                        {
+                            opacity: 1, y: 0, duration: 0.8, ease: "power2.out",
+                            scrollTrigger: {
+                                trigger: element,
+                                start: "top 85%",
+                                toggleActions: "play none none none"
+                            }
+                        }
+                    );
+                });
+
+
+
+
+                let counters = gsap.utils.toArray('.ind-counter');
+                ScrollTrigger.create({
+                    trigger: ".ind-metrics-wrapper",
+                    start: "top 80%",
+                    onEnter: () => {
+                        counters.forEach(el => {
+                            let targetVal = parseFloat(el.getAttribute('data-val'));
+                            let decimals = parseInt(el.getAttribute('data-decimal')) || 0;
+                            let obj = { val: 0 };
+
+                            gsap.to(obj, {
+                                val: targetVal,
+                                duration: 2.5,
+                                ease: "power3.out",
+                                onUpdate: function () {
+                                    let currentVal = obj.val;
+                                    el.innerText = decimals > 0 ? currentVal.toFixed(decimals) : Math.floor(currentVal).toLocaleString('en-US');
+                                }
+                            });
+                        });
+                    },
+                    once: true
+                });
+
+
+
+
+                const graphicTl = gsap.timeline({
+                    scrollTrigger: {
+                        trigger: ".ind-graphic-layout",
+                        start: "top 80%",
+                        toggleActions: "play none none none"
+                    }
+                });
+
+
+                graphicTl.fromTo(".ig-center-box",
+                    { opacity: 0, y: 50 },
+                    { opacity: 1, y: 0, duration: 1, ease: "power3.out" }
+                )
+
+                    .fromTo(".ig-tag-left",
+                        { opacity: 0, x: -50 },
+                        { opacity: 1, x: 0, duration: 0.6, stagger: 0.15, ease: "power2.out" },
+                        "-=0.3"
+                    )
+
+                    .fromTo(".ig-tag-right",
+                        { opacity: 0, x: 50 },
+                        { opacity: 1, x: 0, duration: 0.6, stagger: 0.15, ease: "power2.out" },
+                        "-=0.5"
+                    );
+
+
+
+
+                gsap.fromTo(".t-logo",
+                    { opacity: 0, scale: 0.8, y: 20 },
+                    {
+                        opacity: 1, scale: 1, y: 0,
+                        duration: 0.5,
+                        stagger: 0.1,
+                        ease: "back.out(1.5)",
+                        scrollTrigger: {
+                            trigger: ".ind-trusted-section",
+                            start: "top 85%",
+                            toggleActions: "play none none none"
+                        }
+                    }
+                );
+
+
+
+
+
+
+                gsap.utils.toArray(".top-row-card").forEach((card) => {
+                    gsap.fromTo(card,
+                        { opacity: 0, rotationY: -90, transformPerspective: 1200 },
+                        {
+                            opacity: 1, rotationY: 0, duration: 1.2, ease: "back.out(1.2)",
+                            scrollTrigger: {
+                                trigger: card,
+                                start: "top 85%",
+                                toggleActions: "play none none none"
+                            }
+                        }
+                    );
+                });
+
+
+                gsap.utils.toArray(".bottom-row-card").forEach((card) => {
+                    gsap.fromTo(card,
+                        { opacity: 0, rotationY: 90, transformPerspective: 1200 },
+                        {
+                            opacity: 1, rotationY: 0, duration: 1.2, ease: "back.out(1.2)",
+                            scrollTrigger: {
+                                trigger: card,
+                                start: "top 85%",
+                                toggleActions: "play none none none"
+                            }
+                        }
+                    );
+                });
+
+            }, 2200);
+
+        });
+
+
+        document.addEventListener("DOMContentLoaded", () => {
+
+
+            setTimeout(() => {
+
+                gsap.registerPlugin(ScrollTrigger);
+
+
+
+
+                gsap.utils.toArray('.anim-header').forEach(header => {
+                    gsap.fromTo(header,
+                        { opacity: 0, y: 30 },
+                        {
+                            opacity: 1, y: 0, duration: 0.8, ease: "power2.out",
+                            scrollTrigger: {
+                                trigger: header,
+                                start: "top 85%",
+                                toggleActions: "play none none none"
+                            }
+                        }
+                    );
+                });
+
+
+
+
+
+                gsap.utils.toArray(".imp-slide-up").forEach((card, index) => {
+                    gsap.fromTo(card,
+                        { opacity: 0, y: 50 },
+                        {
+                            opacity: 1, y: 0, duration: 0.8, ease: "power2.out",
+                            scrollTrigger: {
+                                trigger: ".impact-section",
+                                start: "top 80%",
+                                toggleActions: "play none none none"
+                            }
+                        }
+                    );
+                });
+
+
+                let impCounters = gsap.utils.toArray('.imp-counter');
+                ScrollTrigger.create({
+                    trigger: ".impact-section",
+                    start: "top 80%",
+                    onEnter: () => {
+                        impCounters.forEach(el => {
+                            let targetVal = parseFloat(el.getAttribute('data-val'));
+                            let prefix = el.getAttribute('data-prefix') || '';
+                            let suffix = el.getAttribute('data-suffix') || '';
+                            let decimals = parseInt(el.getAttribute('data-decimal')) || 0;
+
+                            let obj = { val: 0 };
+                            gsap.to(obj, {
+                                val: targetVal,
+                                duration: 2.5,
+                                ease: "power3.out",
+                                onUpdate: function () {
+                                    let formattedVal = decimals > 0 ? obj.val.toFixed(decimals) : Math.floor(obj.val);
+                                    el.innerText = prefix + formattedVal + suffix;
+                                }
+                            });
+                        });
+                    },
+                    once: true
+                });
+
+
+
+
+
+                gsap.fromTo(".evd-left",
+                    { opacity: 0, x: -80 },
+                    { opacity: 1, x: 0, duration: 0.9, ease: "power2.out", scrollTrigger: { trigger: ".evidence-section", start: "top 75%", toggleActions: "play none none none" } }
+                );
+
+                gsap.fromTo(".evd-center",
+                    { opacity: 0, y: 80 },
+                    { opacity: 1, y: 0, duration: 0.9, ease: "power2.out", scrollTrigger: { trigger: ".evidence-section", start: "top 75%", toggleActions: "play none none none" } }
+                );
+
+                gsap.fromTo(".evd-right",
+                    { opacity: 0, x: 80 },
+                    { opacity: 1, x: 0, duration: 0.9, ease: "power2.out", scrollTrigger: { trigger: ".evidence-section", start: "top 75%", toggleActions: "play none none none" } }
+                );
+
+
+
+
+
+                gsap.utils.toArray(".reg-left").forEach((card) => {
+                    gsap.fromTo(card,
+                        { opacity: 0, x: -80 },
+                        {
+                            opacity: 1, x: 0, duration: 0.9, ease: "power2.out",
+                            scrollTrigger: { trigger: ".regulatory-section", start: "top 75%", toggleActions: "play none none none" }
+                        }
+                    );
+                });
+
+
+                gsap.utils.toArray(".reg-right").forEach((card) => {
+                    gsap.fromTo(card,
+                        { opacity: 0, x: 80 },
+                        {
+                            opacity: 1, x: 0, duration: 0.9, ease: "power2.out",
+                            scrollTrigger: { trigger: ".regulatory-section", start: "top 75%", toggleActions: "play none none none" }
+                        }
+                    );
+                });
+
+            }, 2200);
+
+        });
+
+
+        document.addEventListener("DOMContentLoaded", () => {
+
+
+            setTimeout(() => {
+
+                gsap.registerPlugin(ScrollTrigger);
+
+
+                gsap.utils.toArray('.cmp-anim').forEach(element => {
+                    gsap.fromTo(element,
+                        { opacity: 0, y: 30 },
+                        {
+                            opacity: 1, y: 0, duration: 0.8, ease: "power2.out",
+                            scrollTrigger: {
+                                trigger: element,
+                                start: "top 85%",
+                                toggleActions: "play none none none"
+                            }
+                        }
+                    );
+                });
+
+
+
+                gsap.fromTo(".cmp-row-anim",
+                    {
+                        opacity: 0,
+                        y: 40
+                    },
+                    {
+                        opacity: 1,
+                        y: 0,
+                        duration: 0.8,
+                        stagger: 0.25,
+                        ease: "power2.out",
+                        scrollTrigger: {
+                            trigger: ".cmp-table-wrapper",
+                            start: "top 75%",
+                            toggleActions: "play none none none"
+                        }
+                    }
+                );
+
+            }, 2200);
+
+        });
+
+        document.addEventListener("DOMContentLoaded", () => {
+
+
+            setTimeout(() => {
+
+                gsap.registerPlugin(ScrollTrigger);
+
+
+
+
+                gsap.utils.toArray('.anim-header').forEach(header => {
+                    gsap.fromTo(header,
+                        { opacity: 0, y: 30 },
+                        {
+                            opacity: 1, y: 0, duration: 0.8, ease: "power2.out",
+                            scrollTrigger: { trigger: header, start: "top 85%", toggleActions: "play none none none" }
+                        }
+                    );
+                });
+
+
+
+
+
+                gsap.fromTo(".faq-anim",
+                    { opacity: 0, y: 20 },
+                    {
+                        opacity: 1, y: 0, duration: 0.6, stagger: 0.15, ease: "power2.out",
+                        scrollTrigger: { trigger: ".faq-list", start: "top 85%", toggleActions: "play none none none" }
+                    }
+                );
+
+
+                const faqQuestions = document.querySelectorAll('.faq-question');
+                faqQuestions.forEach(q => {
+                    q.addEventListener('click', () => {
+                        const item = q.parentElement;
+                        const answer = item.querySelector('.faq-answer');
+                        const icon = q.querySelector('i');
+
+
+                        if (item.classList.contains('active')) {
+                            item.classList.remove('active');
+                            answer.style.maxHeight = null;
+                            icon.className = "fa-solid fa-chevron-down";
+                        } else {
+
+                            document.querySelectorAll('.faq-item').forEach(other => {
+                                other.classList.remove('active');
+                                other.querySelector('.faq-answer').style.maxHeight = null;
+                                other.querySelector('.faq-question i').className = "fa-solid fa-chevron-down";
+                            });
+
+
+                            item.classList.add('active');
+                            answer.style.maxHeight = answer.scrollHeight + "px";
+                            icon.className = "fa-solid fa-xmark";
+                        }
+                    });
+                });
+
+
+
+
+
+                gsap.utils.toArray(".erp-top-card").forEach((card) => {
+                    gsap.fromTo(card,
+                        { opacity: 0, rotationY: -90, transformPerspective: 1200 },
+                        {
+                            opacity: 1, rotationY: 0, duration: 1, ease: "back.out(1.2)",
+                            scrollTrigger: { trigger: card, start: "top 85%", toggleActions: "play none none none" }
+                        }
+                    );
+                });
+
+
+                gsap.utils.toArray(".erp-bot-card").forEach((card) => {
+                    gsap.fromTo(card,
+                        { opacity: 0, rotationY: 90, transformPerspective: 1200 },
+                        {
+                            opacity: 1, rotationY: 0, duration: 1, ease: "back.out(1.2)",
+                            scrollTrigger: { trigger: card, start: "top 85%", toggleActions: "play none none none" }
+                        }
+                    );
+                });
+
+
+
+
+
+                gsap.utils.toArray(".res-left").forEach((card) => {
+                    gsap.fromTo(card,
+                        { opacity: 0, x: -80 },
+                        {
+                            opacity: 1, x: 0, duration: 0.9, ease: "power2.out",
+                            scrollTrigger: { trigger: card, start: "top 85%", toggleActions: "play none none none" }
+                        }
+                    );
+                });
+
+
+                gsap.utils.toArray(".res-center").forEach((card) => {
+                    gsap.fromTo(card,
+                        { opacity: 0, y: 80 },
+                        {
+                            opacity: 1, y: 0, duration: 0.9, ease: "power2.out",
+                            scrollTrigger: { trigger: card, start: "top 85%", toggleActions: "play none none none" }
+                        }
+                    );
+                });
+
+
+                gsap.utils.toArray(".res-right").forEach((card) => {
+                    gsap.fromTo(card,
+                        { opacity: 0, x: 80 },
+                        {
+                            opacity: 1, x: 0, duration: 0.9, ease: "power2.out",
+                            scrollTrigger: { trigger: card, start: "top 85%", toggleActions: "play none none none" }
+                        }
+                    );
+                });
+
+            }, 2200);
+
+        });
+
+        document.addEventListener("DOMContentLoaded", () => {
+
+
+            setTimeout(() => {
+
+                gsap.registerPlugin(ScrollTrigger);
+
+
+                const eduCtaTl = gsap.timeline({
+                    scrollTrigger: {
+                        trigger: ".edu-cta-section",
+                        start: "top 80%",
+                        toggleActions: "play none none none"
+                    }
+                });
+
+
+                eduCtaTl.fromTo(".edu-cta-box",
+                    { opacity: 0, scale: 0.95, y: 40 },
+                    { opacity: 1, scale: 1, y: 0, duration: 0.8, ease: "power3.out" }
+                )
+
+                    .fromTo(".cta-anim",
+                        { opacity: 0, y: 25 },
+                        {
+                            opacity: 1,
+                            y: 0,
+                            duration: 0.6,
+                            stagger: 0.15,
+                            ease: "power2.out"
+                        },
+                        "-=0.4"
+                    );
+
+            }, 2200);
+
+        });
+
+
+    </script>
 </body>
 
 </html>

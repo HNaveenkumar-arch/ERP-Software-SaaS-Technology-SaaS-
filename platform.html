@@ -5,12 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SaaS / ERP Software Navigation - Dark Mode</title>
-    <!-- AOS Animation CSS -->
+
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <!-- FontAwesome for Icons -->
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="platform.css">
     <link rel="stylesheet" href="common.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 
 <body>
@@ -42,15 +44,15 @@
             </div>
 
             <ul class="nav-links" id="nav-links">
-                <li data-aos="fade-down" data-aos-delay="100"><a href="index.html" class="active">Home</a></li>
-                <li data-aos="fade-down" data-aos-delay="200"><a href="platform.html">Platform</a></li>
+                <li data-aos="fade-down" data-aos-delay="100"><a href="index.html">Home</a></li>
+                <li data-aos="fade-down" data-aos-delay="200"><a href="platform.html" class="active">Platform</a></li>
                 <li data-aos="fade-down" data-aos-delay="300"><a href="Solutions.html">Solutions</a></li>
-                <li data-aos="fade-down" data-aos-delay="400"><a href="index.html">Industries</a></li>
+                <li data-aos="fade-down" data-aos-delay="400"><a href="industries.html">Industries</a></li>
                 <li data-aos="fade-down" data-aos-delay="500"><a href="pricing.html">Pricing</a></li>
                 <li data-aos="fade-down" data-aos-delay="600"><a href="resources.html">Resources</a></li>
                 <li data-aos="fade-down" data-aos-delay="700"><a href="contact.html">Contact</a></li>
 
-                <!-- Mobile Actions (Visible only in mobile) -->
+
                 <li class="mobile-actions">
                     <a href="login.html" class="login-btn">Login</a>
                     <a href="getstart.html" class="get-started-btn">Get Started</a>
@@ -64,21 +66,730 @@
         </nav>
     </header>
 
-    <section style="height: 150vh; padding: 150px 5%; background: #0f172a; color: white;">
-        <h1 data-aos="fade-up">Welcome to the Future of ERP Software</h1>
-        <p data-aos="fade-up" data-aos-delay="200" style="margin-top: 15px; color: #94a3b8;">Scroll down to see the
-            navbar shrink effect.</p>
+
+    <section class="platform-hero">
+        <div class="ph-container">
+
+
+            <div class="ph-left">
+                <div class="ph-badge">
+                    <span class="ph-dot"></span> Next-Gen Enterprise Platform &bull; Release v4.8
+                </div>
+
+                <h1 class="ph-title">All Your Business Operations. <span class="text-blue">One Powerful ERP.</span></h1>
+
+                <p class="ph-desc">Manage finance, sales, inventory, HR, projects, and customer operations from one
+                    intelligent SaaS platform.</p>
+
+                <div class="ph-btn-group">
+                    <a href="404page.html" class="ph-btn-primary">Get Started <i class="fa-solid fa-bolt"></i></a>
+                    <a href="404page.html" class="ph-btn-secondary">Explore Features <i
+                            class="fa-solid fa-arrow-right"></i></a>
+                </div>
+
+                <div class="ph-trust-section">
+                    <p class="trust-title">TRUSTED BY 4,200+ FORWARD-THINKING ENTERPRISES</p>
+                    <div class="trust-badges">
+                        <span class="t-badge"><i class="fa-solid fa-shield-check text-blue"></i> SOC2 Type II</span>
+                        <span class="t-badge"><i class="fa-solid fa-shield text-blue"></i> ISO 27001</span>
+                        <span class="t-badge"><i class="fa-solid fa-lock text-blue"></i> GDPR Compliant</span>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="ph-right">
+                <div class="dashboard-card">
+
+                    <div class="db-header">
+                        <div class="mac-dots">
+                            <span class="dot-red"></span>
+                            <span class="dot-yellow"></span>
+                            <span class="dot-green"></span>
+                        </div>
+                        <div class="db-breadcrumb">dashboard / live-ops / overview</div>
+                        <div class="db-status-badges">
+                            <span class="status-live"><span class="pulse-dot"></span> Live Operations</span>
+                            <span class="status-q3">Q3 2025 <i class="fa-regular fa-calendar"></i></span>
+                        </div>
+                    </div>
+
+
+                    <div class="db-metrics-grid">
+                        <div class="metric-box">
+                            <div class="metric-label">Monthly Recurring Rev</div>
+
+                            <div class="metric-value counter-animate" data-val="2845900" data-prefix="$" data-suffix=""
+                                data-decimal="0">$0</div>
+                            <div class="metric-trend text-blue"><i class="fa-solid fa-arrow-trend-up"></i> +18.4% MoM
+                            </div>
+                        </div>
+                        <div class="metric-box">
+                            <div class="metric-label">Operating Margin</div>
+                            <div class="metric-value counter-animate" data-val="34.2" data-prefix="" data-suffix="%"
+                                data-decimal="1">0%</div>
+                            <div class="metric-trend text-blue"><i class="fa-solid fa-arrow-up"></i> +2.1% v budget
+                            </div>
+                        </div>
+                        <div class="metric-box">
+                            <div class="metric-label">Cash Runway</div>
+                            <div class="metric-value counter-animate" data-val="28" data-prefix="" data-suffix=" Mo"
+                                data-decimal="0">0 Mo</div>
+                            <div class="metric-trend text-gray">Autonomous burn control</div>
+                        </div>
+                    </div>
+
+
+                    <div class="db-chart-section">
+                        <div class="chart-header">
+                            <div>
+                                <div class="chart-title">Revenue Velocity & Pipeline Forecast</div>
+                                <div class="chart-sub">Real-time consolidated telemetry (USD $M)</div>
+                            </div>
+                            <div class="chart-target">Target: $3.2M</div>
+                        </div>
+
+                        <div class="chart-container" style="position: relative; height: 120px; width: 100%;">
+                            <canvas id="liveRevenueChart"></canvas>
+                        </div>
+                    </div>
+
+
+                    <div class="db-progress-grid">
+                        <div class="progress-col">
+                            <div class="prog-header">INVENTORY HEALTH</div>
+                            <div class="prog-flex">
+                                <span class="prog-name">Stock Reliability</span>
+                                <span class="prog-val text-blue">99.2%</span>
+                            </div>
+                            <div class="prog-bar-bg">
+                                <div class="prog-bar-fill blue" style="width: 99.2%;"></div>
+                            </div>
+                            <div class="prog-footer">
+                                <span>Reorder Alerts: <strong>3 items</strong></span>
+                                <span>Fulfillment: <strong>99.8%</strong></span>
+                            </div>
+                        </div>
+                        <div class="progress-col">
+                            <div class="prog-header">WORKFORCE CAPITAL</div>
+                            <div class="prog-flex">
+                                <span class="prog-name">Active Team</span>
+                                <span class="prog-val">1,420</span>
+                            </div>
+                            <div class="prog-bar-bg">
+                                <div class="prog-bar-fill dark" style="width: 85%;"></div>
+                            </div>
+                            <div class="prog-footer">
+                                <span>Retention Index: <strong class="text-blue">96%</strong></span>
+                                <span>Payroll: <strong>Synced</strong></span>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="db-ledger-section">
+                        <div class="ledger-header">
+                            <span class="ledger-title">LIVE TRANSACTIONAL LEDGER</span>
+                            <a href="404page.html" class="ledger-link">View full audit trail &rightarrow;</a>
+                        </div>
+                        <div class="table-responsive">
+                            <table class="ledger-table">
+                                <thead>
+                                    <tr>
+                                        <th>Entity</th>
+                                        <th>Category</th>
+                                        <th>Amount</th>
+                                        <th style="text-align: right;">Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="font-semibold">Acme Global Ltd</td>
+                                        <td class="font-mono">Enterprise ARR</td>
+                                        <td class="font-bold">$148,000</td>
+                                        <td align="right"><span class="badge-blue">Settled</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="font-semibold">Vertex Logistics</td>
+                                        <td class="font-mono">Fleet Supply Svc</td>
+                                        <td class="font-bold">$34,250</td>
+                                        <td align="right"><span class="badge-light">Processing</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="font-semibold">CloudScale Inc.</td>
+                                        <td class="font-mono">Infrastructure OpEx</td>
+                                        <td class="font-bold">$89,400</td>
+                                        <td align="right"><span class="badge-light">Approved</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="font-semibold">Nordic Horizons</td>
+                                        <td class="font-mono">SLA Expansion</td>
+                                        <td class="font-bold">$62,100</td>
+                                        <td align="right"><span class="badge-blue">Settled</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+
+
+
+    <section class="arch-section">
+        <div class="arch-container">
+
+
+            <div class="arch-header-wrapper">
+                <div class="arch-badge">ARCHITECTURE & PHILOSOPHY</div>
+                <h2 class="arch-main-title">Built to Simplify Modern Business</h2>
+                <p class="arch-desc">Legacy ERP systems trap mission-critical operations in sluggish database silos.
+                    AcuityERP establishes an elastic, consolidated cloud fabric that harmonizes finance, supply chains,
+                    human capital, and customer pipelines in real time with zero friction.</p>
+            </div>
+
+
+            <div class="arch-grid">
+
+
+                <div class="arch-left">
+                    <div class="arch-features">
+
+                        <div class="feature-item">
+                            <div class="feat-icon"><i class="fa-solid fa-network-wired"></i></div>
+                            <div class="feat-text">
+                                <h3>Unified Data Fabric</h3>
+                                <p>Eliminates departmental drift by creating an authoritative single-source-of-truth for
+                                    multi-entity ledgers, inventory counts, and contractual commitments.</p>
+                            </div>
+                        </div>
+
+                        <div class="feature-item">
+                            <div class="feat-icon"><i class="fa-solid fa-arrow-right-arrow-left"></i></div>
+                            <div class="feat-text">
+                                <h3>Real-Time Synchronization</h3>
+                                <p>Sub-50ms distributed event pipeline pushes ledger balance adjustments, shipment
+                                    confirmations, and pipeline updates across every terminal globally.</p>
+                            </div>
+                        </div>
+
+                        <div class="feature-item">
+                            <div class="feat-icon"><i class="fa-solid fa-diagram-project"></i></div>
+                            <div class="feat-text">
+                                <h3>Automated Cross-Departmental Workflows</h3>
+                                <p>Trigger autonomous purchase requisitions, payroll adjustments, and revenue
+                                    recognition rules instantly without manual handoffs.</p>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="arch-metric-cards">
+                        <div class="a-card">
+                            <h2 class="text-blue arch-counter" data-val="40" data-suffix="%">0%</h2>
+                            <h4>Operational Efficiency Gain</h4>
+                            <p>Demonstrated across enterprise migrations</p>
+                        </div>
+                        <div class="a-card">
+                            <h2 class="text-blue arch-counter" data-val="99.99" data-suffix="%" data-decimal="2">0%</h2>
+                            <h4>System Uptime SLA</h4>
+                            <p>Backed by multi-region hot failover</p>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="arch-right">
+                    <div class="diagram-wrapper">
+                        <div class="diag-header">
+                            <p class="diag-subtitle">ACUITY MESH ARCHITECTURE</p>
+                            <h3 class="diag-title">Consolidated Core Hub</h3>
+                        </div>
+
+
+                        <div class="diagram-circle-area">
+
+                            <div class="dashed-circle"></div>
+
+
+                            <div class="line-v"></div>
+                            <div class="line-h"></div>
+
+
+                            <div class="node-center">
+                                <div class="icon-core"><i class="fa-solid fa-border-all"></i></div>
+                                <h4>Cloud ERP Core</h4>
+                                <p>v4.8 High-<br>Throughput</p>
+                            </div>
+
+
+                            <div class="node-orbit node-top">
+                                <i class="fa-solid fa-wallet text-blue orbit-icon"></i> Finance Fabric
+                            </div>
+                            <div class="node-orbit node-right">
+                                <i class="fa-solid fa-box text-blue orbit-icon"></i> Supply Chain
+                            </div>
+                            <div class="node-orbit node-bottom">
+                                <i class="fa-solid fa-users text-blue orbit-icon"></i> Workforce Matrix
+                            </div>
+                            <div class="node-orbit node-left">
+                                <i class="fa-solid fa-chart-line text-blue orbit-icon"></i> CRM & Revenue
+                            </div>
+                        </div>
+
+
+                        <div class="mobile-diagram-list">
+                            <div class="m-node-item"><i class="fa-solid fa-wallet text-blue"></i> Finance Fabric</div>
+                            <div class="m-node-item"><i class="fa-solid fa-box text-blue"></i> Supply Chain</div>
+                            <div class="m-node-item"><i class="fa-solid fa-users text-blue"></i> Workforce Matrix</div>
+                            <div class="m-node-item"><i class="fa-solid fa-chart-line text-blue"></i> CRM & Revenue
+                            </div>
+                        </div>
+
+
+                        <div class="diag-footer">
+                            <span><span class="dot blue"></span> Zero-Copy Engine</span>
+                            <span><span class="dot blue"></span> Instant Replication</span>
+                            <span><span class="dot gray"></span> TLS 1.3 Transport</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+    <section class="capabilities-section">
+        <div class="cap-container">
+
+
+            <div class="cap-header-wrapper">
+                <div class="cap-badge">ENGINEERED FOR SCALE</div>
+                <h2 class="cap-main-title">Key Architectural Capabilities</h2>
+                <p class="cap-desc">Designed from first principles to handle the uncompromising demands of modern
+                    hyper-growth and global multi-entity operations.</p>
+            </div>
+
+
+            <div class="cap-grid">
+
+
+                <div class="cap-card">
+                    <div class="cap-icon-box"><i class="fa-solid fa-server cap-icon"></i></div>
+                    <h3 class="cap-card-title">Cloud-Based ERP</h3>
+                    <p class="cap-card-desc">Multi-tenant global availability with sub-second latency across 14
+                        geographic zones. Dynamic load leveling ensures continuous performance during end-of-quarter
+                        surges.</p>
+                    <div class="cap-card-footer">
+                        <span class="footer-label">Latency Guarantee</span>
+                        <span class="footer-value">&lt; 42ms worldwide</span>
+                    </div>
+                </div>
+
+
+                <div class="cap-card">
+                    <div class="cap-icon-box"><i class="fa-solid fa-chart-simple cap-icon"></i></div>
+                    <h3 class="cap-card-title">Real-Time Analytics</h3>
+                    <p class="cap-card-desc">Instant KPI computation and predictive business intelligence powered by
+                        embedded columnar analytics engines. Drill down from enterprise consolidated views down to raw
+                        invoices.</p>
+                    <div class="cap-card-footer">
+                        <span class="footer-label">Aggregation Speed</span>
+                        <span class="footer-value">12M rows/sec</span>
+                    </div>
+                </div>
+
+
+                <div class="cap-card">
+                    <div class="cap-icon-box"><i class="fa-solid fa-wand-magic-sparkles cap-icon"></i></div>
+                    <h3 class="cap-card-title">Smart Automation</h3>
+                    <p class="cap-card-desc">Self-healing bank reconciliations and automated hierarchical approval
+                        chains. Reduce 80% of human intervention across routine administrative approvals.</p>
+                    <div class="cap-card-footer">
+                        <span class="footer-label">Auto-Reconciled</span>
+                        <span class="footer-value">94.8% auto match</span>
+                    </div>
+                </div>
+
+
+                <div class="cap-card">
+                    <div class="cap-icon-box"><i class="fa-solid fa-shield-halved cap-icon"></i></div>
+                    <h3 class="cap-card-title">Secure Data</h3>
+                    <p class="cap-card-desc">End-to-end zero-trust architecture and automated cryptographic lineage
+                        logging. Every field edit is permanently hashed for compliance scrutiny.</p>
+                    <div class="cap-card-footer">
+                        <span class="footer-label">Cryptographic Ledger</span>
+                        <span class="footer-value">SHA-256 Verified</span>
+                    </div>
+                </div>
+
+
+                <div class="cap-card">
+                    <div class="cap-icon-box"><i class="fa-solid fa-gauge-high cap-icon"></i></div>
+                    <h3 class="cap-card-title">Scalable Platform</h3>
+                    <p class="cap-card-desc">Elastic cloud throughput capable of processing millions of concurrent
+                        transactions with zero compute contention or connection pooling deadlocks.</p>
+                    <div class="cap-card-footer">
+                        <span class="footer-label">Throughput Peak</span>
+                        <span class="footer-value">150,000 req/sec</span>
+                    </div>
+                </div>
+
+
+                <div class="cap-card">
+                    <div class="cap-icon-box"><i class="fa-solid fa-puzzle-piece cap-icon"></i></div>
+                    <h3 class="cap-card-title">Integrated Modules</h3>
+                    <p class="cap-card-desc">Seamless API-first architecture connecting legacy mainframes and modern
+                        SaaS tools via bidirectional Webhooks and GraphQL endpoints.</p>
+                    <div class="cap-card-footer">
+                        <span class="footer-label">Pre-built Connectors</span>
+                        <span class="footer-value">280+ standard APIs</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+    <section class="modules-section">
+        <div class="mod-container">
+
+
+            <div class="mod-header-wrapper">
+                <div class="mod-header-left">
+                    <div class="mod-badge">MODULAR SUITE</div>
+                    <h2 class="mod-main-title">Comprehensive Enterprise Modules</h2>
+                    <p class="mod-desc">Activate the specific business hubs you need today. Scale horizontally into
+                        unified multi-subsidiary management as you grow.</p>
+                </div>
+                <div class="mod-header-right">
+                    <a href="404page.html" class="mod-link">Request custom module matrix <i
+                            class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+
+            <div class="mod-grid">
+
+
+                <div class="mod-card">
+                    <div class="mod-card-header">
+                        <div class="mod-icon-box"><i class="fa-solid fa-money-bill-transfer mod-icon"></i></div>
+                        <div class="mod-tag">Core Tier</div>
+                    </div>
+                    <h3 class="mod-card-title">Finance & Accounting</h3>
+                    <p class="mod-card-desc">Automate general ledgers, AP/AR workflows, multi-currency valuations, and
+                        international fiscal reconciliations.</p>
+                    <ul class="mod-feature-list">
+                        <li><i class="fa-solid fa-circle-check text-blue"></i> Multi-currency ledger & foreign exchange
+                            parity</li>
+                        <li><i class="fa-solid fa-circle-check text-blue"></i> GAAP/IFRS automated statement compilation
+                        </li>
+                        <li><i class="fa-solid fa-circle-check text-blue"></i> Autonomous sales tax & VAT rules engine
+                        </li>
+                    </ul>
+                    <a href="404page.html" class="mod-explore">Explore Module <i
+                            class="fa-solid fa-arrow-right"></i></a>
+                </div>
+
+
+                <div class="mod-card">
+                    <div class="mod-card-header">
+                        <div class="mod-icon-box"><i class="fa-solid fa-user-tie mod-icon"></i></div>
+                        <div class="mod-tag">Commercial</div>
+                    </div>
+                    <h3 class="mod-card-title">Sales & CRM</h3>
+                    <p class="mod-card-desc">End-to-end deal visibility connecting pre-sales touchpoints directly to
+                        automated invoicing and ARR calculations.</p>
+                    <ul class="mod-feature-list">
+                        <li><i class="fa-solid fa-circle-check text-blue"></i> Lead stages & opportunity pipeline
+                            hygiene</li>
+                        <li><i class="fa-solid fa-circle-check text-blue"></i> Contract lifecycles with native
+                            e-signatures</li>
+                        <li><i class="fa-solid fa-circle-check text-blue"></i> Predictive customer churn forecasting
+                        </li>
+                    </ul>
+                    <a href="404page.html" class="mod-explore">Explore Module <i
+                            class="fa-solid fa-arrow-right"></i></a>
+                </div>
+
+
+                <div class="mod-card">
+                    <div class="mod-card-header">
+                        <div class="mod-icon-box"><i class="fa-solid fa-warehouse mod-icon"></i></div>
+                        <div class="mod-tag">Logistics</div>
+                    </div>
+                    <h3 class="mod-card-title">Inventory Management</h3>
+                    <p class="mod-card-desc">Precision logistics across multiple physical distribution centers,
+                        consignment lots, and in-transit shipments.</p>
+                    <ul class="mod-feature-list">
+                        <li><i class="fa-solid fa-circle-check text-blue"></i> Multi-warehouse global bin tracking</li>
+                        <li><i class="fa-solid fa-circle-check text-blue"></i> Dynamic algorithmic reorder thresholds
+                        </li>
+                        <li><i class="fa-solid fa-circle-check text-blue"></i> Barcode, QR & RFID serialization syncing
+                        </li>
+                    </ul>
+                    <a href="404page.html" class="mod-explore">Explore Module <i
+                            class="fa-solid fa-arrow-right"></i></a>
+                </div>
+
+
+                <div class="mod-card">
+                    <div class="mod-card-header">
+                        <div class="mod-icon-box"><i class="fa-solid fa-users-gear mod-icon"></i></div>
+                        <div class="mod-tag">People</div>
+                    </div>
+                    <h3 class="mod-card-title">Human Resources</h3>
+                    <p class="mod-card-desc">Unify payroll orchestration, localized labor regulations, benefits
+                        Administration, and employee engagement metrics.</p>
+                    <ul class="mod-feature-list">
+                        <li><i class="fa-solid fa-circle-check text-blue"></i> Global cross-border payroll processing
+                        </li>
+                        <li><i class="fa-solid fa-circle-check text-blue"></i> Turnkey onboarding & credential
+                            compliance</li>
+                        <li><i class="fa-solid fa-circle-check text-blue"></i> Organizational retention and parity
+                            monitoring</li>
+                    </ul>
+                    <a href="404page.html" class="mod-explore">Explore Module <i
+                            class="fa-solid fa-arrow-right"></i></a>
+                </div>
+
+
+                <div class="mod-card">
+                    <div class="mod-card-header">
+                        <div class="mod-icon-box"><i class="fa-solid fa-list-check mod-icon"></i></div>
+                        <div class="mod-tag">Operations</div>
+                    </div>
+                    <h3 class="mod-card-title">Project Management</h3>
+                    <p class="mod-card-desc">Tie team deliverables directly to general ledger budget lines, billable
+                        hours, and milestone invoicing triggers.</p>
+                    <ul class="mod-feature-list">
+                        <li><i class="fa-solid fa-circle-check text-blue"></i> Dynamic Gantt milestones & dependency
+                            trees</li>
+                        <li><i class="fa-solid fa-circle-check text-blue"></i> Cross-functional resource capacity
+                            planning</li>
+                        <li><i class="fa-solid fa-circle-check text-blue"></i> Real-time billable utilization tracking
+                        </li>
+                    </ul>
+                    <a href="404page.html" class="mod-explore">Explore Module <i
+                            class="fa-solid fa-arrow-right"></i></a>
+                </div>
+
+
+                <div class="mod-card">
+                    <div class="mod-card-header">
+                        <div class="mod-icon-box"><i class="fa-solid fa-chart-line mod-icon"></i></div>
+                        <div class="mod-tag">Intelligence</div>
+                    </div>
+                    <h3 class="mod-card-title">Business Analytics</h3>
+                    <p class="mod-card-desc">Executive dashboards with drill-down exploration, AI-generated variance
+                        summaries, and board-ready scheduled exports.</p>
+                    <ul class="mod-feature-list">
+                        <li><i class="fa-solid fa-circle-check text-blue"></i> Custom executive dashboards & self-serve
+                            widgets</li>
+                        <li><i class="fa-solid fa-circle-check text-blue"></i> Automated anomaly detection across
+                            expenditures</li>
+                        <li><i class="fa-solid fa-circle-check text-blue"></i> Scheduled SEC/board-ready PDF & CSV
+                            exports</li>
+                    </ul>
+                    <a href="404page.html" class="mod-explore">Explore Module <i
+                            class="fa-solid fa-arrow-right"></i></a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+    <section class="security-section">
+        <div class="sec-container">
+
+
+            <div class="sec-header-wrapper">
+                <div class="sec-badge">ZERO-TRUST PROTOCOL</div>
+                <h2 class="sec-main-title">Enterprise-Grade Security & Governance</h2>
+                <p class="sec-desc">Protecting sensitive sovereign data with defense-in-depth isolation, multi-level
+                    hardware encryption, and continuous automated verification.</p>
+            </div>
+
+
+            <div class="sec-grid">
+
+
+                <div class="sec-left">
+
+                    <div class="sec-feature-card">
+                        <div class="sec-icon-box"><i class="fa-solid fa-user-shield"></i></div>
+                        <div class="sec-text-content">
+                            <h3>Role-Based Access</h3>
+                            <p>Granular RBAC attributes and contextual multi-factor authentication with device
+                                telemetry.</p>
+                        </div>
+                    </div>
+
+                    <div class="sec-feature-card">
+                        <div class="sec-icon-box"><i class="fa-solid fa-lock"></i></div>
+                        <div class="sec-text-content">
+                            <h3>Data Encryption</h3>
+                            <p>FIPS 140-2 Level 3 HSM key management. AES-256 at rest and TLS 1.3 in transit.</p>
+                        </div>
+                    </div>
+
+                    <div class="sec-feature-card">
+                        <div class="sec-icon-box"><i class="fa-solid fa-cloud"></i></div>
+                        <div class="sec-text-content">
+                            <h3>Secure Cloud Infrastructure</h3>
+                            <p>Multi-region redundancy across Tier-4 datacenters with automated physical partition
+                                isolation.</p>
+                        </div>
+                    </div>
+
+                    <div class="sec-feature-card">
+                        <div class="sec-icon-box"><i class="fa-solid fa-cloud-arrow-up"></i></div>
+                        <div class="sec-text-content">
+                            <h3>Automated Backups</h3>
+                            <p>Continuous point-in-time recovery (PITR) with second-by-second snapshot replication
+                                across geos.</p>
+                        </div>
+                    </div>
+
+                    <div class="sec-feature-card">
+                        <div class="sec-icon-box"><i class="fa-solid fa-eye"></i></div>
+                        <div class="sec-text-content">
+                            <h3>Activity Monitoring</h3>
+                            <p>Real-time immutable audit trails piped directly into your enterprise SIEM/SOC event
+                                streams.</p>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="sec-right">
+                    <div class="soc-dashboard">
+
+                        <div class="soc-header">
+                            <div class="soc-title">
+                                <span class="dot-active"></span> SOC Command Center &bull; Active Defense
+                            </div>
+                            <div class="soc-status">Status: Nominal</div>
+                        </div>
+
+
+                        <div class="soc-metrics-grid">
+                            <div class="soc-metric-box inner-anim">
+                                <h5>ACTIVE ENCRYPTION</h5>
+                                <h2>AES-256-GCM</h2>
+                                <p class="text-blue">HSM Ring Active</p>
+                            </div>
+                            <div class="soc-metric-box inner-anim">
+                                <h5>INTRUSION BLOCK RATE</h5>
+                                <h2>100.0%</h2>
+                                <p class="text-blue">0 Anomaly breaches</p>
+                            </div>
+                            <div class="soc-metric-box inner-anim">
+                                <h5>TLS TRANSPORT</h5>
+                                <h2>TLS 1.3</h2>
+                                <p class="text-blue">Strict HSTS</p>
+                            </div>
+                        </div>
+
+
+                        <div class="soc-audit-section">
+                            <h5 class="audit-title">LIVE CRYPTOGRAPHIC AUDIT TRAIL</h5>
+
+                            <div class="audit-list">
+                                <div class="audit-row inner-anim">
+                                    <div class="audit-left">
+                                        <span class="audit-time">[14:28:02.11]</span> RBAC token re-authenticated:
+                                        user_id=admin_9273
+                                    </div>
+                                    <div class="audit-status">OK / 200</div>
+                                </div>
+                                <div class="audit-row inner-anim">
+                                    <div class="audit-left">
+                                        <span class="audit-time">[14:28:01.88]</span> Snapshot differential replicated
+                                        to eu-west-1 (52MB)
+                                    </div>
+                                    <div class="audit-status text-blue">Verified</div>
+                                </div>
+                                <div class="audit-row inner-anim">
+                                    <div class="audit-left">
+                                        <span class="audit-time">[14:27:59.04]</span> Ledger block signed:
+                                        hash_0x82f9...b729a
+                                    </div>
+                                    <div class="audit-status text-blue">Committed</div>
+                                </div>
+                                <div class="audit-row inner-anim">
+                                    <div class="audit-left">
+                                        <span class="audit-time">[14:27:56.40]</span> Automated vulnerability perimeter
+                                        scan completed
+                                    </div>
+                                    <div class="audit-status text-blue">0 Flags</div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="soc-footer inner-anim">
+                            <div class="soc-footer-left">Next automated penetration test: in 4h 12m</div>
+                            <div class="soc-footer-right">Continuous Compliance Agent v2.4 Active</div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+    <section class="cta-section">
+        <div class="cta-container">
+
+            <div class="cta-box">
+                <h2 class="cta-title cta-anim">Ready to Transform Your Business?</h2>
+                <p class="cta-desc cta-anim">Start managing your entire organization with a smarter, connected ERP
+                    platform.</p>
+
+                <div class="cta-buttons cta-anim">
+                    <a href="404page.html" class="cta-btn-primary">Start Free Trial <i
+                            class="fa-solid fa-arrow-right"></i></a>
+                    <a href="404page.html" class="cta-btn-secondary">Talk to Sales</a>
+                </div>
+
+                <p class="cta-footer cta-anim">14-day full access enterprise trial &bull; No credit card required &bull;
+                    Dedicated migration support</p>
+            </div>
+        </div>
     </section>
 
 
     <footer id="footer" class="footer">
         <div class="footer-container">
-            <!-- Column 1: Brand & Social -->
+
             <div class="footer-brand" data-aos="fade-up" data-aos-duration="1000">
                 <div class="logo">
                     <a href="index.html"><img src="./asset/logo_bule.webp" alt="logo"></a>
                 </div>
-                <!-- ஸ்கிரீன்ஷாட்டில் உள்ள அதே வாசகம் -->
+
                 <p class="footer-desc">
                     One connected platform for your entire business. Streamline workflows, boost productivity, and make
                     data-driven decisions.
@@ -91,7 +802,7 @@
                 </div>
             </div>
 
-            <!-- Column 2: Platform Links (ஸ்கிரீன்ஷாட்டில் உள்ள 5 மெனுக்கள்) -->
+
             <div class="footer-links" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
                 <h3>PLATFORM</h3>
                 <ul>
@@ -103,7 +814,7 @@
                 </ul>
             </div>
 
-            <!-- Column 3: Company Links (நேவ்பாரில் உள்ள முதல் 5 மெனுக்கள்) -->
+
             <div class="footer-links" data-aos="fade-up" data-aos-delay="400" data-aos-duration="1000">
                 <h3>COMPANY</h3>
                 <ul>
@@ -115,7 +826,7 @@
                 </ul>
             </div>
 
-            <!-- Column 4: Resources Links (நேவ்பார் மீதி 2 + ஸ்கிரீன்ஷாட் 3) -->
+
             <div class="footer-links" data-aos="fade-up" data-aos-delay="600" data-aos-duration="1000">
                 <h3>RESOURCES</h3>
                 <ul>
@@ -128,7 +839,7 @@
             </div>
         </div>
 
-        <!-- Footer Bottom: Copyright & Legal -->
+
         <div class="footer-bottom-container">
             <div class="footer-bottom">
                 <p>&copy; 2026 STACKLY. All rights reserved.</p>
@@ -144,9 +855,498 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 
-    <!-- AOS Animation JS -->
+
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="script.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+
+
+            gsap.registerPlugin(ScrollTrigger);
+
+
+            gsap.set(".platform-hero", { opacity: 0 });
+
+
+            setTimeout(() => {
+
+
+                gsap.set(".platform-hero", { opacity: 1 });
+                startAllAnimations();
+
+            }, 2000);
+
+
+
+
+
+
+            function startAllAnimations() {
+
+                const tl = gsap.timeline({
+                    scrollTrigger: {
+                        trigger: ".platform-hero",
+                        start: "top 80%",
+                        toggleActions: "play none none none"
+                    }
+                });
+
+
+                tl.fromTo(".ph-badge", { opacity: 0, x: -50 }, { opacity: 1, x: 0, duration: 0.5, ease: "power2.out" })
+                    .fromTo(".ph-title", { opacity: 0, x: -50 }, { opacity: 1, x: 0, duration: 0.6, ease: "power2.out" }, "-=0.3")
+                    .fromTo(".ph-desc", { opacity: 0, x: -50 }, { opacity: 1, x: 0, duration: 0.6, ease: "power2.out" }, "-=0.4")
+                    .fromTo(".ph-btn-group a", { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.5, stagger: 0.15, ease: "back.out(1.5)" }, "-=0.3")
+                    .fromTo(".ph-trust-section", { opacity: 0 }, { opacity: 1, duration: 0.6 }, "-=0.2");
+
+
+                tl.fromTo(".dashboard-card",
+                    { opacity: 0, x: 150, scale: 0.8, rotationY: -20, transformPerspective: 1500 },
+                    { opacity: 1, x: 0, scale: 1, rotationY: 0, duration: 1.2, ease: "back.out(1.2)" },
+                    "-=1"
+                );
+
+
+                gsap.utils.toArray('.counter-animate').forEach(el => {
+                    let targetVal = parseFloat(el.getAttribute('data-val'));
+                    let prefix = el.getAttribute('data-prefix') || '';
+                    let suffix = el.getAttribute('data-suffix') || '';
+                    let decimals = parseInt(el.getAttribute('data-decimal')) || 0;
+
+                    let obj = { val: 0 };
+
+                    tl.to(obj, {
+                        val: targetVal,
+                        duration: 2.5,
+                        ease: "power3.out",
+                        onUpdate: function () {
+                            let currentVal = obj.val;
+                            let formattedVal = decimals > 0 ?
+                                currentVal.toFixed(decimals) :
+                                Math.floor(currentVal).toLocaleString('en-US');
+                            el.innerText = prefix + formattedVal + suffix;
+                        }
+                    }, "-=1.2");
+                });
+
+
+                gsap.to(".dashboard-card", {
+                    y: -15, duration: 3, repeat: -1, yoyo: true, ease: "sine.inOut", delay: 1.5
+                });
+
+
+                initChartJS();
+            }
+
+
+
+
+
+
+            function initChartJS() {
+                setTimeout(() => {
+                    const canvas = document.getElementById('liveRevenueChart');
+                    if (!canvas || typeof Chart === 'undefined') return;
+
+                    const ctx = canvas.getContext('2d');
+
+                    let chartData = [2.1, 2.3, 2.2, 2.5, 2.4, 2.6, 2.84];
+                    let labels = ['Wk 32', 'Wk 33', 'Wk 34', 'Wk 35', 'Wk 36', 'Wk 37', 'Wk 38'];
+
+                    let gradient = ctx.createLinearGradient(0, 0, 0, 150);
+                    gradient.addColorStop(0, 'rgba(37, 99, 235, 0.2)');
+                    gradient.addColorStop(1, 'rgba(37, 99, 235, 0)');
+
+                    const myChart = new Chart(ctx, {
+                        type: 'line',
+                        data: {
+                            labels: labels,
+                            datasets: [{
+                                label: 'Revenue ($M)',
+                                data: chartData,
+                                borderColor: '#2563eb',
+                                backgroundColor: gradient,
+                                borderWidth: 2,
+                                pointBackgroundColor: '#ffffff',
+                                pointBorderColor: '#2563eb',
+                                pointBorderWidth: 2,
+                                pointRadius: 4,
+                                pointHoverRadius: 6,
+                                fill: true,
+                                tension: 0.4
+                            }]
+                        },
+                        options: {
+                            responsive: true,
+                            maintainAspectRatio: false,
+                            plugins: {
+                                legend: { display: false },
+                                tooltip: {
+                                    backgroundColor: '#0f172a',
+                                    titleFont: { size: 11, family: 'Inter' },
+                                    bodyFont: { size: 13, family: 'Inter', weight: 'bold' },
+                                    padding: 10,
+                                    displayColors: false,
+                                    callbacks: {
+                                        label: function (context) { return context.parsed.y + 'M (+18.4%)'; }
+                                    }
+                                }
+                            },
+                            scales: {
+                                x: { display: false },
+                                y: { display: false, min: 1.5, max: 3.5 }
+                            },
+                            animation: { duration: 800, easing: 'easeOutQuart' }
+                        }
+                    });
+
+
+                    setInterval(() => {
+                        let newVal = chartData[chartData.length - 1] + (Math.random() * 0.2 - 0.05);
+                        if (newVal > 3.4) newVal = 3.2;
+
+                        chartData.shift();
+                        chartData.push(parseFloat(newVal.toFixed(2)));
+
+                        let lastWk = parseInt(labels[labels.length - 1].replace('Wk ', ''));
+                        labels.shift();
+                        labels.push('Wk ' + (lastWk + 1));
+
+                        myChart.update();
+                    }, 3000);
+
+                }, 500);
+            }
+
+        });
+
+
+        document.addEventListener("DOMContentLoaded", () => {
+
+            gsap.registerPlugin(ScrollTrigger);
+
+
+
+
+
+            const archTl = gsap.timeline({
+                scrollTrigger: {
+                    trigger: ".arch-section",
+                    start: "top 75%",
+                    toggleActions: "play none none none"
+                }
+            });
+
+
+            archTl.fromTo(".arch-badge", { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.6 })
+                .fromTo(".arch-main-title", { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.6 }, "-=0.3")
+                .fromTo(".arch-desc", { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.6 }, "-=0.4");
+
+
+            archTl.fromTo(".feature-item",
+                { opacity: 0, x: -30 },
+                { opacity: 1, x: 0, duration: 0.6, stagger: 0.2, ease: "power2.out" },
+                "-=0.2"
+            );
+
+
+            archTl.fromTo(".a-card",
+                { opacity: 0, rotationY: 90, scale: 0.8, transformPerspective: 1000 },
+                { opacity: 1, rotationY: 0, scale: 1, duration: 1, stagger: 0.2, ease: "back.out(1.5)" },
+                "-=0.4"
+            );
+
+
+            archTl.fromTo(".diagram-wrapper",
+                { opacity: 0, x: 50, rotationX: 10 },
+                { opacity: 1, x: 0, rotationX: 0, duration: 1, ease: "power3.out" },
+                "-=1.2"
+            );
+
+
+            archTl.fromTo(".node-center", { opacity: 0, scale: 0 }, { opacity: 1, scale: 1, duration: 0.6, ease: "back.out(2)" }, "-=0.5")
+                .fromTo(".node-orbit", { opacity: 0, scale: 0 }, { opacity: 1, scale: 1, duration: 0.4, stagger: 0.1, ease: "back.out(1.5)" }, "-=0.2")
+                .fromTo(".m-node-item", { opacity: 0, scale: 0.8 }, { opacity: 1, scale: 1, duration: 0.4, stagger: 0.1, ease: "back.out(1.5)" }, "-=0.5")
+                .fromTo(".diag-footer span", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.4, stagger: 0.1 }, "-=0.2");
+
+
+
+
+
+
+            gsap.utils.toArray('.arch-counter').forEach(el => {
+                let targetVal = parseFloat(el.getAttribute('data-val'));
+                let suffix = el.getAttribute('data-suffix') || '';
+                let decimals = parseInt(el.getAttribute('data-decimal')) || 0;
+
+                let obj = { val: 0 };
+
+                archTl.to(obj, {
+                    val: targetVal,
+                    duration: 2.5,
+                    ease: "power3.out",
+                    onUpdate: function () {
+                        let currentVal = obj.val;
+                        let formattedVal = decimals > 0 ?
+                            currentVal.toFixed(decimals) :
+                            Math.floor(currentVal).toLocaleString('en-US');
+
+                        el.innerText = formattedVal + suffix;
+                    }
+                }, "-=1.5");
+            });
+
+
+
+
+
+
+
+            gsap.to(".node-center", {
+                y: -10,
+                boxShadow: "0 20px 40px rgba(37,99,235,0.25)",
+                duration: 2.5,
+                repeat: -1,
+                yoyo: true,
+                ease: "sine.inOut",
+                delay: 1
+            });
+
+
+            gsap.to(".orbit-icon", {
+                rotation: 360,
+                duration: 10,
+                repeat: -1,
+                ease: "linear"
+            });
+
+        });
+
+
+        document.addEventListener("DOMContentLoaded", () => {
+
+            gsap.registerPlugin(ScrollTrigger);
+
+
+            gsap.fromTo(".cap-badge, .cap-main-title, .cap-desc",
+                { opacity: 0, y: 30 },
+                {
+                    opacity: 1,
+                    y: 0,
+                    duration: 0.8,
+                    stagger: 0.2,
+                    scrollTrigger: {
+                        trigger: ".capabilities-section",
+                        start: "top 80%",
+                        toggleActions: "play none none none"
+                    }
+                }
+            );
+
+
+            gsap.utils.toArray(".cap-card").forEach((card, index) => {
+                gsap.fromTo(card,
+                    {
+                        opacity: 0,
+                        rotationY: 60,
+                        y: 60,
+                        transformPerspective: 1500,
+                        scale: 0.9
+                    },
+                    {
+                        scrollTrigger: {
+                            trigger: card,
+                            start: "top 75%",
+                            toggleActions: "play none none none"
+                        },
+                        opacity: 1,
+                        rotationY: 0,
+                        y: 0,
+                        scale: 1,
+                        duration: 1,
+                        ease: "back.out(1.2)"
+                    }
+                );
+            });
+
+        });
+
+
+        document.addEventListener("DOMContentLoaded", () => {
+
+            gsap.registerPlugin(ScrollTrigger);
+
+
+            gsap.fromTo(".mod-badge, .mod-main-title, .mod-desc, .mod-link",
+                { opacity: 0, y: 30 },
+                {
+                    opacity: 1,
+                    y: 0,
+                    duration: 0.8,
+                    stagger: 0.15,
+                    scrollTrigger: {
+                        trigger: ".modules-section",
+                        start: "top 80%",
+                        toggleActions: "play none none none"
+                    }
+                }
+            );
+
+
+            gsap.utils.toArray(".mod-card").forEach((card, index) => {
+
+
+                let startX = (index % 2 === 0) ? -50 : 50;
+
+                gsap.fromTo(card,
+                    {
+                        opacity: 0,
+                        x: startX,
+                        y: 30
+                    },
+                    {
+                        scrollTrigger: {
+                            trigger: card,
+                            start: "top 85%",
+                            toggleActions: "play none none none"
+                        },
+                        opacity: 1,
+                        x: 0,
+                        y: 0,
+                        duration: 0.8,
+                        delay: 0.2,
+                        ease: "power3.out"
+                    }
+                );
+            });
+
+        });
+
+
+        document.addEventListener("DOMContentLoaded", () => {
+
+            gsap.registerPlugin(ScrollTrigger);
+
+
+            gsap.fromTo(".sec-badge, .sec-main-title, .sec-desc",
+                { opacity: 0, y: 30 },
+                {
+                    opacity: 1,
+                    y: 0,
+                    duration: 0.8,
+                    stagger: 0.15,
+                    scrollTrigger: {
+                        trigger: ".security-section",
+                        start: "top 80%",
+                        toggleActions: "play none none none"
+                    }
+                }
+            );
+
+
+            gsap.fromTo(".sec-feature-card",
+                {
+                    opacity: 0,
+                    x: -100
+                },
+                {
+                    scrollTrigger: {
+                        trigger: ".sec-grid",
+                        start: "top 75%",
+                        toggleActions: "play none none none"
+                    },
+                    opacity: 1,
+                    x: 0,
+                    duration: 0.8,
+                    stagger: 0.15,
+                    ease: "power3.out"
+                }
+            );
+
+
+            gsap.fromTo(".soc-dashboard",
+                {
+                    opacity: 0,
+                    x: 50,
+                    scale: 0.95
+                },
+                {
+                    scrollTrigger: {
+                        trigger: ".sec-grid",
+                        start: "top 75%",
+                        toggleActions: "play none none none"
+                    },
+                    opacity: 1,
+                    x: 0,
+                    scale: 1,
+                    duration: 1,
+                    ease: "power2.out"
+                }
+            );
+
+
+
+            gsap.fromTo(".inner-anim",
+                {
+                    opacity: 0,
+                    y: 20
+                },
+                {
+                    scrollTrigger: {
+                        trigger: ".sec-grid",
+                        start: "top 75%",
+                        toggleActions: "play none none none"
+                    },
+                    opacity: 1,
+                    y: 0,
+                    duration: 0.6,
+                    stagger: 0.1,
+                    delay: 0.6,
+                    ease: "power2.out"
+                }
+            );
+
+        });
+
+
+        document.addEventListener("DOMContentLoaded", () => {
+
+            gsap.registerPlugin(ScrollTrigger);
+
+
+
+
+
+            const ctaTl = gsap.timeline({
+                scrollTrigger: {
+                    trigger: ".cta-section",
+                    start: "top 80%",
+                    toggleActions: "play none none none"
+                }
+            });
+
+
+            ctaTl.fromTo(".cta-box",
+                { opacity: 0, scale: 0.9, y: 30 },
+                { opacity: 1, scale: 1, y: 0, duration: 0.8, ease: "power3.out" }
+            );
+
+
+            ctaTl.fromTo(".cta-anim",
+                { opacity: 0, y: 20 },
+                {
+                    opacity: 1,
+                    y: 0,
+                    duration: 0.6,
+                    stagger: 0.15,
+                    ease: "power2.out"
+                },
+                "-=0.2"
+            );
+
+        });
+
+    </script>
 </body>
 
 </html>

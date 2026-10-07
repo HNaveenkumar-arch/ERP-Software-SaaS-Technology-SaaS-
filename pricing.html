@@ -5,12 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SaaS / ERP Software Navigation - Dark Mode</title>
-    <!-- AOS Animation CSS -->
+
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <!-- FontAwesome for Icons -->
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="pricing.css">
     <link rel="stylesheet" href="common.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 
 <body>
@@ -42,15 +44,15 @@
             </div>
 
             <ul class="nav-links" id="nav-links">
-                <li data-aos="fade-down" data-aos-delay="100"><a href="index.html" class="active">Home</a></li>
+                <li data-aos="fade-down" data-aos-delay="100"><a href="index.html">Home</a></li>
                 <li data-aos="fade-down" data-aos-delay="200"><a href="platform.html">Platform</a></li>
                 <li data-aos="fade-down" data-aos-delay="300"><a href="Solutions.html">Solutions</a></li>
-                <li data-aos="fade-down" data-aos-delay="400"><a href="index.html">Industries</a></li>
-                <li data-aos="fade-down" data-aos-delay="500"><a href="pricing.html">Pricing</a></li>
+                <li data-aos="fade-down" data-aos-delay="400"><a href="industries.html">Industries</a></li>
+                <li data-aos="fade-down" data-aos-delay="500"><a href="pricing.html" class="active">Pricing</a></li>
                 <li data-aos="fade-down" data-aos-delay="600"><a href="resources.html">Resources</a></li>
                 <li data-aos="fade-down" data-aos-delay="700"><a href="contact.html">Contact</a></li>
 
-                <!-- Mobile Actions (Visible only in mobile) -->
+
                 <li class="mobile-actions">
                     <a href="login.html" class="login-btn">Login</a>
                     <a href="getstart.html" class="get-started-btn">Get Started</a>
@@ -64,21 +66,595 @@
         </nav>
     </header>
 
-    <section style="height: 150vh; padding: 150px 5%; background: #0f172a; color: white;">
-        <h1 data-aos="fade-up">Welcome to the Future of ERP Software</h1>
-        <p data-aos="fade-up" data-aos-delay="200" style="margin-top: 15px; color: #94a3b8;">Scroll down to see the
-            navbar shrink effect.</p>
+
+
+
+    <section class="pricing-section">
+        <div class="pr-container">
+
+
+            <div class="pr-header pr-anim">
+                <div class="pr-badge">TRANSPARENT ENTERPRISE PRICING</div>
+                <h2>Simple Pricing. Powerful ERP.</h2>
+                <p>Choose the plan that fits your business today and seamlessly scale governance, workflows, and global
+                    branches whenever you need.</p>
+            </div>
+
+
+            <div class="pr-toggle-wrapper pr-anim">
+                <div class="pr-toggle-bg">
+                    <button class="pr-toggle-btn active" id="btn-monthly">Monthly</button>
+                    <button class="pr-toggle-btn" id="btn-yearly">Yearly <span class="save-badge">Save
+                            20%</span></button>
+                </div>
+            </div>
+
+
+            <div class="pr-trust-features pr-anim">
+                <span><i class="fa-solid fa-circle-check text-blue"></i> 14-day free trial on all plans</span>
+                <span class="dot-separator"></span>
+                <span><i class="fa-solid fa-credit-card-blank text-blue"></i> No credit card required</span>
+                <span class="dot-separator"></span>
+                <span><i class="fa-solid fa-clock-rotate-left text-blue"></i> Cancel anytime</span>
+                <span class="dot-separator"></span>
+                <span><i class="fa-solid fa-shield-check text-green"></i> 99.98% uptime SLA</span>
+            </div>
+
+
+            <div class="pr-grid">
+
+
+                <div class="pr-card pr-anim-card">
+                    <div class="pr-card-head">
+                        <span class="plan-name">STARTER</span>
+                        <div class="plan-price">
+                            <span class="currency">₹</span>
+                            <span class="amount" data-monthly="1,499" data-yearly="1,199">1,499</span>
+                            <span class="duration">/ month</span>
+                        </div>
+                        <div class="plan-billing" data-monthly="billed monthly"
+                            data-yearly="billed annually (save ₹3,600)">billed monthly</div>
+                        <p class="plan-desc">For growing teams laying operational foundations and unified tracking.</p>
+                        <div class="plan-users"><i class="fa-solid fa-user-group text-blue"></i> Up to 5 users included
+                        </div>
+                    </div>
+                    <div class="pr-card-body">
+                        <div class="feature-title">FEATURES INCLUDED</div>
+                        <ul class="feature-list">
+                            <li><i class="fa-solid fa-circle-check text-blue"></i> Core ERP operational modules</li>
+                            <li><i class="fa-solid fa-circle-check text-blue"></i> Basic business intelligence reports
+                            </li>
+                            <li><i class="fa-solid fa-circle-check text-blue"></i> Single-warehouse inventory</li>
+                            <li><i class="fa-solid fa-circle-check text-blue"></i> Sales & order pipeline tracking</li>
+                            <li><i class="fa-solid fa-circle-check text-blue"></i> Standard email support (24hr SLA)
+                            </li>
+                        </ul>
+                        <a href="404page.html" class="pr-btn-outline">Start Free Trial</a>
+                    </div>
+                </div>
+
+
+                <div class="pr-card pr-card-popular pr-anim-card">
+                    <div class="popular-badge"><i class="fa-solid fa-star"></i> MOST POPULAR</div>
+                    <div class="pr-card-head">
+                        <span class="plan-name text-blue">BUSINESS</span>
+                        <div class="plan-price">
+                            <span class="currency">₹</span>
+                            <span class="amount" data-monthly="3,999" data-yearly="3,199">3,999</span>
+                            <span class="duration">/ month</span>
+                        </div>
+                        <div class="plan-billing text-blue" data-monthly="billed monthly"
+                            data-yearly="billed annually (save ₹9,600)">billed monthly</div>
+                        <p class="plan-desc">For high-velocity businesses scaling transactions and multi-entity books.
+                        </p>
+                        <div class="plan-users bg-blue-light text-blue"><i class="fa-solid fa-user-group"></i> Up to 15
+                            users included</div>
+                    </div>
+                    <div class="pr-card-body">
+                        <div class="feature-title text-blue">ALL STARTER FEATURES, PLUS:</div>
+                        <ul class="feature-list">
+                            <li><i class="fa-solid fa-circle-check text-blue"></i> Advanced ERP capabilities & workflows
+                            </li>
+                            <li><i class="fa-solid fa-circle-check text-blue"></i> Advanced real-time KPI analytics</li>
+                            <li><i class="fa-solid fa-circle-check text-blue"></i> Finance & multi-entity accounting
+                            </li>
+                            <li><i class="fa-solid fa-circle-check text-blue"></i> Full CRM & automated deal stages</li>
+                            <li><i class="fa-solid fa-circle-check text-blue"></i> Automated purchase orders & multi-hub
+                            </li>
+                            <li><i class="fa-solid fa-circle-check text-blue"></i> Priority email & live chat support
+                            </li>
+                        </ul>
+                        <a href="404page.html" class="pr-btn-solid">Start Free Trial</a>
+                    </div>
+                </div>
+
+
+                <div class="pr-card pr-anim-card">
+                    <div class="pr-card-head">
+                        <span class="plan-name">PROFESSIONAL</span>
+                        <div class="plan-price">
+                            <span class="currency">₹</span>
+                            <span class="amount" data-monthly="7,999" data-yearly="6,399">7,999</span>
+                            <span class="duration">/ month</span>
+                        </div>
+                        <div class="plan-billing" data-monthly="billed monthly"
+                            data-yearly="billed annually (save ₹19,200)">billed monthly</div>
+                        <p class="plan-desc">For established mid-market enterprises demanding deep automation and
+                            analytics.</p>
+                        <div class="plan-users"><i class="fa-solid fa-user-group text-blue"></i> Up to 50 users included
+                        </div>
+                    </div>
+                    <div class="pr-card-body">
+                        <div class="feature-title">ALL BUSINESS FEATURES, PLUS:</div>
+                        <ul class="feature-list">
+                            <li><i class="fa-solid fa-circle-check text-blue"></i> Complete AuraERP suite access</li>
+                            <li><i class="fa-solid fa-circle-check text-blue"></i> AI predictive insights & anomaly
+                                detection</li>
+                            <li><i class="fa-solid fa-circle-check text-blue"></i> Full HR & automated payroll engine
+                            </li>
+                            <li><i class="fa-solid fa-circle-check text-blue"></i> Cross-functional project management
+                            </li>
+                            <li><i class="fa-solid fa-circle-check text-blue"></i> Audit-grade statutory & tax reports
+                            </li>
+                            <li><i class="fa-solid fa-circle-check text-blue"></i> 24/7 priority support (1-hr SLA)</li>
+                        </ul>
+                        <a href="404page.html" class="pr-btn-outline">Start Free Trial</a>
+                    </div>
+                </div>
+
+
+                <div class="pr-card pr-anim-card">
+                    <div class="pr-card-head">
+                        <span class="plan-name bg-dark text-white">ENTERPRISE</span>
+                        <div class="plan-price">
+                            <span class="amount">Custom</span>
+                        </div>
+                        <div class="plan-billing">&nbsp;</div>
+                        <p class="plan-desc">Tailored to exact organizational scale. For global operations requiring
+                            custom architecture, compliance, and custom SLA.</p>
+                        <div class="plan-users"><i class="fa-solid fa-infinity text-purple"></i> Unlimited users &
+                            branches</div>
+                    </div>
+                    <div class="pr-card-body">
+                        <div class="feature-title">FULL ENTERPRISE STACK</div>
+                        <ul class="feature-list">
+                            <li><i class="fa-solid fa-circle-check text-blue"></i> Custom ERP workflows & rule engines
+                            </li>
+                            <li><i class="fa-solid fa-circle-check text-blue"></i> SOC2 Type II, HIPAA, SAML/SSO</li>
+                            <li><i class="fa-solid fa-circle-check text-blue"></i> Custom API integrations & webhooks
+                            </li>
+                            <li><i class="fa-solid fa-circle-check text-blue"></i> Multi-branch & cross-border tax</li>
+                            <li><i class="fa-solid fa-circle-check text-blue"></i> Dedicated Technical Account Manager
+                            </li>
+                            <li><i class="fa-solid fa-circle-check text-blue"></i> 24/7 dedicated phone & engineer SLA
+                            </li>
+                        </ul>
+                        <a href="404page.html" class="pr-btn-dark">Contact Sales</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+    <section class="breakdown-section">
+        <div class="bd-container">
+
+
+            <div class="bd-header bd-anim">
+                <div class="bd-badge">DEEP ARCHITECTURAL BREAKDOWN</div>
+                <h2>Everything Your Business Needs</h2>
+                <p>A detailed breakdown of all capabilities across Starter, Business, Professional, and Enterprise
+                    tiers.</p>
+            </div>
+
+
+            <div class="bd-table-wrapper">
+
+
+                <div class="bd-row bd-thead bd-anim">
+                    <div class="bd-col">Capabilities & Modules</div>
+                    <div class="bd-col text-center">Starter</div>
+                    <div class="bd-col text-center text-blue font-bold">Business</div>
+                    <div class="bd-col text-center">Professional</div>
+                    <div class="bd-col text-center font-bold text-dark">Enterprise</div>
+                </div>
+
+
+                <div class="bd-row bd-subheader bd-anim">
+                    <div class="bd-col">1. CORE ERP OPERATIONS</div>
+                </div>
+
+
+                <div class="bd-row bd-line-anim">
+                    <div class="bd-col">
+                        <div class="feat-title">Dashboard & Executive Cockpit</div>
+                        <div class="feat-desc">High-altitude telemetry and widget customization</div>
+                    </div>
+                    <div class="bd-col text-center">Basic</div>
+                    <div class="bd-col text-center text-blue font-bold">Advanced</div>
+                    <div class="bd-col text-center">Real-Time Multi-Entity</div>
+                    <div class="bd-col text-center font-bold text-dark">Custom Modular</div>
+                </div>
+
+                <div class="bd-row bd-line-anim">
+                    <div class="bd-col">
+                        <div class="feat-title">Finance & Accounting</div>
+                        <div class="feat-desc">Double-entry ledger, reconciliation, and automated closure</div>
+                    </div>
+                    <div class="bd-col text-center">Standard</div>
+                    <div class="bd-col text-center text-blue font-bold">Multi-currency</div>
+                    <div class="bd-col text-center">Multi-entity consolidation</div>
+                    <div class="bd-col text-center font-bold text-dark">Full Global GAAP & IFRS</div>
+                </div>
+
+                <div class="bd-row bd-line-anim">
+                    <div class="bd-col">
+                        <div class="feat-title">CRM & Lead Pipeline</div>
+                        <div class="feat-desc">Account tracking, deals pipeline, and contract quotes</div>
+                    </div>
+                    <div class="bd-col text-center">Basic</div>
+                    <div class="bd-col text-center text-blue font-bold">Advanced</div>
+                    <div class="bd-col text-center">Automated CPQ</div>
+                    <div class="bd-col text-center font-bold text-dark">Enterprise Omnichannel</div>
+                </div>
+
+                <div class="bd-row bd-line-anim">
+                    <div class="bd-col">
+                        <div class="feat-title">Inventory & Warehouse</div>
+                        <div class="feat-desc">Lot/serial numbers, bin locations, and stock routing</div>
+                    </div>
+                    <div class="bd-col text-center">Single site</div>
+                    <div class="bd-col text-center text-blue font-bold">Multi-warehouse</div>
+                    <div class="bd-col text-center">Predictive Restock</div>
+                    <div class="bd-col text-center font-bold text-dark">Global Supply Chain</div>
+                </div>
+
+                <div class="bd-row bd-line-anim">
+                    <div class="bd-col">
+                        <div class="feat-title">Purchasing & Vendor Management</div>
+                        <div class="feat-desc">Supplier performance, purchase requisitions, and approvals</div>
+                    </div>
+                    <div class="bd-col text-center">PO only</div>
+                    <div class="bd-col text-center text-blue font-bold">2-way matching</div>
+                    <div class="bd-col text-center">3-way matching + RFQ</div>
+                    <div class="bd-col text-center font-bold text-dark">Custom Vendor Portal</div>
+                </div>
+
+                <div class="bd-row bd-line-anim">
+                    <div class="bd-col">
+                        <div class="feat-title">HR & Payroll Processing</div>
+                        <div class="feat-desc">Statutory deductions, salary disbursement, leaves</div>
+                    </div>
+                    <div class="bd-col text-center">Limited</div>
+                    <div class="bd-col text-center text-blue font-bold">Up to 15 staff</div>
+                    <div class="bd-col text-center">Up to 50 + Tax Filings</div>
+                    <div class="bd-col text-center font-bold text-dark">Unlimited Global Compliance</div>
+                </div>
+
+                <div class="bd-row bd-line-anim">
+                    <div class="bd-col">
+                        <div class="feat-title">Regional Tax, GST & e-Invoicing</div>
+                        <div class="feat-desc">E-Way billing, automated return forms, regional VAT</div>
+                    </div>
+                    <div class="bd-col text-center">Standard GST</div>
+                    <div class="bd-col text-center text-blue font-bold">Auto e-Way & Invoicing</div>
+                    <div class="bd-col text-center">Multi-state Auto GST</div>
+                    <div class="bd-col text-center font-bold text-dark">Global Cross-Border Tax</div>
+                </div>
+
+
+                <div class="bd-row bd-subheader bd-anim">
+                    <div class="bd-col">2. GOVERNANCE, INTELLIGENCE & EXTENSIBILITY</div>
+                </div>
+
+
+                <div class="bd-row bd-line-anim">
+                    <div class="bd-col">
+                        <div class="feat-title">AI & Advanced Predictive Analytics</div>
+                        <div class="feat-desc">Anomaly detection in ledgers, demand forecasting</div>
+                    </div>
+                    <div class="bd-col text-center text-gray">—</div>
+                    <div class="bd-col text-center text-blue font-bold">Basic Trends</div>
+                    <div class="bd-col text-center">Predictive Engine</div>
+                    <div class="bd-col text-center font-bold text-dark">Bespoke Enterprise ML</div>
+                </div>
+
+                <div class="bd-row bd-line-anim">
+                    <div class="bd-col">
+                        <div class="feat-title">Workflow Automation Engine</div>
+                        <div class="feat-desc">Conditional triggers, notifications, status handoffs</div>
+                    </div>
+                    <div class="bd-col text-center">10 rules</div>
+                    <div class="bd-col text-center text-blue font-bold">50 rules</div>
+                    <div class="bd-col text-center">200 rules</div>
+                    <div class="bd-col text-center font-bold text-dark">Unlimited Event-Driven</div>
+                </div>
+
+                <div class="bd-row bd-line-anim">
+                    <div class="bd-col">
+                        <div class="feat-title">API Access & Connectors</div>
+                        <div class="feat-desc">High-frequency webhooks, REST and GraphQL endpoints</div>
+                    </div>
+                    <div class="bd-col text-center">Standard Webhooks</div>
+                    <div class="bd-col text-center text-blue font-bold">50+ Connectors</div>
+                    <div class="bd-col text-center">Full GraphQL & REST</div>
+                    <div class="bd-col text-center font-bold text-dark">Dedicated Sandbox</div>
+                </div>
+
+                <div class="bd-row bd-line-anim">
+                    <div class="bd-col">
+                        <div class="feat-title">Role-Based Access Control (RBAC)</div>
+                        <div class="feat-desc">Field-level permissions, audit log tracking</div>
+                    </div>
+                    <div class="bd-col text-center">Standard Roles</div>
+                    <div class="bd-col text-center text-blue font-bold">Custom Roles</div>
+                    <div class="bd-col text-center">Granular Field-Level</div>
+                    <div class="bd-col text-center font-bold text-dark">Biometric & Contextual</div>
+                </div>
+
+                <div class="bd-row bd-line-anim">
+                    <div class="bd-col">
+                        <div class="feat-title">Data Security & Compliance</div>
+                        <div class="feat-desc">Audits, regional data residency, dedicated VPC</div>
+                    </div>
+                    <div class="bd-col text-center">TLS 1.3 Encryption</div>
+                    <div class="bd-col text-center text-blue font-bold">Daily Backups</div>
+                    <div class="bd-col text-center">SOC 2 Type II</div>
+                    <div class="bd-col text-center font-bold text-dark">Dedicated VPC / Air-Gapped</div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+    <section class="addons-section">
+        <div class="ad-container">
+
+            <div class="ad-header pr-anim">
+                <div class="ad-badge">ON-DEMAND SCALABILITY</div>
+                <h2>ERP Add-ons & Modular Expansion</h2>
+                <p>Extend your platform capabilities on-demand without migrating your entire plan or interrupting team
+                    operations.</p>
+            </div>
+
+
+            <div class="ad-grid">
+
+
+                <div class="ad-card top-addon-card">
+                    <div class="ad-icon bg-blue-light text-blue"><i class="fa-solid fa-user-plus"></i></div>
+                    <h3>Additional Users</h3>
+                    <p>Scale your workforce seamlessly. Add user seats in flexible packs of 5 or 10 at any time from
+                        your admin panel.</p>
+                    <div class="ad-card-footer">
+                        <span class="ad-price">₹249 <small>/user/mo</small></span>
+                        <a href="404page.html" class="ad-link">Add to Plan <i class="fa-solid fa-chevron-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="ad-card top-addon-card">
+                    <div class="ad-icon bg-blue-light text-blue"><i class="fa-solid fa-hard-drive"></i></div>
+                    <h3>Extra Storage</h3>
+                    <p>High-capacity encrypted cloud document storage, receipt archival, and audit log backup snapshots.
+                    </p>
+                    <div class="ad-card-footer">
+                        <span class="ad-price">₹999 <small>/100GB/mo</small></span>
+                        <a href="404page.html" class="ad-link">Add to Plan <i class="fa-solid fa-chevron-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="ad-card top-addon-card">
+                    <div class="ad-icon bg-blue-light text-blue"><i class="fa-solid fa-plug"></i></div>
+                    <h3>Custom Integrations</h3>
+                    <p>Connect legacy ERPs, SAP/Oracle endpoints, or custom proprietary internal tools with custom
+                        connector builds.</p>
+                    <div class="ad-card-footer">
+                        <span class="ad-price">Bespoke Scoping</span>
+                        <a href="404page.html" class="ad-link">Consult Eng <i class="fa-solid fa-chevron-right"></i></a>
+                    </div>
+                </div>
+
+
+                <div class="ad-card bot-addon-card">
+                    <div class="ad-icon bg-blue-light text-blue"><i class="fa-solid fa-database"></i></div>
+                    <h3>Data Migration</h3>
+                    <p>White-glove migration services handling ETL pipeline execution, historical ledger extraction, and
+                        reconciliation.</p>
+                    <div class="ad-card-footer">
+                        <span class="ad-price">One-Time Advisory</span>
+                        <a href="404page.html" class="ad-link">Request Scope <i
+                                class="fa-solid fa-chevron-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="ad-card bot-addon-card">
+                    <div class="ad-icon bg-blue-light text-blue"><i class="fa-solid fa-bolt"></i></div>
+                    <h3>Advanced API & Webhooks</h3>
+                    <p>High-throughput real-time event streaming with dedicated compute quotas, 99.99% webhook delivery
+                        guarantees.</p>
+                    <div class="ad-card-footer">
+                        <span class="ad-price">₹1,999 <small>/mo</small></span>
+                        <a href="404page.html" class="ad-link">Add to Plan <i class="fa-solid fa-chevron-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="ad-card bot-addon-card">
+                    <div class="ad-icon bg-blue-light text-blue"><i class="fa-solid fa-graduation-cap"></i></div>
+                    <h3>Dedicated Training</h3>
+                    <p>Guided live team workshops, administrator certification courses, and customized standard
+                        operating procedures (SOP).</p>
+                    <div class="ad-card-footer">
+                        <span class="ad-price">Tailored Package</span>
+                        <a href="404page.html" class="ad-link">Inquire <i class="fa-solid fa-chevron-right"></i></a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <section class="pricing-faq-section">
+        <div class="faq-container">
+
+            <div class="faq-header pr-anim">
+                <div class="ad-badge">CLARITY FIRST</div>
+                <h2>Frequently Asked Questions</h2>
+                <p>Everything you need to know about plans, billing, implementation, and enterprise scalability.</p>
+            </div>
+
+
+            <div class="faq-list">
+
+                <div class="faq-item faq-anim-item">
+                    <div class="faq-question">
+                        <h3>Can I try the ERP before paying?</h3>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            <p>Yes, all plans include a fully functional 14-day free trial pre-loaded with industry
+                                sample data. You can invite your team members, test core modules, and configure custom
+                                workflows with zero credit card required.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item faq-anim-item">
+                    <div class="faq-question">
+                        <h3>Can I change my plan or add users later?</h3>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            <p>Absolutely. You can upgrade your tier or add modular user packs at any time directly from
+                                your admin billing portal. Prorated charges will apply automatically for the remainder
+                                of your billing cycle.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item faq-anim-item">
+                    <div class="faq-question">
+                        <h3>Do you offer discounts for annual billing?</h3>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            <p>Yes, we offer a flat 20% discount on all our pricing tiers when you choose the annual
+                                billing cycle instead of monthly. This helps enterprises lock in better rates for
+                                long-term scalability.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item faq-anim-item">
+                    <div class="faq-question">
+                        <h3>Is implementation and onboarding included?</h3>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            <p>Our Enterprise plan includes a dedicated onboarding specialist and white-glove setup.
+                                Starter, Business, and Professional plans come with comprehensive documentation,
+                                live-chat support, and self-paced setup wizards.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item faq-anim-item">
+                    <div class="faq-question">
+                        <h3>How is our enterprise data secured?</h3>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            <p>We employ military-grade AES-256 encryption at rest, TLS 1.3 in transit, and maintain
+                                strict SOC 2 Type II compliance. We also conduct regular third-party penetration testing
+                                to ensure zero-trust perimeter governance.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item faq-anim-item">
+                    <div class="faq-question">
+                        <h3>Do you provide custom ERP solutions & custom APIs?</h3>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            <p>Yes. Our Enterprise tier offers bespoke scoping, allowing our engineering team to build
+                                custom schemas, specialized integrations, and dedicated API endpoints tailored perfectly
+                                to your exact business logic.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <section class="cta-bespoke-section">
+        <div class="cta-container">
+            <div class="cta-blue-box">
+
+                <div class="decor-circle circle-1"></div>
+                <div class="decor-circle circle-2"></div>
+                <div class="decor-circle circle-3"></div>
+
+
+                <div class="cta-content">
+                    <div class="cta-anim-elem">
+                        <span class="cta-badge"><i class="fa-solid fa-shield"></i> BESPOKE ARCHITECTURE</span>
+                    </div>
+                    <h2 class="cta-anim-elem">Need an ERP Built Around Your Business?</h2>
+                    <p class="cta-anim-elem">Get custom workflows, integrations, advanced security, and dedicated
+                        enterprise support tailored to your unique organizational hierarchy and legal entity structure.
+                    </p>
+
+                    <div class="cta-buttons cta-anim-elem">
+                        <a href="404page.html" class="btn-solid-white">Talk to an ERP Expert <i
+                                class="fa-solid fa-arrow-right"></i></a>
+                        <a href="404page.html" class="btn-outline-white"><i class="fa-solid fa-download"></i> Download
+                            Solution Guide</a>
+                    </div>
+
+                    <div class="cta-features cta-anim-elem">
+                        <span><i class="fa-solid fa-circle-check text-green"></i> SOC 2 Type II Certified</span>
+                        <span class="dot"></span>
+                        <span><i class="fa-solid fa-user-tie text-blue-light"></i> Dedicated Solutions Architect</span>
+                        <span class="dot"></span>
+                        <span><i class="fa-solid fa-sliders text-green"></i> Tailored Proof of Concept</span>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
 
     <footer id="footer" class="footer">
         <div class="footer-container">
-            <!-- Column 1: Brand & Social -->
+
             <div class="footer-brand" data-aos="fade-up" data-aos-duration="1000">
                 <div class="logo">
                     <a href="index.html"><img src="./asset/logo_bule.webp" alt="logo"></a>
                 </div>
-                <!-- ஸ்கிரீன்ஷாட்டில் உள்ள அதே வாசகம் -->
+
                 <p class="footer-desc">
                     One connected platform for your entire business. Streamline workflows, boost productivity, and make
                     data-driven decisions.
@@ -91,7 +667,7 @@
                 </div>
             </div>
 
-            <!-- Column 2: Platform Links (ஸ்கிரீன்ஷாட்டில் உள்ள 5 மெனுக்கள்) -->
+
             <div class="footer-links" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
                 <h3>PLATFORM</h3>
                 <ul>
@@ -103,7 +679,7 @@
                 </ul>
             </div>
 
-            <!-- Column 3: Company Links (நேவ்பாரில் உள்ள முதல் 5 மெனுக்கள்) -->
+
             <div class="footer-links" data-aos="fade-up" data-aos-delay="400" data-aos-duration="1000">
                 <h3>COMPANY</h3>
                 <ul>
@@ -115,7 +691,7 @@
                 </ul>
             </div>
 
-            <!-- Column 4: Resources Links (நேவ்பார் மீதி 2 + ஸ்கிரீன்ஷாட் 3) -->
+
             <div class="footer-links" data-aos="fade-up" data-aos-delay="600" data-aos-duration="1000">
                 <h3>RESOURCES</h3>
                 <ul>
@@ -128,7 +704,7 @@
             </div>
         </div>
 
-        <!-- Footer Bottom: Copyright & Legal -->
+
         <div class="footer-bottom-container">
             <div class="footer-bottom">
                 <p>&copy; 2026 STACKLY. All rights reserved.</p>
@@ -144,9 +720,262 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 
-    <!-- AOS Animation JS -->
+
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="script.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+
+
+
+
+            const btnMonthly = document.getElementById("btn-monthly");
+            const btnYearly = document.getElementById("btn-yearly");
+            const amounts = document.querySelectorAll(".amount");
+            const billings = document.querySelectorAll(".plan-billing");
+
+            function updatePricing(plan) {
+
+                if (plan === 'monthly') {
+                    btnMonthly.classList.add("active");
+                    btnYearly.classList.remove("active");
+                } else {
+                    btnYearly.classList.add("active");
+                    btnMonthly.classList.remove("active");
+                }
+
+
+                amounts.forEach(el => {
+                    if (el.hasAttribute(`data-${plan}`)) {
+
+                        gsap.to(el, {
+                            opacity: 0, y: -10, duration: 0.2, onComplete: () => {
+                                el.innerText = el.getAttribute(`data-${plan}`);
+                                gsap.to(el, { opacity: 1, y: 0, duration: 0.2 });
+                            }
+                        });
+                    }
+                });
+
+
+                billings.forEach(el => {
+                    if (el.hasAttribute(`data-${plan}`)) {
+                        gsap.to(el, {
+                            opacity: 0, duration: 0.2, onComplete: () => {
+                                el.innerText = el.getAttribute(`data-${plan}`);
+                                gsap.to(el, { opacity: 1, duration: 0.2 });
+                            }
+                        });
+                    }
+                });
+            }
+
+
+            btnMonthly.addEventListener("click", () => updatePricing('monthly'));
+            btnYearly.addEventListener("click", () => updatePricing('yearly'));
+
+
+
+
+
+            setTimeout(() => {
+                gsap.registerPlugin(ScrollTrigger);
+
+
+                gsap.utils.toArray('.pr-anim').forEach(element => {
+                    gsap.fromTo(element,
+                        { opacity: 0, y: 30 },
+                        {
+                            opacity: 1, y: 0, duration: 0.8, ease: "power2.out",
+                            scrollTrigger: { trigger: ".pricing-section", start: "top 85%", toggleActions: "play none none none" }
+                        }
+                    );
+                });
+
+
+
+                gsap.fromTo(".pr-anim-card",
+                    { opacity: 0, y: 50 },
+                    {
+                        opacity: 1,
+                        y: 0,
+                        duration: 0.8,
+                        stagger: 0.15,
+                        ease: "power2.out",
+                        scrollTrigger: {
+                            trigger: ".pr-grid",
+                            start: "top 80%",
+                            toggleActions: "play none none none"
+                        }
+                    }
+                );
+
+            }, 2200);
+
+        });
+
+
+        document.addEventListener("DOMContentLoaded", () => {
+
+
+            setTimeout(() => {
+
+                gsap.registerPlugin(ScrollTrigger);
+
+
+                gsap.utils.toArray('.bd-anim').forEach(element => {
+                    gsap.fromTo(element,
+                        { opacity: 0, y: 30 },
+                        {
+                            opacity: 1, y: 0, duration: 0.8, ease: "power2.out",
+                            scrollTrigger: {
+                                trigger: element,
+                                start: "top 85%",
+                                toggleActions: "play none none none"
+                            }
+                        }
+                    );
+                });
+
+
+
+                gsap.utils.toArray('.bd-line-anim').forEach((row) => {
+                    gsap.fromTo(row,
+                        {
+                            opacity: 0,
+                            y: 20,
+                            scale: 0.98
+                        },
+                        {
+                            opacity: 1,
+                            y: 0,
+                            scale: 1,
+                            duration: 0.6,
+                            ease: "back.out(1.2)",
+                            scrollTrigger: {
+                                trigger: row,
+                                start: "top 90%",
+                                toggleActions: "play none none none"
+                            }
+                        }
+                    );
+                });
+
+            }, 2200);
+
+        });
+
+        document.addEventListener("DOMContentLoaded", () => {
+
+
+            setTimeout(() => {
+
+                gsap.registerPlugin(ScrollTrigger);
+
+
+
+
+                gsap.utils.toArray('.pr-anim').forEach(element => {
+                    gsap.fromTo(element,
+                        { opacity: 0, y: 30 },
+                        {
+                            opacity: 1, y: 0, duration: 0.8, ease: "power2.out",
+                            scrollTrigger: { trigger: element, start: "top 85%", toggleActions: "play none none none" }
+                        }
+                    );
+                });
+
+
+
+
+
+                gsap.utils.toArray(".top-addon-card").forEach((card) => {
+                    gsap.fromTo(card,
+                        { opacity: 0, rotationX: 90, transformPerspective: 1200 },
+                        {
+                            opacity: 1, rotationX: 0, duration: 1, ease: "back.out(1.2)",
+                            scrollTrigger: { trigger: card, start: "top 85%", toggleActions: "play none none none" }
+                        }
+                    );
+                });
+
+
+                gsap.utils.toArray(".bot-addon-card").forEach((card) => {
+                    gsap.fromTo(card,
+                        { opacity: 0, rotationX: 90, transformPerspective: 1200 },
+                        {
+                            opacity: 1, rotationX: 0, duration: 1, ease: "back.out(1.2)",
+                            scrollTrigger: { trigger: card, start: "top 85%", toggleActions: "play none none none" }
+                        }
+                    );
+                });
+
+
+
+
+
+                gsap.fromTo(".faq-anim-item",
+                    { opacity: 0, y: 20 },
+                    {
+                        opacity: 1, y: 0, duration: 0.6, stagger: 0.15, ease: "power2.out",
+                        scrollTrigger: { trigger: ".faq-list", start: "top 85%", toggleActions: "play none none none" }
+                    }
+                );
+
+
+                const faqQuestions = document.querySelectorAll('.faq-question');
+                faqQuestions.forEach(q => {
+                    q.addEventListener('click', () => {
+                        const item = q.parentElement;
+                        const answer = item.querySelector('.faq-answer');
+                        const icon = q.querySelector('i');
+
+                        if (item.classList.contains('active')) {
+
+                            item.classList.remove('active');
+                            answer.style.maxHeight = null;
+                            icon.className = "fa-solid fa-chevron-down";
+                        } else {
+
+                            document.querySelectorAll('.faq-item').forEach(other => {
+                                other.classList.remove('active');
+                                other.querySelector('.faq-answer').style.maxHeight = null;
+                                other.querySelector('.faq-question i').className = "fa-solid fa-chevron-down";
+                            });
+
+
+                            item.classList.add('active');
+                            answer.style.maxHeight = answer.scrollHeight + "px";
+                            icon.className = "fa-solid fa-xmark";
+                        }
+                    });
+                });
+
+
+
+
+                const ctaTl = gsap.timeline({
+                    scrollTrigger: { trigger: ".cta-bespoke-section", start: "top 80%", toggleActions: "play none none none" }
+                });
+
+
+                ctaTl.fromTo(".cta-blue-box",
+                    { opacity: 0, scale: 0.95 },
+                    { opacity: 1, scale: 1, duration: 0.8, ease: "power3.out" }
+                )
+
+                    .fromTo(".cta-anim-elem",
+                        { opacity: 0, y: 25 },
+                        { opacity: 1, y: 0, duration: 0.6, stagger: 0.15, ease: "power2.out" },
+                        "-=0.4"
+                    );
+
+            }, 2200);
+
+        });
+
+    </script>
 </body>
 
 </html>

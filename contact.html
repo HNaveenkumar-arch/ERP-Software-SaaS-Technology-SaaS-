@@ -5,12 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SaaS / ERP Software Navigation - Dark Mode</title>
-    <!-- AOS Animation CSS -->
+
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <!-- FontAwesome for Icons -->
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="contact.css">
     <link rel="stylesheet" href="common.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 
 <body>
@@ -42,15 +44,15 @@
             </div>
 
             <ul class="nav-links" id="nav-links">
-                <li data-aos="fade-down" data-aos-delay="100"><a href="index.html" class="active">Home</a></li>
+                <li data-aos="fade-down" data-aos-delay="100"><a href="index.html">Home</a></li>
                 <li data-aos="fade-down" data-aos-delay="200"><a href="platform.html">Platform</a></li>
                 <li data-aos="fade-down" data-aos-delay="300"><a href="Solutions.html">Solutions</a></li>
-                <li data-aos="fade-down" data-aos-delay="400"><a href="index.html">Industries</a></li>
+                <li data-aos="fade-down" data-aos-delay="400"><a href="industries.html">Industries</a></li>
                 <li data-aos="fade-down" data-aos-delay="500"><a href="pricing.html">Pricing</a></li>
                 <li data-aos="fade-down" data-aos-delay="600"><a href="resources.html">Resources</a></li>
-                <li data-aos="fade-down" data-aos-delay="700"><a href="contact.html">Contact</a></li>
+                <li data-aos="fade-down" data-aos-delay="700"><a href="contact.html" class="active">Contact</a></li>
 
-                <!-- Mobile Actions (Visible only in mobile) -->
+
                 <li class="mobile-actions">
                     <a href="login.html" class="login-btn">Login</a>
                     <a href="getstart.html" class="get-started-btn">Get Started</a>
@@ -64,21 +66,556 @@
         </nav>
     </header>
 
-    <section style="height: 150vh; padding: 150px 5%; background: #0f172a; color: white;">
-        <h1 data-aos="fade-up">Welcome to the Future of ERP Software</h1>
-        <p data-aos="fade-up" data-aos-delay="200" style="margin-top: 15px; color: #94a3b8;">Scroll down to see the
-            navbar shrink effect.</p>
+
+
+
+    <section class="contact-hero-section">
+        <div class="ch-container">
+
+
+            <div class="ch-left">
+                <div class="ch-badge ch-anim-item"><span class="dot-blue"></span> CONTACT OUR TEAM</div>
+                <h1 class="ch-anim-item">Let's Build a <span class="text-blue">Smarter Business</span> Together</h1>
+                <p class="ch-anim-item">Have questions about our ERP platform, need a product demo, or looking for a
+                    solution tailored to your business? Our team of enterprise architects is ready to assist.</p>
+
+                <div class="ch-btns ch-anim-item">
+                    <a href="404page.html" class="btn-solid-blue">Book a Demo <i
+                            class="fa-solid fa-arrow-right"></i></a>
+                    <a href="404page.html" class="btn-outline-gray">Talk to Sales</a>
+                </div>
+
+                <div class="ch-features ch-anim-item">
+                    <span><i class="fa-solid fa-bolt text-blue"></i> Avg response &lt; 15 mins</span>
+                    <span><i class="fa-regular fa-circle-check text-green"></i> SOC 2 Type II Certified</span>
+                    <span><i class="fa-solid fa-globe text-blue"></i> Global 24/7 Coverage</span>
+                </div>
+            </div>
+
+
+            <div class="ch-right ch-graphic-anim">
+                <div class="ch-graphic-box">
+
+
+                    <div class="cg-header">
+                        <div class="cg-title"><span class="dot-green"></span> AuraERP Mesh Telemetry</div>
+                        <div class="cg-status"><i class="fa-regular fa-circle-check"></i> Live Fabric Active</div>
+                    </div>
+
+
+                    <div class="cg-grid">
+                        <div class="cg-card">
+                            <div class="cg-card-top">
+                                <div class="cg-icon bg-blue-light text-blue"><i class="fa-solid fa-wallet"></i></div>
+                                <span class="cg-val">4.2ms</span>
+                            </div>
+                            <h4>Finance & Ledger</h4>
+                            <p><span class="dot-green-small"></span> Multi-currency sync</p>
+                        </div>
+                        <div class="cg-card">
+                            <div class="cg-card-top">
+                                <div class="cg-icon bg-purple-light text-purple"><i class="fa-solid fa-id-badge"></i>
+                                </div>
+                                <span class="cg-val">99.99%</span>
+                            </div>
+                            <h4>HR & People</h4>
+                            <p><span class="dot-green-small"></span> Global payroll active</p>
+                        </div>
+                        <div class="cg-card">
+                            <div class="cg-card-top">
+                                <div class="cg-icon bg-yellow-light text-yellow"><i
+                                        class="fa-solid fa-boxes-stacked"></i></div>
+                                <span class="cg-val">Instant</span>
+                            </div>
+                            <h4>Inventory & WMS</h4>
+                            <p><span class="dot-green-small"></span> RFID & IoT streams</p>
+                        </div>
+                        <div class="cg-card">
+                            <div class="cg-card-top">
+                                <div class="cg-icon bg-blue-light text-blue"><i class="fa-solid fa-arrow-trend-up"></i>
+                                </div>
+                                <span class="cg-val">+24.8%</span>
+                            </div>
+                            <h4>CRM & Pipeline</h4>
+                            <p><span class="dot-green-small"></span> Auto-enrichment</p>
+                        </div>
+                    </div>
+
+
+                    <div class="cg-footer bg-blue-light text-blue">
+                        <div class="cg-f-left"><i class="fa-solid fa-network-wired"></i> Real-Time Data Fabric</div>
+                        <div class="cg-f-right bg-blue-dark text-white">0 Sub-second Latency</div>
+                    </div>
+
+
+                    <div class="cg-floating-badge">
+                        <div class="cg-float-icon bg-green-light text-green"><i class="fa-solid fa-headset"></i></div>
+                        <div>
+                            <h5>Tier 3 Engineers</h5>
+                            <span>Direct line on all inquiries</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+
+
+    <section class="connect-section">
+        <div class="conn-container">
+
+
+            <div class="conn-header conn-anim-up">
+                <div class="conn-badge">DIRECT CHANNELS</div>
+                <h2>Choose How You'd Like to Connect</h2>
+                <p>Route your inquiry directly to specialized functional departments for faster, zero-friction
+                    resolution.</p>
+            </div>
+
+
+            <div class="conn-grid">
+
+
+                <div class="conn-card conn-left">
+                    <div class="cc-icon text-blue"><i class="fa-regular fa-id-badge"></i></div>
+                    <h3>Sales & Demo</h3>
+                    <p>Discover how our ERP can fit your business workflows, discuss custom pricing, or schedule a
+                        customized walkthrough.</p>
+                    <a href="404page.html" class="cc-link text-blue">Schedule Walkthrough <i
+                            class="fa-solid fa-arrow-right"></i></a>
+                </div>
+
+                <div class="conn-card conn-left">
+                    <div class="cc-icon text-purple"><i class="fa-solid fa-code"></i></div>
+                    <h3>Technical Support</h3>
+                    <p>Get dedicated assistance with your account, API integrations, sandbox provisioning, and critical
+                        technical troubleshooting.</p>
+                    <a href="404page.html" class="cc-link text-blue">Open Developer Ticket <i
+                            class="fa-solid fa-arrow-right"></i></a>
+                </div>
+
+
+                <div class="conn-card conn-right">
+                    <div class="cc-icon text-green"><i class="fa-solid fa-file-invoice"></i></div>
+                    <h3>Billing & Plans</h3>
+                    <p>Questions about enterprise subscriptions, global multi-entity invoices, license upgrades, or
+                        regional tax directives.</p>
+                    <a href="404page.html" class="cc-link text-blue">Inquire on Licensing <i
+                            class="fa-solid fa-arrow-right"></i></a>
+                </div>
+
+                <div class="conn-card conn-right">
+                    <div class="cc-icon text-yellow"><i class="fa-regular fa-handshake"></i></div>
+                    <h3>Partnerships</h3>
+                    <p>Interested in becoming a certified implementation partner, reselling, technology alliance, or
+                        strategic integrations?</p>
+                    <a href="404page.html" class="cc-link text-blue">Join Alliance Network <i
+                            class="fa-solid fa-arrow-right"></i></a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+    <section class="contact-form-section">
+        <div class="cfs-container">
+
+
+            <div class="cfs-left">
+                <div class="cfs-badge cfs-anim">DIRECT ENGAGEMENT</div>
+                <h2 class="cfs-anim">Send Us a Message</h2>
+                <p class="cfs-anim">Share your business requirements, operational bottlenecks, or integration
+                    architecture. An AuraERP solutions specialist tailored to your specific industry will reach out
+                    within 1 business day.</p>
+
+                <ul class="cfs-features">
+                    <li class="cfs-anim">
+                        <i class="fa-solid fa-circle-check text-green-light"></i>
+                        <div>
+                            <h4>Dedicated Solutions Architect</h4>
+                            <p>Assigned specifically to review your existing ERP stack and dependencies.</p>
+                        </div>
+                    </li>
+                    <li class="cfs-anim">
+                        <i class="fa-solid fa-circle-check text-green-light"></i>
+                        <div>
+                            <h4>Custom POC Sandbox</h4>
+                            <p>Pre-populated with your synthetic industry taxonomy ready within 48 hours.</p>
+                        </div>
+                    </li>
+                    <li class="cfs-anim">
+                        <i class="fa-solid fa-circle-check text-green-light"></i>
+                        <div>
+                            <h4>Upfront Compliance & NDA</h4>
+                            <p>Mutual NDA and SOC 2 Type II audit packages available immediately.</p>
+                        </div>
+                    </li>
+                </ul>
+
+
+                <div class="cfs-benchmark-box cfs-anim">
+                    <div class="bm-header">
+                        <span>Enterprise Benchmark Impact</span>
+                        <i class="fa-solid fa-chart-line"></i>
+                    </div>
+                    <div class="bm-cards">
+                        <div class="bm-card">
+                            <h3 class="text-blue">+<span class="bm-counter" data-val="48" data-decimal="0">0</span>%
+                            </h3>
+                            <p>Closing Velocity</p>
+                        </div>
+                        <div class="bm-card">
+                            <h3 class="text-green"><span class="bm-counter" data-val="99.99" data-decimal="2">0</span>%
+                            </h3>
+                            <p>Data Integrity SLA</p>
+                        </div>
+                    </div>
+                    <div class="bm-footer">
+                        <span>Multi-Entity Consolidation</span>
+                        <span class="text-blue font-bold">Sub-Minute Sync</span>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="cfs-right">
+                <div class="cfs-form-box cfs-anim">
+                    <form id="erpContactForm" novalidate>
+
+
+                        <div class="form-row">
+                            <div class="form-group cfs-form-anim">
+                                <label>First Name <span class="req">*</span></label>
+                                <input type="text" id="fName" placeholder="e.g. Sarah">
+                                <span class="error-msg" id="err-fName">Invalid First Name (Letters only).</span>
+                            </div>
+                            <div class="form-group cfs-form-anim">
+                                <label>Last Name <span class="req">*</span></label>
+                                <input type="text" id="lName" placeholder="e.g. Jenkins">
+                                <span class="error-msg" id="err-lName">Invalid Last Name (Letters only).</span>
+                            </div>
+                        </div>
+
+
+                        <div class="form-row">
+                            <div class="form-group cfs-form-anim">
+                                <label>Work Email <span class="req">*</span></label>
+                                <input type="email" id="wEmail" placeholder="sarah@enterprise.com">
+                                <small>Please use your company domain.</small>
+                                <span class="error-msg" id="err-wEmail">Please enter a valid email address.</span>
+                            </div>
+                            <div class="form-group cfs-form-anim">
+                                <label>Phone Number <span class="req">*</span></label>
+                                <input type="tel" id="pNumber" placeholder="e.g. 9876543210" maxlength="10">
+                                <span class="error-msg" id="err-pNumber">Must be exactly 10 digits.</span>
+                            </div>
+                        </div>
+
+
+                        <div class="form-row">
+                            <div class="form-group cfs-form-anim">
+                                <label>Company Name <span class="req">*</span></label>
+                                <input type="text" id="cName" placeholder="e.g. Globex Global Logistics">
+                                <span class="error-msg" id="err-cName">Company Name is required.</span>
+                            </div>
+                            <div class="form-group cfs-form-anim">
+                                <label>Company Size</label>
+                                <select id="cSize">
+                                    <option>1-50 employees</option>
+                                    <option>51-250 employees</option>
+                                    <option selected>251-1,000 employees</option>
+                                    <option>1,000+ employees</option>
+                                </select>
+                            </div>
+                        </div>
+
+
+                        <div class="form-group cfs-form-anim">
+                            <label>Inquiry Type</label>
+                            <select id="iType">
+                                <option selected>Enterprise Demo & Executive Walkthrough</option>
+                                <option>Pricing & Licensing Inquiry</option>
+                                <option>Partnership & Integration</option>
+                            </select>
+                        </div>
+
+
+                        <div class="form-group cfs-form-anim">
+                            <label>Message <span class="req">*</span></label>
+                            <textarea id="uMessage" rows="4"
+                                placeholder="Tell us about your current ERP challenges, timeline, or key integrations needed (e.g., Salesforce, SAP, Shopify)..."></textarea>
+                            <span class="error-msg" id="err-uMessage">Message must be at least 10 characters
+                                long.</span>
+                        </div>
+
+
+                        <div class="form-group checkbox-group cfs-form-anim">
+                            <input type="checkbox" id="termsCheck">
+                            <label for="termsCheck">I agree to receive communications regarding AuraERP products,
+                                services, and architecture whitepapers. You may unsubscribe anytime in accordance with
+                                our <a href="404page.html">Privacy Policy</a>. <span class="req">*</span></label>
+                        </div>
+                        <span class="error-msg" id="err-termsCheck"
+                            style="margin-top:-10px; margin-bottom:15px; display:none;">You must accept the terms to
+                            proceed.</span>
+
+
+                        <div class="cfs-form-anim">
+                            <button type="submit" id="submitBtn" class="btn-submit">Send Message <i
+                                    class="fa-regular fa-paper-plane"></i></button>
+                            <div id="successMsg" class="success-msg"><i class="fa-solid fa-circle-check"></i> Message
+                                Sent Successfully! Redirecting...</div>
+                        </div>
+
+                        <div class="secure-text cfs-form-anim">
+                            <i class="fa-solid fa-lock"></i> 256-bit SSL encrypted. We respect your enterprise privacy.
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+
+
+
+    <section class="contact-info-section">
+        <div class="ci-container">
+            <div class="ci-grid">
+
+
+                <div class="ci-card">
+                    <div class="ci-icon bg-blue-light text-blue"><i class="fa-regular fa-envelope"></i></div>
+                    <div class="ci-content">
+                        <div class="ci-title">Direct Email</div>
+                        <a href="404page.html" class="ci-val">info@thestackly.com</a>
+                        <div class="ci-desc">24/7 dedicated monitoring</div>
+                    </div>
+                </div>
+
+
+                <div class="ci-card">
+                    <div class="ci-icon bg-purple-light text-purple"><i class="fa-solid fa-phone"></i></div>
+                    <div class="ci-content">
+                        <div class="ci-title">Phone Hotline</div>
+                        <a href="404page.html" class="ci-val">+91 9876543210</a>
+                        <div class="ci-desc">London: +44 20 7946 0991</div>
+                    </div>
+                </div>
+
+
+                <div class="ci-card">
+                    <div class="ci-icon bg-green-light text-green"><i class="fa-regular fa-comments"></i></div>
+                    <div class="ci-content">
+                        <div class="ci-title">Live System Chat <span class="dot-green"></span></div>
+                        <div class="ci-val text-dark">Online Now</div>
+                        <div class="ci-desc">Enterprise SLA &lt; 5 min</div>
+                    </div>
+                </div>
+
+
+                <div class="ci-card">
+                    <div class="ci-icon bg-pink-light text-pink"><i class="fa-regular fa-building"></i></div>
+                    <div class="ci-content">
+                        <div class="ci-title">Global Regional Hubs</div>
+                        <div class="ci-val text-dark">MMR Complex, Chinna Thirupathi, near Chinna Muniyappan Kovil,
+                            Salem</div>
+                        <div class="ci-desc">Follow-the-sun uptime</div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <section class="process-section">
+        <div class="pro-container">
+
+            <div class="pro-header pro-anim">
+                <div class="pro-badge text-blue">OUR ENGAGEMENT BLUEPRINT</div>
+                <h2>Our Consultation Process</h2>
+                <p>A straightforward, zero-pressure path from initial inquiry to tailored implementation roadmap.</p>
+            </div>
+
+
+            <div class="pro-grid">
+
+
+                <div class="pro-card">
+                    <div class="pro-card-top">
+                        <div class="pro-num bg-blue-dark text-white">01</div>
+                        <i class="fa-solid fa-file-signature text-gray"></i>
+                    </div>
+                    <h3>Submit Your Request</h3>
+                    <p>Fill out the inquiry form or book directly on our calendar with your specific industry context
+                        and operational targets.</p>
+                    <div class="pro-footer text-blue">
+                        <i class="fa-regular fa-clock"></i> Duration: ~2 Minutes
+                    </div>
+                </div>
+
+
+                <div class="pro-card">
+                    <div class="pro-card-top">
+                        <div class="pro-num bg-blue-dark text-white">02</div>
+                        <i class="fa-solid fa-compass-drafting text-gray"></i>
+                    </div>
+                    <h3>Connect With an Expert</h3>
+                    <p>Meet with a senior ERP solutions architect who understands your industry regulations, security
+                        standards, and legacy data systems.</p>
+                    <div class="pro-footer text-blue">
+                        <i class="fa-regular fa-clock"></i> Within 24 Business Hours
+                    </div>
+                </div>
+
+
+                <div class="pro-card">
+                    <div class="pro-card-top">
+                        <div class="pro-num bg-green-dark text-white">03</div>
+                        <i class="fa-solid fa-certificate text-gray"></i>
+                    </div>
+                    <h3>Find Your Solution</h3>
+                    <p>Receive an interactive proof-of-concept, customized ROI projection, data migration plan, and
+                        deployment roadmap.</p>
+                    <div class="pro-footer text-blue">
+                        <i class="fa-regular fa-clock"></i> 14-Day Free POC Sandbox
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <section class="contact-faq-section">
+        <div class="faq-container">
+
+            <div class="faq-header faq-anim">
+                <div class="pro-badge text-blue">ANSWERS & CLARITY</div>
+                <h2>Frequently Asked Questions</h2>
+                <p>Everything you need to know about initiating a partnership with AuraERP.</p>
+            </div>
+
+
+            <div class="faq-list">
+
+                <div class="faq-item faq-anim-item">
+                    <div class="faq-question">
+                        <h3>Can I request a free ERP demo?</h3>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            <p>Yes, you can request a customized, live demonstration of our ERP platform. Our solutions
+                                architect will tailor the demo specifically to your industry workflows, showcasing
+                                features like automated reconciliation, inventory tracking, and executive dashboards.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item faq-anim-item">
+                    <div class="faq-question">
+                        <h3>Can the ERP be customized for my business?</h3>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            <p>Absolutely. AuraERP is built on a highly modular and extensible architecture. We offer
+                                bespoke scoping for custom integrations, specialized schemas, and automated rule engines
+                                that perfectly align with your unique organizational hierarchy.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item faq-anim-item">
+                    <div class="faq-question">
+                        <h3>Do you provide technical support?</h3>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            <p>All Enterprise clients receive a dedicated Technical Account Manager and 24/7 priority
+                                support with a 15-minute response SLA. Other tiers also include robust live-chat,
+                                comprehensive API documentation, and expert email support.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item faq-anim-item">
+                    <div class="faq-question">
+                        <h3>Can I integrate the ERP with other software?</h3>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            <p>Yes. AuraERP comes with over 200+ pre-built enterprise connectors (Salesforce, Shopify,
+                                Snowflake, etc.). We also provide native REST and GraphQL APIs for seamless
+                                bi-directional syncing with your legacy systems or proprietary tools.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <section class="cta-section">
+        <div class="cta-container">
+            <div class="cta-blue-box">
+
+                <div class="decor-circle c-1"></div>
+                <div class="decor-circle c-2"></div>
+                <div class="decor-circle c-3"></div>
+
+                <div class="cta-content">
+                    <h2 class="cta-item-anim">Ready to Simplify Your Business Operations?</h2>
+                    <p class="cta-item-anim">Bring finance, HR, inventory, CRM, projects, and telemetry together in one
+                        connected ERP platform.</p>
+
+                    <div class="cta-buttons cta-item-anim">
+                        <a href="404page.html" class="btn-solid">Book a Free Demo</a>
+                        <a href="404page.html" class="btn-outline">Explore ERP Features</a>
+                    </div>
+
+                    <div class="cta-features cta-item-anim">
+                        <span><i class="fa-solid fa-check"></i> 14-day risk-free sandbox</span>
+                        <span><i class="fa-solid fa-check"></i> Dedicated solutions architect</span>
+                        <span><i class="fa-solid fa-check"></i> Zero legacy hardware footprint</span>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
 
     <footer id="footer" class="footer">
         <div class="footer-container">
-            <!-- Column 1: Brand & Social -->
+
             <div class="footer-brand" data-aos="fade-up" data-aos-duration="1000">
                 <div class="logo">
                     <a href="index.html"><img src="./asset/logo_bule.webp" alt="logo"></a>
                 </div>
-                <!-- ஸ்கிரீன்ஷாட்டில் உள்ள அதே வாசகம் -->
+
                 <p class="footer-desc">
                     One connected platform for your entire business. Streamline workflows, boost productivity, and make
                     data-driven decisions.
@@ -91,7 +628,7 @@
                 </div>
             </div>
 
-            <!-- Column 2: Platform Links (ஸ்கிரீன்ஷாட்டில் உள்ள 5 மெனுக்கள்) -->
+
             <div class="footer-links" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
                 <h3>PLATFORM</h3>
                 <ul>
@@ -103,7 +640,7 @@
                 </ul>
             </div>
 
-            <!-- Column 3: Company Links (நேவ்பாரில் உள்ள முதல் 5 மெனுக்கள்) -->
+
             <div class="footer-links" data-aos="fade-up" data-aos-delay="400" data-aos-duration="1000">
                 <h3>COMPANY</h3>
                 <ul>
@@ -115,7 +652,7 @@
                 </ul>
             </div>
 
-            <!-- Column 4: Resources Links (நேவ்பார் மீதி 2 + ஸ்கிரீன்ஷாட் 3) -->
+
             <div class="footer-links" data-aos="fade-up" data-aos-delay="600" data-aos-duration="1000">
                 <h3>RESOURCES</h3>
                 <ul>
@@ -128,7 +665,7 @@
             </div>
         </div>
 
-        <!-- Footer Bottom: Copyright & Legal -->
+
         <div class="footer-bottom-container">
             <div class="footer-bottom">
                 <p>&copy; 2026 STACKLY. All rights reserved.</p>
@@ -144,9 +681,341 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 
-    <!-- AOS Animation JS -->
+
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="script.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+
+
+            setTimeout(() => {
+
+                gsap.registerPlugin(ScrollTrigger);
+
+
+
+
+
+
+                gsap.fromTo(".ch-anim-item",
+                    { opacity: 0, y: 30 },
+                    {
+                        opacity: 1, y: 0, duration: 0.8, stagger: 0.15, ease: "power2.out",
+                        scrollTrigger: { trigger: ".contact-hero-section", start: "top 85%", toggleActions: "play none none none" }
+                    }
+                );
+
+
+                gsap.fromTo(".ch-graphic-anim",
+                    { opacity: 0, x: 80 },
+                    {
+                        opacity: 1, x: 0, duration: 1, ease: "power2.out", delay: 0.3,
+                        scrollTrigger: { trigger: ".contact-hero-section", start: "top 85%", toggleActions: "play none none none" }
+                    }
+                );
+
+
+
+
+
+
+
+                gsap.fromTo(".conn-anim-up",
+                    { opacity: 0, y: 30 },
+                    {
+                        opacity: 1, y: 0, duration: 0.8, ease: "power2.out",
+                        scrollTrigger: { trigger: ".connect-section", start: "top 85%", toggleActions: "play none none none" }
+                    }
+                );
+
+
+                gsap.utils.toArray(".conn-left").forEach((card, index) => {
+                    gsap.fromTo(card,
+                        { opacity: 0, x: -80 },
+                        {
+                            opacity: 1, x: 0, duration: 0.8, ease: "power2.out", delay: index * 0.15,
+                            scrollTrigger: { trigger: ".conn-grid", start: "top 80%", toggleActions: "play none none none" }
+                        }
+                    );
+                });
+
+
+                gsap.utils.toArray(".conn-right").forEach((card, index) => {
+                    gsap.fromTo(card,
+                        { opacity: 0, x: 80 },
+                        {
+                            opacity: 1, x: 0, duration: 0.8, ease: "power2.out", delay: index * 0.15,
+                            scrollTrigger: { trigger: ".conn-grid", start: "top 80%", toggleActions: "play none none none" }
+                        }
+                    );
+                });
+
+            }, 2200);
+
+        });
+
+
+        document.addEventListener("DOMContentLoaded", () => {
+
+
+
+
+            setTimeout(() => {
+                gsap.registerPlugin(ScrollTrigger);
+
+
+                gsap.fromTo(".cfs-anim",
+                    { opacity: 0, y: 30 },
+                    {
+                        opacity: 1, y: 0, duration: 0.8, stagger: 0.15, ease: "power2.out",
+                        scrollTrigger: { trigger: ".cfs-left", start: "top 85%", toggleActions: "play none none none" }
+                    }
+                );
+
+
+                gsap.fromTo(".cfs-form-anim",
+                    { opacity: 0, rotationX: 45, transformPerspective: 1000, y: 20 },
+                    {
+                        opacity: 1, rotationX: 0, y: 0, duration: 0.8, stagger: 0.1, ease: "back.out(1.2)",
+                        scrollTrigger: { trigger: ".cfs-form-box", start: "top 85%", toggleActions: "play none none none" }
+                    }
+                );
+
+
+                let bmCounters = gsap.utils.toArray('.bm-counter');
+                ScrollTrigger.create({
+                    trigger: ".cfs-benchmark-box",
+                    start: "top 85%",
+                    onEnter: () => {
+                        bmCounters.forEach(el => {
+                            let targetVal = parseFloat(el.getAttribute('data-val'));
+                            let decimals = parseInt(el.getAttribute('data-decimal')) || 0;
+                            let obj = { val: 0 };
+
+                            gsap.to(obj, {
+                                val: targetVal,
+                                duration: 2.5,
+                                ease: "power3.out",
+                                onUpdate: function () {
+                                    el.innerText = obj.val.toFixed(decimals);
+                                }
+                            });
+                        });
+                    },
+                    once: true
+                });
+
+            }, 2200);
+
+
+
+
+            const form = document.getElementById("erpContactForm");
+
+
+            const fName = document.getElementById("fName");
+            const lName = document.getElementById("lName");
+            const wEmail = document.getElementById("wEmail");
+            const pNumber = document.getElementById("pNumber");
+            const cName = document.getElementById("cName");
+            const uMessage = document.getElementById("uMessage");
+            const termsCheck = document.getElementById("termsCheck");
+            const successMsg = document.getElementById("successMsg");
+            const submitBtn = document.getElementById("submitBtn");
+
+
+            const nameRegex = /^[A-Za-z\s]+$/;
+            const phoneRegex = /^\d{10}$/;
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+
+            function validateField(input, condition, errorId) {
+                const errorElem = document.getElementById(errorId);
+                if (condition) {
+                    errorElem.style.display = "none";
+                    input.style.borderColor = "#cbd5e1";
+                    return true;
+                } else {
+                    errorElem.style.display = "block";
+                    input.style.borderColor = "#ef4444";
+                    return false;
+                }
+            }
+
+            form.addEventListener("submit", (e) => {
+                e.preventDefault();
+
+                let isValid = true;
+
+
+                let isFNameValid = validateField(fName, nameRegex.test(fName.value.trim()) && fName.value.trim() !== "", "err-fName");
+                if (!isFNameValid) isValid = false;
+
+
+                let isLNameValid = validateField(lName, nameRegex.test(lName.value.trim()) && lName.value.trim() !== "", "err-lName");
+                if (!isLNameValid) isValid = false;
+
+
+                let isEmailValid = validateField(wEmail, emailRegex.test(wEmail.value.trim()), "err-wEmail");
+                if (!isEmailValid) isValid = false;
+
+
+                let isPhoneValid = validateField(pNumber, phoneRegex.test(pNumber.value.trim()), "err-pNumber");
+                if (!isPhoneValid) isValid = false;
+
+
+                let isCNameValid = validateField(cName, cName.value.trim() !== "", "err-cName");
+                if (!isCNameValid) isValid = false;
+
+
+                let isMsgValid = validateField(uMessage, uMessage.value.trim().length >= 10, "err-uMessage");
+                if (!isMsgValid) isValid = false;
+
+
+                const errCheckbox = document.getElementById("err-termsCheck");
+                if (!termsCheck.checked) {
+                    errCheckbox.style.display = "block";
+                    isValid = false;
+                } else {
+                    errCheckbox.style.display = "none";
+                }
+
+
+                if (isValid) {
+
+                    submitBtn.disabled = true;
+                    submitBtn.style.opacity = "0.7";
+
+
+                    successMsg.style.display = "block";
+
+
+                    setTimeout(() => {
+                        window.location.href = "404page.html";
+                    }, 2000);
+                }
+            });
+
+
+            pNumber.addEventListener('input', function () {
+                this.value = this.value.replace(/[^0-9]/g, '');
+            });
+
+        });
+
+        document.addEventListener("DOMContentLoaded", () => {
+
+
+            setTimeout(() => {
+
+                gsap.registerPlugin(ScrollTrigger);
+
+
+
+
+
+                gsap.fromTo(".ci-card",
+                    { opacity: 0, rotationY: -90, transformPerspective: 1200 },
+                    {
+                        opacity: 1, rotationY: 0, duration: 1, stagger: 0.2, ease: "back.out(1.2)",
+                        scrollTrigger: {
+                            trigger: ".contact-info-section",
+                            start: "top 85%",
+                            toggleActions: "play none none none"
+                        }
+                    }
+                );
+
+
+
+
+
+                gsap.fromTo(".pro-anim",
+                    { opacity: 0, y: 30 },
+                    {
+                        opacity: 1, y: 0, duration: 0.8, ease: "power2.out",
+                        scrollTrigger: { trigger: ".process-section", start: "top 85%", toggleActions: "play none none none" }
+                    }
+                );
+
+
+                gsap.fromTo(".pro-card",
+                    { opacity: 0, rotationX: 90, transformPerspective: 1200 },
+                    {
+                        opacity: 1, rotationX: 0, duration: 1, stagger: 0.2, ease: "back.out(1.2)",
+                        scrollTrigger: {
+                            trigger: ".pro-grid",
+                            start: "top 80%",
+                            toggleActions: "play none none none"
+                        }
+                    }
+                );
+
+
+
+
+                gsap.fromTo(".faq-anim",
+                    { opacity: 0, y: 30 },
+                    {
+                        opacity: 1, y: 0, duration: 0.8, ease: "power2.out",
+                        scrollTrigger: { trigger: ".contact-faq-section", start: "top 85%", toggleActions: "play none none none" }
+                    }
+                );
+
+
+                gsap.fromTo(".faq-anim-item",
+                    { opacity: 0, y: 20 },
+                    {
+                        opacity: 1, y: 0, duration: 0.6, stagger: 0.15, ease: "power2.out",
+                        scrollTrigger: { trigger: ".faq-list", start: "top 85%", toggleActions: "play none none none" }
+                    }
+                );
+
+
+                const faqQuestions = document.querySelectorAll('.faq-question');
+                faqQuestions.forEach(q => {
+                    q.addEventListener('click', () => {
+                        const item = q.parentElement;
+                        const answer = item.querySelector('.faq-answer');
+
+                        if (item.classList.contains('active')) {
+                            item.classList.remove('active');
+                            answer.style.maxHeight = null;
+                        } else {
+                            document.querySelectorAll('.faq-item').forEach(other => {
+                                other.classList.remove('active');
+                                other.querySelector('.faq-answer').style.maxHeight = null;
+                            });
+                            item.classList.add('active');
+                            answer.style.maxHeight = answer.scrollHeight + "px";
+                        }
+                    });
+                });
+
+
+
+
+                const ctaTl = gsap.timeline({
+                    scrollTrigger: { trigger: ".cta-section", start: "top 80%", toggleActions: "play none none none" }
+                });
+
+                ctaTl.fromTo(".cta-blue-box",
+                    { opacity: 0, scale: 0.95 },
+                    { opacity: 1, scale: 1, duration: 0.8, ease: "power3.out" }
+                )
+
+                    .fromTo(".cta-item-anim",
+                        { opacity: 0, y: 25 },
+                        { opacity: 1, y: 0, duration: 0.6, stagger: 0.15, ease: "power2.out" },
+                        "-=0.4"
+                    );
+
+            }, 2200);
+
+        });
+
+    </script>
 </body>
 
 </html>
